@@ -1,8 +1,7 @@
-import React
 
 const Shop = ()=>{
 	return (
-
+<div></div>
 	)
 }
 

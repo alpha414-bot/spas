@@ -1,8 +1,6 @@
 import MainLayout from "@/layouts/MainLayout";
-import { useNavigation } from "react-router-dom";
 
 const Home = () => {
-  const navigation = useNavigation();
   return (
     <MainLayout
       title="Hot Tubs, Swim Spas and Portable Spas by Master Spas"
