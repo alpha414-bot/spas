@@ -92,27 +92,6 @@ const NavBar: React.FC<NavBarInterface> = ({}) => {
                     <li>
                       <Link to="javascript:void">Shop all swim spas</Link>
                     </li>
-                    <li className="dropdown-header">Shop By Brand</li>
-                    <li>
-                      <Link to="javascript:void">Michael Phelps Swim Spas</Link>
-                    </li>
-                    <li>
-                      <Link to="javascript:void">H2X Fitness Swim Spas</Link>
-                    </li>
-                    <li className="divider" />
-                    <li className="dropdown-header">Shop By Use</li>
-                    <li>
-                      <Link to="javascript:void">Therapy/Fitness</Link>
-                    </li>
-                    <li>
-                      <Link to="javascript:void">Recreation/Swim/Fitness</Link>
-                    </li>
-                    <li>
-                      <Link to="javascript:void">Endurance Swim Training</Link>
-                    </li>
-                    <li>
-                      <Link to="javascript:void">Fast/Sprint Swimming</Link>
-                    </li>
                   </ul>
                 </div>
               </div>
@@ -153,19 +132,18 @@ const NavBar: React.FC<NavBarInterface> = ({}) => {
                 <ul className="dropdown-menu dropdown-menu-large row">
                   <li className="col-sm-12">
                     <ul className="dropdown-brands">
-                      <li className="dropdown-header">Shop now</li>
                       <li>
-                        <Link to="javascript:void">
+                        <Link to="/hot-tubs">
                           <span>Trident Series</span>
                         </Link>
                       </li>
                       <li>
-                        <Link to="javascript:void">
+                        <Link preventScrollReset={false}  to="/hot-tubs">
                           <span>Nautical Series</span>
                         </Link>
                       </li>
                       <li>
-                        <Link to="javascript:void">
+                        <Link preventScrollReset={false} to="/hot-tubs">
                           <span>Coastal Series</span>
                         </Link>
                       </li>
@@ -178,39 +156,13 @@ const NavBar: React.FC<NavBarInterface> = ({}) => {
                   Swim Spas <b className="caret"></b>
                 </Link>
                 <ul className="dropdown-menu dropdown-menu-large row">
-                  <li className="col-sm-5">
+                  <li className="col-sm-12">
                     <ul>
-                      <li className="dropdown-header">Gulf South Swim Spas</li>
                       <li>
                         <Link to="/swim-spas">General Overview</Link>
                       </li>
                       <li>
                         <Link to="javascript:void">Shop all swim spas</Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="col-sm-7">
-                    <ul className="dropdown-brands">
-                      <li className="dropdown-header">Shop By Brand</li>
-                      <li>
-                        <Link to="javascript:void">Michael Phelps Swim Spas</Link>
-                      </li>
-                      <li>
-                        <Link to="javascript:void">H2X Fitness Swim Spas</Link>
-                      </li>
-                      <li className="divider"></li>
-                      <li className="dropdown-header">Shop By Use</li>
-                      <li>
-                        <Link to="javascript:void">Therapy/Fitness</Link>
-                      </li>
-                      <li>
-                        <Link to="javascript:void">Recreation/Swim/Fitness</Link>
-                      </li>
-                      <li>
-                        <Link to="javascript:void">Endurance Swim Training</Link>
-                      </li>
-                      <li>
-                        <Link to="javascript:void">Fast/Sprint Swimming</Link>
                       </li>
                     </ul>
                   </li>
