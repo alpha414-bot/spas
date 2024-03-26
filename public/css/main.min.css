@@ -227,9 +227,6 @@ a:hover {
 .maincontent.inner {
   margin-top: -100px;
 }
-.bumpedNav {
-  margin-top: 38px;
-}
 #imgTabContainer {
   background-color: #00aad4;
   height: 38px;
@@ -250,16 +247,16 @@ a:hover {
   min-height: 40px;
 }
 #imgTabContainer .flexContainer a#msTab {
-  background-image: url("https://masterspascdn.com/img/tabs/ms-sprite.png");
+  background-image: url("../img/tabs/ms-sprite.png");
 }
 #imgTabContainer .flexContainer a#mpssTab {
-  background-image: url("https://masterspascdn.com/img/tabs/mpss-sprite.png");
+  background-image: url("../img/tabs/mpss-sprite.png");
 }
 #imgTabContainer .flexContainer a#h2xTab {
-  background-image: url("https://masterspascdn.com/img/tabs/h2x-sprite.png");
+  background-image: url("../img/tabs/h2x-sprite.png");
 }
 #imgTabContainer .flexContainer a#goatTab {
-  background-image: url("https://masterspascdn.com/img/tabs/goat-sprite.png");
+  background-image: url("../img/tabs/goat-sprite.png");
 }
 #imgTabContainer .flexContainer a:hover,
 #imgTabContainer .flexContainer a:active,
@@ -296,13 +293,13 @@ a:hover {
   }
 }
 nav {
-  background-image: url("https://masterspascdn.com/img/colors-light-bg.webp");
+  background-image: url("../img/colors-light-bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 .no-webp nav {
-  background-image: url("https://masterspascdn.com/img/colors-light-bg.jpg");
+  background-image: url("../img/colors-light-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -802,22 +799,22 @@ nav {
     margin-right: auto;
   }
   .hotTubLineWrapper.legend {
-    background-image: url("https://masterspascdn.com/img/home-page/line-display/legend-mobile-fade.jpg");
+    background-image: url("../img/home-page/line-display/legend-mobile-fade.jpg");
   }
   .hotTubLineWrapper.twilight {
-    background-image: url("https://masterspascdn.com/img/home-page/line-display/twilight-mobile-fade.jpg");
+    background-image: url("../img/home-page/line-display/twilight-mobile-fade.jpg");
   }
   .hotTubLineWrapper.clarity {
-    background-image: url("https://masterspascdn.com/img/home-page/line-display/clarity-mobile-fade.jpg");
+    background-image: url("../img/home-page/line-display/clarity-mobile-fade.jpg");
   }
   .hotTubLineWrapper.getaway {
-    background-image: url("https://masterspascdn.com/img/home-page/line-display/getaway-mobile-fade.jpg");
+    background-image: url("../img/home-page/line-display/getaway-mobile-fade.jpg");
   }
   .swimSpaLineWrapper.h2x {
-    background-image: url("https://masterspascdn.com/img/home-page/line-display/h2x-mobile-fade.png");
+    background-image: url("../img/home-page/line-display/h2x-mobile-fade.png");
   }
   .swimSpaLineWrapper.mpss {
-    background-image: url("https://masterspascdn.com/img/home-page/line-display/mpss-mobile-fade-a.png");
+    background-image: url("../img/home-page/line-display/mpss-mobile-fade-a.png");
   }
 }
 @media only screen and (min-width: 992px) {
@@ -875,22 +872,22 @@ nav {
     right: auto;
   }
   .hotTubLineWrapper.legend {
-    background-image: url("https://masterspascdn.com/img/home-page/line-display/legend.jpg");
+    background-image: url("../img/home-page/line-display/legend.jpg");
   }
   .hotTubLineWrapper.twilight {
-    background-image: url("https://masterspascdn.com/img/home-page/line-display/twilight.jpg");
+    background-image: url("../img/home-page/line-display/twilight.jpg");
   }
   .hotTubLineWrapper.clarity {
-    background-image: url("https://masterspascdn.com/img/home-page/line-display/clarity.jpg");
+    background-image: url("../img/home-page/line-display/clarity.jpg");
   }
   .hotTubLineWrapper.getaway {
-    background-image: url("https://masterspascdn.com/img/home-page/line-display/getaway.jpg");
+    background-image: url("../img/home-page/line-display/getaway.jpg");
   }
   .swimSpaLineWrapper.h2x {
-    background-image: url("https://masterspascdn.com/img/home-page/line-display/h2x.png");
+    background-image: url("../img/home-page/line-display/h2x.png");
   }
   .swimSpaLineWrapper.mpss {
-    background-image: url("https://masterspascdn.com/img/home-page/line-display/mpss-a.png");
+    background-image: url("../img/home-page/line-display/mpss-a.png");
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -998,7 +995,7 @@ nav {
   }
   .parallax.experience {
     position: relative;
-    background-image: url("https://www.masterspas.com/img/home-trainer-15-mobile.jpg");
+    background-image: url("../img/home-trainer-15-mobile.jpg");
     background-position: 71% 12px;
     background-size: 250%;
   }
@@ -1010,7 +1007,8 @@ nav {
     width: 100%;
   }
   .feltItToo {
-    background-image: url("https://www.masterspas.com/img/home-ts-couple.jpg");
+    /* background-image: url("../img/local/ai-generated-image-mature-senior-woman-jacuzzi-high-quality-photo.jpg"); */
+    background-image: url("../img/home-ts-couple.jpg");
     background-position: 80% center;
   }
   .parallaxText {
@@ -1043,7 +1041,7 @@ nav {
   .parallax.experience {
     background-position: center 17%;
     background-size: cover;
-    background-image: url("https://www.masterspas.com/img/home-trainer-15.jpg");
+    background-image: url("../img/home-trainer-15.jpg");
   }
   .parallaxText {
     top: 100px;
@@ -1119,7 +1117,7 @@ ol.bigNumberList h4 {
   text-transform: uppercase;
 }
 #homePlanningCTA {
-  background: url("https://masterspascdn.com/img/colors-light-bg.jpg");
+  background: url("../img/colors-light-bg.jpg");
   background-repeat: no-repeat;
   background-size: 180%;
   background-position: top right;
@@ -1173,37 +1171,30 @@ ol.bigNumberList h4 {
   padding-top: 100px;
 }
 .find {
-  background: url(https://masterspascdn.com/img/find-a-spa-bg.jpg) no-repeat top
-    left;
+  background: url(../img/find-a-spa-bg.jpg) no-repeat top left;
 }
 .results {
-  background: url(https://masterspascdn.com/img/results-bg.jpg) no-repeat top
-    left;
+  background: url(../img/results-bg.jpg) no-repeat top left;
   background-size: 100%;
 }
 .overview,
 .detail {
-  background: url(https://masterspascdn.com/img/overview-bg.jpg) no-repeat top
-    left;
+  background: url(../img/overview-bg.jpg) no-repeat top left;
 }
 .about {
-  background: url(https://masterspascdn.com/img/about-bg.jpg) no-repeat top left;
+  background: url(../img/about-bg.jpg) no-repeat top left;
 }
 .mplegend {
-  background: url(https://masterspascdn.com/img/mpl-features.jpg) no-repeat top
-    left;
+  background: url(../img/mpl-features.jpg) no-repeat top left;
 }
 .twilight {
-  background: url(https://masterspascdn.com/img/ts-features.jpg) no-repeat top
-    right;
+  background: url(../img/ts-features.jpg) no-repeat top right;
 }
 .clarity {
-  background: url(https://masterspascdn.com/img/cls-features.jpg) no-repeat top
-    left;
+  background: url(../img/cls-features.jpg) no-repeat top left;
 }
 .owners {
-  background: url(https://masterspascdn.com/img/owners-bg.jpg) no-repeat top
-    left;
+  background: url(../img/owners-bg.jpg) no-repeat top left;
 }
 @media only screen and (min-width: 300px) {
   .owners {
@@ -1216,20 +1207,17 @@ ol.bigNumberList h4 {
   }
 }
 .backyard {
-  background: url(https://masterspascdn.com/img/backyard-bg.jpg) no-repeat top
-    left;
+  background: url(../img/backyard-bg.jpg) no-repeat top left;
 }
 .mcrafted {
-  background: url(https://masterspascdn.com/img/master-crafted-bg.jpg) no-repeat
-    top center;
+  background: url(../img/master-crafted-bg.jpg) no-repeat top center;
 }
 .mast3r {
-  background: url(https://masterspascdn.com/img/mast3rpur-water-purification-sytem.jpg)
-    no-repeat top center;
+  background: url(../img/mast3rpur-water-purification-sytem.jpg) no-repeat top
+    center;
 }
 .requestService {
-  background: url("https://masterspascdn.com/img/service-request-form.jpg")
-    no-repeat;
+  background: url("../img/service-request-form.jpg") no-repeat;
 }
 @media only screen and (min-width: 300px) {
   .requestService {
@@ -1242,39 +1230,32 @@ ol.bigNumberList h4 {
   }
 }
 .ecopur {
-  background: url(https://masterspascdn.com/img/ecopur-charge-hot-tub-water-purification-system.jpg)
+  background: url(../img/ecopur-charge-hot-tub-water-purification-system.jpg)
     no-repeat top center;
 }
 .quietflo {
-  background: url(https://masterspascdn.com/img/quiet-flow-water-care-system.jpg)
-    no-repeat top center;
+  background: url(../img/quiet-flow-water-care-system.jpg) no-repeat top center;
 }
 .energy {
-  background: url(https://masterspascdn.com/img/energy-efficient-hot-tubs.jpg)
-    no-repeat top left;
+  background: url(../img/energy-efficient-hot-tubs.jpg) no-repeat top left;
 }
 .dealer {
-  background: url(https://masterspascdn.com/img/dealer-bg.jpg) no-repeat top
-    center;
+  background: url(../img/dealer-bg.jpg) no-repeat top center;
 }
 .dealer h1 {
   font-size: 46px;
 }
 .master-blaster {
-  background: url(https://masterspascdn.com/img/master-blaster-bg.jpg) no-repeat
-    top left;
+  background: url(../img/master-blaster-bg.jpg) no-repeat top left;
 }
 .magnet {
-  background: url(https://masterspascdn.com/img/magnet-bg.jpg) no-repeat top
-    left;
+  background: url(../img/magnet-bg.jpg) no-repeat top left;
 }
 .fusion-mp {
-  background: url(https://masterspascdn.com/img/fusion-bg.jpg) no-repeat top
-    left;
+  background: url(../img/fusion-bg.jpg) no-repeat top left;
 }
 .stress-mp {
-  background: url(https://masterspascdn.com/img/phelps-bg.jpg) no-repeat top
-    left;
+  background: url(../img/phelps-bg.jpg) no-repeat top left;
 }
 .find p,
 .results p,
@@ -1312,7 +1293,7 @@ ol.bigNumberList h4 {
   position: absolute;
   bottom: 50px;
   left: 0;
-  background: url(https://masterspascdn.com/img/branded.png) no-repeat top left;
+  background: url(../img/branded.png) no-repeat top left;
   display: block;
   background-size: contain;
   width: 180px;
@@ -1914,7 +1895,7 @@ ol.bigNumberList h4 {
 }
 .maincontent .para.gradient,
 .para.gradient {
-  background: url("https://masterspascdn.com/img/colors-light-bg.jpg");
+  background: url("../img/colors-light-bg.jpg");
   background-position: 10px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2081,19 +2062,16 @@ label.para input {
   width: 75px;
 }
 .phelps-carousel {
-  background: #fff
-    url("https://masterspascdn.com/img/legend/carousel-info-blue.png") no-repeat
-    bottom left;
+  background: #fff url("../img/legend/carousel-info-blue.png") no-repeat bottom
+    left;
 }
 .twilight-carousel {
-  background: #fff
-    url("https://masterspascdn.com/img/legend/carousel-info-blue.png") no-repeat
-    bottom left;
+  background: #fff url("../img/legend/carousel-info-blue.png") no-repeat bottom
+    left;
 }
 .clarity-carousel {
-  background: #fff
-    url("https://masterspascdn.com/img/clarity/carousel-info-green.png")
-    no-repeat bottom left;
+  background: #fff url("../img/clarity/carousel-info-green.png") no-repeat
+    bottom left;
 }
 .carousel-control.left,
 .carousel-control.right {
@@ -2122,8 +2100,7 @@ label.para input {
 }
 .maincontent #aboutbeige,
 .maincontent #contactbeige {
-  background: url(https://masterspascdn.com/img/about-beige.jpg) no-repeat top
-    left;
+  background: url(../img/about-beige.jpg) no-repeat top left;
   background-size: cover;
 }
 #contactbeige .row {
@@ -2173,12 +2150,12 @@ label.para input {
   max-width: 300px;
 }
 .bgBlueSwirls {
-  background-image: url("https://masterspascdn.com/img/about/bg-blue-swirls.png");
+  background-image: url("../img/about/bg-blue-swirls.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .bgSubtleGradient {
-  background: url("https://masterspascdn.com/img/about/bg-subtle-gradient.jpg");
+  background: url("../img/about/bg-subtle-gradient.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -2815,7 +2792,7 @@ footer .footDisclaimer {
   color: #676767;
 }
 #energyrow {
-  background-image: url(https://masterspascdn.com/img/hills-bg.png);
+  background-image: url(../img/hills-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -2942,7 +2919,7 @@ footer .footDisclaimer {
   }
 }
 .bgGradient {
-  background: url("https://masterspascdn.com/img/colors-light-bg.jpg");
+  background: url("../img/colors-light-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -3273,13 +3250,13 @@ section#productionAccordion .container {
   height: 100%;
   position: absolute;
   top: 0;
-  background: url("https://masterspascdn.com/img/yt-icon-dark.png") no-repeat;
+  background: url("../img/yt-icon-dark.png") no-repeat;
   background-position: 50% 50%;
 }
 .videoFeatureWrap span:hover,
 #introVideo span:hover,
 .spotlightVideo span:hover {
-  background: url("https://masterspascdn.com/img/yt-icon-red.png") no-repeat;
+  background: url("../img/yt-icon-red.png") no-repeat;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -3743,46 +3720,46 @@ section#productionAccordion .container {
   margin: auto;
 }
 #shellOne {
-  background-image: url(https://masterspascdn.com/img/colors/acrylic/sterling-silver.jpg);
+  background-image: url(../img/colors/acrylic/sterling-silver.jpg);
 }
 #shellTwo {
-  background-image: url(https://masterspascdn.com/img/colors/acrylic/tuscan-sun.jpg);
+  background-image: url(../img/colors/acrylic/tuscan-sun.jpg);
 }
 #shellThree {
-  background-image: url(https://masterspascdn.com/img/colors/acrylic/midnight-canyon.jpg);
+  background-image: url(../img/colors/acrylic/midnight-canyon.jpg);
 }
 #shellFour {
-  background-image: url(https://masterspascdn.com/img/colors/acrylic/storm-clouds.jpg);
+  background-image: url(../img/colors/acrylic/storm-clouds.jpg);
 }
 #shellFive {
-  background-image: url(https://masterspascdn.com/img/colors/acrylic/smoky-mountain.jpg);
+  background-image: url(../img/colors/acrylic/smoky-mountain.jpg);
 }
 #rotoshellOne {
-  background-image: url(https://masterspascdn.com/img/getaway/colors/pebble-beach.jpg);
+  background-image: url(../img/getaway/colors/pebble-beach.jpg);
 }
 #rotoshellTwo {
-  background-image: url(https://masterspascdn.com/img/getaway/colors/sea-salt.jpg);
+  background-image: url(../img/getaway/colors/sea-salt.jpg);
 }
 #skirtOne {
-  background-image: url(https://masterspascdn.com/img/colors/skirting/skirt-duramaster-espresso.jpg);
+  background-image: url(../img/colors/skirting/skirt-duramaster-espresso.jpg);
 }
 #skirtTwo {
-  background-image: url(https://masterspascdn.com/img/colors/skirting/skirt-duramaster-graphite.jpg);
+  background-image: url(../img/colors/skirting/skirt-duramaster-graphite.jpg);
 }
 #skirtThree {
-  background-image: url(https://masterspascdn.com/img/colors/skirting/skirt-duramaster-midnight.jpg);
+  background-image: url(../img/colors/skirting/skirt-duramaster-midnight.jpg);
 }
 #skirtFour {
-  background-image: url(https://masterspascdn.com/img/colors/skirting/skirt-dreamstone-ashstone.jpg);
+  background-image: url(../img/colors/skirting/skirt-dreamstone-ashstone.jpg);
 }
 #skirtFive {
-  background-image: url(https://masterspascdn.com/img/colors/skirting/skirt-dreamstone-canyonstone.jpg);
+  background-image: url(../img/colors/skirting/skirt-dreamstone-canyonstone.jpg);
 }
 #rotoskirtOne {
-  background-image: url(https://masterspascdn.com/img/getaway/colors/roto-espresso.jpg);
+  background-image: url(../img/getaway/colors/roto-espresso.jpg);
 }
 #rotoskirtTwo {
-  background-image: url(https://masterspascdn.com/img/getaway/colors/roto-graphite.jpg);
+  background-image: url(../img/getaway/colors/roto-graphite.jpg);
 }
 .carousel.vertical {
   position: relative;
@@ -3984,8 +3961,7 @@ section#productionAccordion .container {
   right: 0;
 }
 #popupOverlay #globalPopup .buttonDiv {
-  background: url("https://masterspascdn.com/img/backyard-bg.jpg") no-repeat
-    center;
+  background: url("../img/backyard-bg.jpg") no-repeat center;
   background-size: 150%;
 }
 #flyout {
@@ -4127,8 +4103,7 @@ section#productionAccordion .container {
   }
   .maincontent #aboutbeige,
   .maincontent #contactbeige {
-    background: url(https://masterspascdn.com/img/about-beige.jpg) no-repeat top
-      center;
+    background: url(../img/about-beige.jpg) no-repeat top center;
     background-size: cover;
   }
   .tronTainer {
@@ -4157,8 +4132,7 @@ section#productionAccordion .container {
     padding: 25px 15px;
   }
   .dealer {
-    background: url(https://masterspascdn.com/img/dealer-bg.jpg) no-repeat top
-      center;
+    background: url(../img/dealer-bg.jpg) no-repeat top center;
   }
   .find h1 {
     padding-top: 20px;
@@ -4240,8 +4214,7 @@ section#productionAccordion .container {
     max-width: 600px;
   }
   .dealer {
-    background: url(https://masterspascdn.com/img/dealer-bg.jpg) no-repeat top
-      center;
+    background: url(../img/dealer-bg.jpg) no-repeat top center;
   }
   .swimchoice {
     margin-top: 0px;
@@ -4377,8 +4350,7 @@ section#productionAccordion .container {
   }
   .maincontent #aboutbeige,
   .maincontent #contactbeige {
-    background: url(https://masterspascdn.com/img/about-beige.jpg) no-repeat top
-      left;
+    background: url(../img/about-beige.jpg) no-repeat top left;
     background-size: cover;
   }
 }
