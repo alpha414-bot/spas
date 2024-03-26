@@ -13,13 +13,13 @@ const Footer = () => {
                     loading="lazy"
                     className="img-responsive footerLogo"
                     src="/img/ms-logo.png"
-                    alt="Master Spas Logo"
+                    alt="Gulf South Spas Logo"
                   />
                 </Link>
                 <br />
                 <p>
                   Creating your dream backyard oasis should be simple. With the
-                  Master Spas&reg; range of ultra-therapeutic hot tubs and swim
+                  Gulf South Spas&reg; range of ultra-therapeutic hot tubs and swim
                   spas, it is.
                 </p>
 
@@ -50,7 +50,7 @@ const Footer = () => {
                         <img
                           loading="lazy"
                           src="/img/social/houzz-social-icon.png"
-                          alt="Relax with Master Spas on Houzz"
+                          alt="Relax with Gulf South Spas on Houzz"
                         />
                       </picture>
                     </span>
@@ -91,7 +91,7 @@ const Footer = () => {
                         <img
                           loading="lazy"
                           src="/img/social/threads-social-icon.png"
-                          alt="Relax with Master Spas on Threads"
+                          alt="Relax with Gulf South Spas on Threads"
                         />
                       </picture>
                     </span>
@@ -119,7 +119,7 @@ const Footer = () => {
                         <img
                           loading="lazy"
                           src="/img/social/twitter-x-social-icon.png"
-                          alt="Relax with Master Spas on Twitter"
+                          alt="Relax with Gulf South Spas on Twitter"
                         />
                       </picture>
                     </span>
@@ -247,7 +247,7 @@ const Footer = () => {
                     <img
                       loading="lazy"
                       src="/img/spa-certified2.png"
-                      alt="Master Spas is a Spa Certified Manufacturer"
+                      alt="Gulf South Spas is a Spa Certified Manufacturer"
                     />
                   </picture>
                 </span>
@@ -266,7 +266,7 @@ const Footer = () => {
                     <img
                       loading="lazy"
                       src="/img/torch2.png"
-                      alt="Master Spas is a Better Business Bureau Torch Award for Business Ethics Recipient"
+                      alt="Gulf South Spas is a Better Business Bureau Torch Award for Business Ethics Recipient"
                     />
                   </picture>
                   <p>
@@ -288,7 +288,7 @@ const Footer = () => {
                     <img
                       loading="lazy"
                       src="/img/inspire2.png"
-                      alt="Master Spas is an Inspire Award Winner"
+                      alt="Gulf South Spas is an Inspire Award Winner"
                     />
                   </picture>
 
@@ -311,7 +311,7 @@ const Footer = () => {
                     <img
                       loading="lazy"
                       src="/img/ernst2.png"
-                      alt="Master Spas is an Ernst and Young Award Winner"
+                      alt="Gulf South Spas is an Ernst and Young Award Winner"
                     />
                   </picture>
                   <p>
@@ -365,7 +365,7 @@ const Footer = () => {
         <section className="text-center">
           <br />
           <p>
-            Copyright &copy; 2024, Master Spas | <Link to="javascript:void">Legal</Link>
+            Copyright &copy; 2024, Gulf South Spas | <Link to="javascript:void">Legal</Link>
           </p>
           <p>
             Manufacturer of{" "}
@@ -402,14 +402,14 @@ const Footer = () => {
         </section>
         <section className="footDisclaimer">
           <small>
-            Master Spas&reg; products are made and assembled in the U.S.A. with
-            domestic and foreign components. Master Spas reserves the right to
+            Gulf South Spas&reg; products are made and assembled in the U.S.A. with
+            domestic and foreign components. Gulf South Spas reserves the right to
             change product specifications or features without notice. Master
             Spas is a manufacturer of spas and related products, and we stand
             behind every product we produce pursuant to those representations
             which are stated in our written limited warranty. Your dealer is an
             independent businessperson or company and not an employee or agent
-            of Master Spas. We cannot and do not accept any responsibility or
+            of Gulf South Spas. We cannot and do not accept any responsibility or
             liability for any other representations, statements or contracts
             made by any dealer beyond the provisions of our written limited
             warranty.

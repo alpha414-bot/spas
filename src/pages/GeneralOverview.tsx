@@ -11,8 +11,8 @@ const GeneralOverview = () => {
     setSequenceState((current) => (current > 1 ? current - 1 : 4));
   return (
     <MainLayout
-      title="Swim Spas by Master Spas"
-      description="Master Spas makes two premium lines of swim spas — Michael Phelps Signature Swim Spas and H2X Fitness Swim Spas. Get active and stay active with a swimming pool alternative."
+      title="Swim Spas by Gulf South Spas"
+      description="Gulf South Spas makes two premium lines of swim spas — Michael Phelps Signature Swim Spas and H2X Fitness Swim Spas. Get active and stay active with a swimming pool alternative."
     >
       <div id="swimSpaVideo">
         <div className="dtop">
@@ -54,11 +54,11 @@ const GeneralOverview = () => {
           style={{ margin: "75px auto 0px auto" }}
           src="/img/swim-spas-mobile-hero.jpg"
           className="img-responsive mobile"
-          alt="Win Your Day with a Michael Phelps Swim Spa by Master Spas"
+          alt="Win Your Day with a Michael Phelps Swim Spa by Gulf South Spas"
         />
         <section id="homeLead">
           <div>
-            <h1>Master Spas Swim Spas</h1>
+            <h1>Gulf South Spas Swim Spas</h1>
             <h2>Swim. Exercise. Relax.</h2>
             <p>
               Swim, jog, walk, and exercise in water without the stress gravity
@@ -102,7 +102,7 @@ const GeneralOverview = () => {
                   />
                   <img
                     src="/img/swimspas/front-thumb-fitness.jpg"
-                    alt="A woman exercising in a Michael Phelps Swim Spa by Master Spas"
+                    alt="A woman exercising in a Michael Phelps Swim Spa by Gulf South Spas"
                   />
                 </picture>
                 <span>Aquatic Fitness</span>
@@ -150,7 +150,7 @@ const GeneralOverview = () => {
           <div className="row">
             <div className="col-md-8 col-centered">
               <h3 style={{ fontSize: 30 }} className="text-center">
-                Choose from two premium lines of swim spas by Master Spas, the
+                Choose from two premium lines of swim spas by Gulf South Spas, the
                 world's largest swim spa manufacturer.
               </h3>
               <ul className="leadList">
@@ -190,7 +190,7 @@ const GeneralOverview = () => {
                   <h2 className="bluetitle">A Powerful Smooth Current</h2>
                   <strong>Wave Propulsion</strong>
                   <br />
-                  Michael Phelps Signature Swim Spas by Master Spas were
+                  Michael Phelps Signature Swim Spas by Gulf South Spas were
                   designed with input from 23-time gold medalist, Michael
                   Phelps, to have a powerful yet smooth current.
                 </figcaption>
@@ -259,16 +259,6 @@ const GeneralOverview = () => {
             </div>
             <div className="col-md-2" />
           </div>
-          <div className="row">
-            <div className="col-md-12">
-              <p>&nbsp;</p>
-              <div className="btn para">
-                <a href="https://michaelphelpsswimspa.com/find-a-dealer">
-                  Find A Dealer
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
       <section id="meetOurAthletes" className="text-center">
@@ -290,7 +280,7 @@ const GeneralOverview = () => {
                     loading="lazy"
                     src="/img/swimspas/athlete-banner.jpg"
                     className="img-responsive"
-                    alt="Meet Master Spas' Athletes"
+                    alt="Meet Gulf South Spas' Athletes"
                   />
                 </picture>
                 <picture className="mobile">
@@ -306,7 +296,7 @@ const GeneralOverview = () => {
                     loading="lazy"
                     src="/img/swimspas/athlete-banner-mobile.jpg"
                     className="img-responsive mobile"
-                    alt="Meet Master Spas' Athletes"
+                    alt="Meet Gulf South Spas' Athletes"
                   />
                 </picture>
               </a>
@@ -352,9 +342,6 @@ const GeneralOverview = () => {
                   than just two months!"
                 </p>
                 <p className="author">— Vesna, Ontario</p>
-              </div>
-              <div className="btn para">
-                <a href="/find-a-dealer">Find My Dealer</a>
               </div>
             </div>
             <div className="col-md-2" />
@@ -427,7 +414,7 @@ const GeneralOverview = () => {
                             loading="lazy"
                             className="img-responsive"
                             src="/img/swimspas/momentum-sequence.png"
-                            alt="MP Momentum Swim Spas By Master Spas"
+                            alt="MP Momentum Swim Spas By Gulf South Spas"
                           />
                         </picture>
                         <span data-seq="" className="seq-title">
@@ -475,7 +462,7 @@ const GeneralOverview = () => {
                             loading="lazy"
                             className="img-responsive"
                             src="/img/swimspas/challenger-sequence.png"
-                            alt="Challenger Series Swim Spas By Master Spas"
+                            alt="Challenger Series Swim Spas By Gulf South Spas"
                           />
                         </picture>
                         <span data-seq="" className="seq-title">
@@ -523,7 +510,7 @@ const GeneralOverview = () => {
                             loading="lazy"
                             className="img-responsive"
                             src="/img/swimspas/trainer-sequence.png"
-                            alt="Trainer Series Swim Spas By Master Spas"
+                            alt="Trainer Series Swim Spas By Gulf South Spas"
                           />
                         </picture>
                         <br />
@@ -572,7 +559,7 @@ const GeneralOverview = () => {
                             loading="lazy"
                             className="img-responsive"
                             src="/img/swimspas/therapool-sequence.png"
-                            alt="Therapool Series Swim Spas By Master Spas"
+                            alt="Therapool Series Swim Spas By Gulf South Spas"
                           />
                         </picture>
                         <span data-seq="" className="seq-title">
@@ -690,13 +677,6 @@ const GeneralOverview = () => {
               </div>
             </div>
           </div>
-          <div className="row">
-            <div className="col-md-12 doublebuttons">
-              <div className="btn para">
-                <a href="/find-a-dealer">FIND MY DEALER</a>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
       <div id="featureWrap" className="container maincontent">
@@ -714,7 +694,7 @@ const GeneralOverview = () => {
                   lineHeight: 1,
                 }}
               >
-                At Master Spas, we make buying a hot tub or swim spa just as
+                At Gulf South Spas, we make buying a hot tub or swim spa just as
                 relaxing as using one.
               </p>
             </div>
@@ -791,13 +771,6 @@ const GeneralOverview = () => {
                 When you're ready, a hot tub or swim spa can be installed in one
                 day.
               </span>
-            </div>
-            <div className="col-md-12">
-              <div className="btn para">
-                <a href="/find-a-dealer" target="_blank">
-                  FIND A DEALER
-                </a>
-              </div>
             </div>
           </div>
         </div>

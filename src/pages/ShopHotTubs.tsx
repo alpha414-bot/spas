@@ -194,7 +194,7 @@ const ShopHotTubs = () => {
   return (
     <MainLayout
       title="Shop Hot Tubs by Brand, Size and Price"
-      description="Shop all Master Spas hot tubs, or filter products by brand, size and cost to find your perfect hot tub."
+      description="Shop all Gulf South Spas hot tubs, or filter products by brand, size and cost to find your perfect hot tub."
     >
       <div className="container maincontent">
         <div className="row" style={{ marginTop: 75 }}>
@@ -442,7 +442,7 @@ const ShopHotTubs = () => {
             <div>
               <Link to="javascript:void">
                 <span>
-                  <p>Compare the features of all Master Spas hot tubs.</p>
+                  <p>Compare the features of all Gulf South Spas hot tubs.</p>
                 </span>
                 <img
                   loading="lazy"
