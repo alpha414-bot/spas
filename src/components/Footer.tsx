@@ -25,7 +25,7 @@ const Footer = () => {
 
                 <section className="socmed">
                   <Link
-                    to="https://www.facebook.com/MasterSpas/"
+                    to="javascript:void"
                     target="_blank"
                   >
                     <span className="">
@@ -34,7 +34,7 @@ const Footer = () => {
                   </Link>
 
                   <Link
-                    to="https://www.houzz.com/pro/masterspas"
+                    to="javascript:void"
                     target="_blank"
                   >
                     <span className="">
@@ -57,7 +57,7 @@ const Footer = () => {
                   </Link>
 
                   <Link
-                    to="https://www.instagram.com/masterspas/"
+                    to="javascript:void"
                     target="_blank"
                   >
                     <span className="">
@@ -66,7 +66,7 @@ const Footer = () => {
                   </Link>
 
                   <Link
-                    to="https://www.pinterest.com/masterspas/"
+                    to="javascript:void"
                     target="_blank"
                   >
                     <span className="">
@@ -75,7 +75,7 @@ const Footer = () => {
                   </Link>
 
                   <Link
-                    to="https://www.threads.net/@masterspas"
+                    to="javascript:void"
                     target="_blank"
                   >
                     <span className="">
@@ -98,14 +98,14 @@ const Footer = () => {
                   </Link>
 
                   <Link
-                    to="https://www.tiktok.com/@masterspasofficial"
+                    to="javascript:void"
                     target="_blank"
                   >
                     <span className="">
                       <i className="fab fa-tiktok"></i>
                     </span>
                   </Link>
-                  <Link to="https://twitter.com/masterspas" target="_blank">
+                  <Link to="javascript:void" target="_blank">
                     <span className="">
                       <picture>
                         <source
@@ -125,7 +125,7 @@ const Footer = () => {
                     </span>
                   </Link>
                   <Link
-                    to="https://www.youtube.com/user/MasterSpas"
+                    to="javascript:void"
                     target="_blank"
                   >
                     <span className="">
@@ -144,67 +144,67 @@ const Footer = () => {
                       <Link to="/hot-tubs">Hot Tubs</Link>
                     </li>
                     <li>
-                      <Link to="/shop-swim-spas">Swim Spas</Link>
+                      <Link to="/swim-spas">Swim Spas</Link>
                     </li>
                     <li>
-                      <Link to="#">Find My Spa Quiz</Link>
+                      <Link to="javascript:void">Find My Spa Quiz</Link>
                     </li>
                     <li>
-                      <Link to="#">Buying Tools</Link>
+                      <Link to="javascript:void">Buying Tools</Link>
                     </li>
                     <li>
-                      <Link to="#">Compare Hot Tub Brands</Link>
+                      <Link to="javascript:void">Compare Hot Tub Brands</Link>
                     </li>
                   </ul>
 
                   <ul>
                     <li className="listTitle">Visit Us</li>
                     <li>
-                      <Link to="#">Find My Local Dealer</Link>
+                      <Link to="javascript:void">Find My Local Dealer</Link>
                     </li>
                     <li>
-                      <Link to="#">Request Pricing</Link>
+                      <Link to="javascript:void">Request Pricing</Link>
                     </li>
                     <li>
-                      <Link to="#">Financing</Link>
+                      <Link to="javascript:void">Financing</Link>
                     </li>
                     <li>
-                      <Link to="#">Trade-In</Link>
+                      <Link to="javascript:void">Trade-In</Link>
                     </li>
                   </ul>
 
                   <ul>
                     <li className="listTitle">Ideas &amp; Helpful Info</li>
                     <li>
-                      <Link to="#">Backyard Ideas</Link>
+                      <Link to="javascript:void">Backyard Ideas</Link>
                     </li>
                     <li>
-                      <Link to="#">Planning Guide</Link>
+                      <Link to="javascript:void">Planning Guide</Link>
                     </li>
                     <li>
-                      <Link to="#">FAQs</Link>
+                      <Link to="javascript:void">FAQs</Link>
                     </li>
                     <li>
-                      <Link to="#">About Us</Link>
+                      <Link to="javascript:void">About Us</Link>
                     </li>
                   </ul>
 
                   <ul>
                     <li className="listTitle">Owners &amp; Support</li>
                     <li>
-                      <Link to="#">Upload Your Photo</Link>
+                      <Link to="javascript:void">Upload Your Photo</Link>
                     </li>
                     <li>
-                      <Link to="#">Register My Spa</Link>
+                      <Link to="javascript:void">Register My Spa</Link>
                     </li>
                     <li>
-                      <Link to="#">Resources</Link>
+                      <Link to="javascript:void">Resources</Link>
                     </li>
                     <li>
-                      <Link to="#">Owner's Manuals</Link>
+                      <Link to="javascript:void">Owner's Manuals</Link>
                     </li>
                     <li>
-                      <Link to="#">How-To Videos</Link>
+                      <Link to="javascript:void">How-To Videos</Link>
                     </li>
                   </ul>
                 </div>
@@ -214,7 +214,7 @@ const Footer = () => {
             <section className="footerDivider"></section>
 
             <section className="awards">
-              <Link to="/awards#bba">
+              <Link to="javascript:void">
                 <span>
                   <picture>
                     <source
@@ -233,7 +233,7 @@ const Footer = () => {
                   </picture>
                 </span>
               </Link>
-              <Link to="/awards#certified">
+              <Link to="javascript:void">
                 <span>
                   <picture>
                     <source
@@ -252,7 +252,7 @@ const Footer = () => {
                   </picture>
                 </span>
               </Link>
-              <Link to="/awards#torch">
+              <Link to="javascript:void">
                 <span>
                   <picture>
                     <source
@@ -274,7 +274,7 @@ const Footer = () => {
                   </p>
                 </span>
               </Link>
-              <Link to="/awards#inspire">
+              <Link to="javascript:void">
                 <span>
                   <picture>
                     <source
@@ -297,7 +297,7 @@ const Footer = () => {
                   </p>
                 </span>
               </Link>
-              <Link to="/awards#ernst">
+              <Link to="javascript:void">
                 <span>
                   <picture>
                     <source
@@ -319,7 +319,7 @@ const Footer = () => {
                   </p>
                 </span>
               </Link>
-              <Link to="/awards#ihta">
+              <Link to="javascript:void">
                 <span>
                   <picture>
                     <source
@@ -338,7 +338,7 @@ const Footer = () => {
                   </picture>
                 </span>
               </Link>
-              <Link to="/awards">
+              <Link to="javascript:void">
                 <span>
                   <picture>
                     <source
@@ -365,17 +365,17 @@ const Footer = () => {
         <section className="text-center">
           <br />
           <p>
-            Copyright &copy; 2024, Master Spas | <Link to="/legal">Legal</Link>
+            Copyright &copy; 2024, Master Spas | <Link to="javascript:void">Legal</Link>
           </p>
           <p>
             Manufacturer of{" "}
-            <Link to="http://legacywhirlpool.com/" target="_blank">
+            <Link to="javascript:void" target="_blank">
               Legacy Whirlpool
             </Link>
           </p>
           <br />
           <p>
-            <Link to="/privacy-statement">Privacy Statement</Link>
+            <Link to="javascript:void">Privacy Statement</Link>
           </p>
           <br />
         </section>

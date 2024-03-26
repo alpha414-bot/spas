@@ -26,7 +26,7 @@ const Home = () => {
   }) => {
     return (
       <Link
-        to="#"
+        to="javascript:void"
         {...rest}
         onClick={onClick}
         className={`carousel-control ${type == "prev" ? "left" : "right"}`}
@@ -66,7 +66,7 @@ const Home = () => {
                           Master Spas&reg;
                         </h2>
                         <div id="videoCTA">
-                          <Link to="#">
+                          <Link to="javascript:void">
                             Find your local dealer and get pricing
                           </Link>
                         </div>
@@ -150,7 +150,7 @@ const Home = () => {
                 <div className="col-md-6">
                   <div className="hotTubLineWrapper legend">
                     <div className="threeQuarter">
-                      <Link to="/brand/legend-series/">
+                      <Link to="javascript:void">
                         <img
                           alt="Michael Phelps Legend Series Hot Tub"
                           src="/img/home-page/line-display/legend-tub.png"
@@ -164,7 +164,7 @@ const Home = () => {
                         second best.
                       </p>
                       <div className="btn para">
-                        <Link to="/brand/legend-series/">See More</Link>
+                        <Link to="javascript:void">See More</Link>
                       </div>
                     </div>
                   </div>
@@ -172,7 +172,7 @@ const Home = () => {
                 <div className="col-md-6">
                   <div className="hotTubLineWrapper twilight">
                     <div className="threeQuarter">
-                      <Link to="/brand/twilight/">
+                      <Link to="javascript:void">
                         <img
                           alt="Twilight Series Hot Tub"
                           src="/img/home-page/line-display/twilight-tub.png"
@@ -185,7 +185,7 @@ const Home = () => {
                         Luxurious perfection designed for discriminating tastes.
                       </p>
                       <div className="btn para">
-                        <Link to="/brand/twilight/">See More</Link>
+                        <Link to="javascript:void">See More</Link>
                       </div>
                     </div>
                   </div>
@@ -193,7 +193,7 @@ const Home = () => {
                 <div className="col-md-6">
                   <div className="hotTubLineWrapper clarity">
                     <div className="threeQuarter">
-                      <Link to="/brand/clarity/">
+                      <Link to="javascript:void">
                         <img
                           alt="Clarity Spas Hot Tub"
                           src="/img/home-page/line-display/clarity-tub.png"
@@ -206,7 +206,7 @@ const Home = () => {
                         A stylish, modern approach to relaxation and wellness.
                       </p>
                       <div className="btn para">
-                        <Link to="/brand/clarity/">See More</Link>
+                        <Link to="javascript:void">See More</Link>
                       </div>
                     </div>
                   </div>
@@ -214,7 +214,7 @@ const Home = () => {
                 <div className="col-md-6">
                   <div className="hotTubLineWrapper getaway">
                     <div className="threeQuarter">
-                      <Link to="/brand/getaway/">
+                      <Link to="javascript:void">
                         <img
                           alt="Getaway Hot Tub"
                           src="/img/home-page/line-display/getaway-tub.png"
@@ -227,7 +227,7 @@ const Home = () => {
                         Your passport to relaxation, offering quality and value.
                       </p>
                       <div className="btn para">
-                        <Link to="/brand/getaway/">See More</Link>
+                        <Link to="javascript:void">See More</Link>
                       </div>
                     </div>
                   </div>
@@ -306,7 +306,7 @@ const Home = () => {
                 </picture>
               </span>
             </Link>
-            <Link to="#">
+            <Link to="javascript:void">
               <span>
                 <picture>
                   <source srcSet="/img/spa-certified2.webp" type="image/webp" />
@@ -318,7 +318,7 @@ const Home = () => {
                 </picture>
               </span>
             </Link>
-            <Link to="#">
+            <Link to="javascript:void">
               <span>
                 <picture>
                   <source srcSet="/img/torch2.webp" type="image/webp" />
@@ -333,7 +333,7 @@ const Home = () => {
                 </p>
               </span>
             </Link>
-            <Link to="#">
+            <Link to="javascript:void">
               <span>
                 <picture>
                   <source srcSet="/img/inspire2.webp" type="image/webp" />
@@ -349,7 +349,7 @@ const Home = () => {
                 </p>
               </span>
             </Link>
-            <Link to="#">
+            <Link to="javascript:void">
               <span>
                 <picture>
                   <source srcSet="/img/ernst2.webp" type="image/webp" />
@@ -364,7 +364,7 @@ const Home = () => {
                 </p>
               </span>
             </Link>
-            <Link to="#">
+            <Link to="javascript:void">
               <span>
                 <picture>
                   <source srcSet="/img/apsp2.webp" type="image/webp" />
@@ -406,7 +406,7 @@ const Home = () => {
                     <br />
                     <br />
                     <div className="btn para" style={{ width: "175px" }}>
-                      <Link to="#">Find my spa quiz</Link>
+                      <Link to="javascript:void">Find my spa quiz</Link>
                     </div>
                   </div>
                 </div>
@@ -458,7 +458,7 @@ const Home = () => {
                 <div className="col-md-12">
                   <div className="doublebuttons">
                     <div className="btn para">
-                      <Link to="#">Find a Dealer</Link>
+                      <Link to="javascript:void">Find a Dealer</Link>
                     </div>
                   </div>
                 </div>
@@ -495,7 +495,7 @@ const Home = () => {
                   <div className="col-md-3">
                     <div className="row">
                       <div className="col-xs-4 col-md-12">
-                        <Link to="/hot-tub-features/bio-magnetic-therapy">
+                        <Link to="javascript:void">
                           <img
                             className="img-responsive imgctr"
                             alt="Bio magnetic therapy"
@@ -505,7 +505,7 @@ const Home = () => {
                       </div>
                       <div className="col-xs-8 col-md-12">
                         <h3 className="bluetitle">
-                          <Link to="/hot-tub-features/bio-magnetic-therapy">
+                          <Link to="javascript:void">
                             Biomagnetic Therapy System
                           </Link>
                         </h3>
@@ -520,7 +520,7 @@ const Home = () => {
                   <div className="col-md-3">
                     <div className="row">
                       <div className="col-xs-4 col-md-12">
-                        <Link to="/hot-tub-filter">
+                        <Link to="javascript:void">
                           <img
                             className="img-responsive imgctr"
                             alt="EcoPur&reg; Charge Filtration System"
@@ -607,7 +607,7 @@ const Home = () => {
                   <div className="col-md-12">
                     <div className="doublebuttons">
                       <div className="btn para">
-                        <Link to="#">Find a Dealer</Link>
+                        <Link to="javascript:void">Find a Dealer</Link>
                       </div>
                     </div>
                   </div>
@@ -694,7 +694,7 @@ const Home = () => {
                         </p>
                         <div className="doublebuttons dtop">
                           <div className="btn para">
-                            <Link to="legend-series/lsx-800-hot-tub">
+                            <Link to="javascript:void">
                               See Details
                             </Link>
                           </div>
@@ -718,7 +718,7 @@ const Home = () => {
                         </div>
                         <div className="doublebuttons mobile">
                           <div className="btn para">
-                            <Link to="legend-series/lsx-800-hot-tub">
+                            <Link to="javascript:void">
                               See Details
                             </Link>
                           </div>
@@ -740,7 +740,7 @@ const Home = () => {
                         </p>
                         <div className="doublebuttons dtop">
                           <div className="btn para">
-                            <Link to="twilight/ts-82">See Details</Link>
+                            <Link to="javascript:void">See Details</Link>
                           </div>
                         </div>
                         <br />
@@ -762,7 +762,7 @@ const Home = () => {
                         </div>
                         <div className="doublebuttons mobile">
                           <div className="btn para">
-                            <Link to="twilight/ts-82">See Details</Link>
+                            <Link to="javascript:void">See Details</Link>
                           </div>
                         </div>
                       </div>
@@ -845,7 +845,7 @@ const Home = () => {
                 <div className="col-md-12">
                   <div className="doublebuttons">
                     <div className="btn para">
-                      <Link to="#">Find My Dealer</Link>
+                      <Link to="javascript:void">Find My Dealer</Link>
                     </div>
                   </div>
                 </div>
@@ -874,7 +874,7 @@ const Home = () => {
                       </p>
                       <div className="doublebuttons">
                         <div className="btn para">
-                          <Link to="#">Download Now</Link>
+                          <Link to="javascript:void">Download Now</Link>
                         </div>
                       </div>
                     </div>

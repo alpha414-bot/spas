@@ -71,41 +71,6 @@ const ShopHotTubs = () => {
       image: "SS19 SWIM",
       price: 2,
     },
-    {
-      brand: "Clarity",
-      name: "TS8 TOP",
-      seat: 6,
-      image: "TS8 TOP",
-      price: 2,
-    },
-    {
-      brand: "Clarity",
-      name: "TS8.1L SIDE",
-      seat: 6,
-      image: "TS8.1L SIDE",
-      price: 2,
-    },
-    {
-      brand: "Clarity",
-      name: "TS8.1L TOP",
-      seat: 7,
-      image: "TS8.1L TOP",
-      price: 2,
-    },
-    {
-      brand: "Clarity",
-      name: "TS8L SIDE",
-      seat: 7,
-      image: "TS8L SIDE",
-      price: 2,
-    },
-    {
-      brand: "Twilight",
-      name: "TUSCAN SUN ARCYLIC",
-      seat: 3,
-      image: "TUSCAN SUN ARCYLIC",
-      price: 3,
-    },
    /*  {
       brand: "Twilight",
       name: "TS 6.2",
@@ -381,10 +346,6 @@ const ShopHotTubs = () => {
                           <span className="tubwrap">
                             <picture>
                               <source
-                                srcSet={`/img/products/${item.image}.webp`}
-                                type="image/webp"
-                              />
-                              <source
                                 srcSet={`/img/products/${item.image}.png`}
                                 type="image/png"
                               />
@@ -451,7 +412,7 @@ const ShopHotTubs = () => {
         <section className="homemore row">
           <div className="col-xs-12 col-md-4 ">
             <div>
-              <Link to="/get-hot-tub-pricing">
+              <Link to="javascript:void">
                 <span>
                   <p>Found the perfect hot tub? Request pricing online.</p>
                 </span>
@@ -473,13 +434,13 @@ const ShopHotTubs = () => {
                   paddingBottom: 3,
                 }}
               >
-                <Link to="/get-hot-tub-pricing">Get Pricing</Link>
+                <Link to="javascript:void">Get Pricing</Link>
               </div>
             </div>
           </div>
           <div className="col-xs-12 col-md-4 ">
             <div>
-              <Link to="/compare-hot-tub-brands">
+              <Link to="javascript:void">
                 <span>
                   <p>Compare the features of all Master Spas hot tubs.</p>
                 </span>
@@ -501,13 +462,13 @@ const ShopHotTubs = () => {
                   paddingBottom: 3,
                 }}
               >
-                <Link to="/compare-hot-tub-brands">Compare Hot Tubs</Link>
+                <Link to="javascript:void">Compare Hot Tubs</Link>
               </div>
             </div>
           </div>
           <div className="col-xs-12 col-md-4 ">
             <div>
-              <Link to="/find-my-spa/">
+              <Link to="javascript:void">
                 <span>
                   <p style={{ color: "#00aad4" }}>
                     Use our tool to discover your new hot tub.
@@ -532,7 +493,7 @@ const ShopHotTubs = () => {
                   paddingBottom: 3,
                 }}
               >
-                <Link to="/find-my-spa/">Find a Hot Tub</Link>
+                <Link to="javascript:void">Find a Hot Tub</Link>
               </div>
             </div>
           </div>

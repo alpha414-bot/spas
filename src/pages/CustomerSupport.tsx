@@ -125,7 +125,7 @@ const CustomerSupport = () => {
                 </Link>
               </div>
               <div className="col-sm-6 col-md-4">
-                <Link to="/hot-tub-owners-manuals/">
+                <Link to="javascript:void">
                   <div className="support">
                     <h4>Owner's Manuals</h4>
                     <img
@@ -216,7 +216,7 @@ const CustomerSupport = () => {
               </div>
               <div className="col-sm-6 col-md-4">
                 <Link
-                  to="#"
+                  to="javascript:void"
                 >
                   <div className="support">
                     <h4>Spa Registration</h4>
@@ -232,7 +232,7 @@ const CustomerSupport = () => {
                 </Link>
               </div>
               <div className="col-sm-6 col-md-4">
-                <Link to="news/">
+                <Link to="javascript:void">
                   <div className="support">
                     <h4>Master Spas News</h4>
                     <img
