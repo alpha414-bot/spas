@@ -346,13 +346,13 @@ const ShopHotTubs = () => {
                           <span className="tubwrap">
                             <picture>
                               <source
-                                srcSet={`/img/products/${item.image}.png`}
+                                srcSet={`/img/placeholder.png`}
                                 type="image/png"
                               />
                               <img
                                 loading="lazy"
                                 className="img-responsive"
-                                src={`/img/products/${item.image}.png`}
+                                src={`/img/placeholder.png`}
                                 alt={`${item.name} ${item.brand}`}
                               />
                             </picture>
