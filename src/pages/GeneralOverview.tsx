@@ -110,15 +110,15 @@ const GeneralOverview = () => {
               <div className="featurelink card">
                 <picture>
                   <source
-                    srcSet="https://masterspascdn.com/img/swimspas/front-thumb-therapy.webp"
+                    srcSet="/img/swimspas/front-thumb-therapy.webp"
                     type="image/webp"
                   />
                   <source
-                    srcSet="https://masterspascdn.com/img/swimspas/front-thumb-therapy.jpg"
+                    srcSet="/img/swimspas/front-thumb-therapy.jpg"
                     type="image/jpg"
                   />
                   <img
-                    src="https://masterspascdn.com/img/swimspas/front-thumb-therapy.jpg"
+                    src="/img/swimspas/front-thumb-therapy.jpg"
                     alt="Jets massaging aches away"
                   />
                 </picture>
@@ -127,15 +127,15 @@ const GeneralOverview = () => {
               <div className="featurelink card">
                 <picture>
                   <source
-                    srcSet="https://masterspascdn.com/img/swimspas/front-thumb-familyfun.webp"
+                    srcSet="/img/swimspas/front-thumb-familyfun.webp"
                     type="image/webp"
                   />
                   <source
-                    srcSet="https://masterspascdn.com/img/swimspas/front-thumb-familyfun.jpg"
+                    srcSet="/img/swimspas/front-thumb-familyfun.jpg"
                     type="image/jpg"
                   />
                   <img
-                    src="https://masterspascdn.com/img/swimspas/front-thumb-familyfun.jpg"
+                    src="/img/swimspas/front-thumb-familyfun.jpg"
                     alt="A family in a swim spa enjoying their time together"
                   />
                 </picture>
@@ -171,16 +171,16 @@ const GeneralOverview = () => {
                 <a href="https://michaelphelpsswimspa.com">
                   <picture>
                     <source
-                      srcSet="https://masterspascdn.com/img/swimspas/mp-redirect.webp"
+                      srcSet="/img/swimspas/mp-redirect.webp"
                       type="image/webp"
                     />
                     <source
-                      srcSet="https://masterspascdn.com/img/swimspas/mp-redirect.jpg"
+                      srcSet="/img/swimspas/mp-redirect.jpg"
                       type="image/jpg"
                     />
                     <img
                       loading="lazy"
-                      src="https://masterspascdn.com/img/swimspas/mp-redirect.jpg"
+                      src="/img/swimspas/mp-redirect.jpg"
                       className="img-responsive"
                       alt="Michael Phelps swim spa"
                     />
@@ -204,16 +204,16 @@ const GeneralOverview = () => {
                 <a href="https://h2xswimspa.com">
                   <picture>
                     <source
-                      srcSet="https://masterspascdn.com/img/swimspas/h2x-redirect.webp"
+                      srcSet="/img/swimspas/h2x-redirect.webp"
                       type="image/webp"
                     />
                     <source
-                      srcSet="https://masterspascdn.com/img/swimspas/h2x-redirect.jpg"
+                      srcSet="/img/swimspas/h2x-redirect.jpg"
                       type="image/jpg"
                     />
                     <img
                       loading="lazy"
-                      src="https://masterspascdn.com/img/swimspas/h2x-redirect.jpg"
+                      src="/img/swimspas/h2x-redirect.jpg"
                       className="img-responsive"
                       alt="H2X Swim Spa"
                     />
@@ -279,32 +279,32 @@ const GeneralOverview = () => {
               <a href="athletes.php">
                 <picture className="dtop">
                   <source
-                    srcSet="https://masterspascdn.com/img/swimspas/athlete-banner.webp"
+                    srcSet="/img/swimspas/athlete-banner.webp"
                     type="image/webp"
                   />
                   <source
-                    srcSet="https://masterspascdn.com/img/swimspas/athlete-banner.jpg"
+                    srcSet="/img/swimspas/athlete-banner.jpg"
                     type="image/jpg"
                   />
                   <img
                     loading="lazy"
-                    src="https://masterspascdn.com/img/swimspas/athlete-banner.jpg"
+                    src="/img/swimspas/athlete-banner.jpg"
                     className="img-responsive"
                     alt="Meet Master Spas' Athletes"
                   />
                 </picture>
                 <picture className="mobile">
                   <source
-                    srcSet="https://masterspascdn.com/img/swimspas/athlete-banner-mobile.webp"
+                    srcSet="/img/swimspas/athlete-banner-mobile.webp"
                     type="image/webp"
                   />
                   <source
-                    srcSet="https://masterspascdn.com/img/swimspas/athlete-banner-mobile.jpg"
+                    srcSet="/img/swimspas/athlete-banner-mobile.jpg"
                     type="image/jpg"
                   />
                   <img
                     loading="lazy"
-                    src="https://masterspascdn.com/img/swimspas/athlete-banner-mobile.jpg"
+                    src="/img/swimspas/athlete-banner-mobile.jpg"
                     className="img-responsive mobile"
                     alt="Meet Master Spas' Athletes"
                   />
@@ -378,22 +378,22 @@ const GeneralOverview = () => {
                 <picture className="seq-prev" onClick={PrevSequence}>
                   <source
                     className="img-responsive"
-                    srcSet="https://masterspascdn.com/img/arrow.png"
+                    srcSet="/img/arrow.png"
                   />
                   <img
                     className="img-responsive"
-                    src="https://masterspascdn.com/img/arrow.png"
+                    src="/img/arrow.png"
                     alt="arrow"
                   />
                 </picture>
                 <picture className="seq-next" onClick={NextSequence}>
                   <source
                     className="img-responsive"
-                    srcSet="https://masterspascdn.com/img/arrow.png"
+                    srcSet="/img/arrow.png"
                   />
                   <img
                     className="img-responsive"
-                    src="https://masterspascdn.com/img/arrow.png"
+                    src="/img/arrow.png"
                     alt="arrow"
                   />
                 </picture>
@@ -417,16 +417,16 @@ const GeneralOverview = () => {
                         <picture data-seq="" className="seq-title">
                           <source
                             media="(min-width: 200px)"
-                            srcSet="https://masterspascdn.com/img/swimspas/momentum-sequence.webp"
+                            srcSet="/img/swimspas/momentum-sequence.webp"
                           />
                           <source
                             media="(min-width: 200px)"
-                            srcSet="https://masterspascdn.com/img/swimspas/momentum-sequence.png"
+                            srcSet="/img/swimspas/momentum-sequence.png"
                           />
                           <img
                             loading="lazy"
                             className="img-responsive"
-                            src="https://masterspascdn.com/img/swimspas/momentum-sequence.png"
+                            src="/img/swimspas/momentum-sequence.png"
                             alt="MP Momentum Swim Spas By Master Spas"
                           />
                         </picture>
@@ -465,16 +465,16 @@ const GeneralOverview = () => {
                         <picture data-seq="" className="seq-title">
                           <source
                             media="(min-width: 200px)"
-                            srcSet="https://masterspascdn.com/img/swimspas/challenger-sequence.webp"
+                            srcSet="/img/swimspas/challenger-sequence.webp"
                           />
                           <source
                             media="(min-width: 200px)"
-                            srcSet="https://masterspascdn.com/img/swimspas/challenger-sequence.png"
+                            srcSet="/img/swimspas/challenger-sequence.png"
                           />
                           <img
                             loading="lazy"
                             className="img-responsive"
-                            src="https://masterspascdn.com/img/swimspas/challenger-sequence.png"
+                            src="/img/swimspas/challenger-sequence.png"
                             alt="Challenger Series Swim Spas By Master Spas"
                           />
                         </picture>
@@ -513,16 +513,16 @@ const GeneralOverview = () => {
                         <picture data-seq="" className="seq-title">
                           <source
                             media="(min-width: 200px)"
-                            srcSet="https://masterspascdn.com/img/swimspas/trainer-sequence.webp"
+                            srcSet="/img/swimspas/trainer-sequence.webp"
                           />
                           <source
                             media="(min-width: 200px)"
-                            srcSet="https://masterspascdn.com/img/swimspas/trainer-sequence.png"
+                            srcSet="/img/swimspas/trainer-sequence.png"
                           />
                           <img
                             loading="lazy"
                             className="img-responsive"
-                            src="https://masterspascdn.com/img/swimspas/trainer-sequence.png"
+                            src="/img/swimspas/trainer-sequence.png"
                             alt="Trainer Series Swim Spas By Master Spas"
                           />
                         </picture>
@@ -562,16 +562,16 @@ const GeneralOverview = () => {
                         <picture data-seq="" className="seq-title">
                           <source
                             media="(min-width: 200px)"
-                            srcSet="https://masterspascdn.com/img/swimspas/therapool-sequence.webp"
+                            srcSet="/img/swimspas/therapool-sequence.webp"
                           />
                           <source
                             media="(min-width: 200px)"
-                            srcSet="https://masterspascdn.com/img/swimspas/therapool-sequence.png"
+                            srcSet="/img/swimspas/therapool-sequence.png"
                           />
                           <img
                             loading="lazy"
                             className="img-responsive"
-                            src="https://masterspascdn.com/img/swimspas/therapool-sequence.png"
+                            src="/img/swimspas/therapool-sequence.png"
                             alt="Therapool Series Swim Spas By Master Spas"
                           />
                         </picture>
@@ -722,17 +722,17 @@ const GeneralOverview = () => {
               <figure>
                 <picture>
                   <source
-                    srcSet="https://masterspas.com/img/swimspas/icon-welcom-to-event.webp"
+                    srcSet="/img/swimspas/icon-welcom-to-event.webp"
                     type="image/webp"
                   />
                   <source
-                    srcSet="https://masterspas.com/img/swimspas/icon-welcom-to-event.png"
+                    srcSet="/img/swimspas/icon-welcom-to-event.png"
                     type="image/png"
                   />
                   <img
                     className="img-responsive"
                     loading="lazy"
-                    src="https://masterspas.com/img/swimspas/icon-welcom-to-event.png"
+                    src="/img/swimspas/icon-welcom-to-event.png"
                     alt="Come visit our showroom"
                   />
                 </picture>
@@ -746,17 +746,17 @@ const GeneralOverview = () => {
               <figure>
                 <picture>
                   <source
-                    srcSet="https://masterspas.com/img/swimspas/icon-professional-evaluation.webp"
+                    srcSet="/img/swimspas/icon-professional-evaluation.webp"
                     type="image/webp"
                   />
                   <source
-                    srcSet="https://masterspas.com/img/swimspas/icon-professional-evaluation.png"
+                    srcSet="/img/swimspas/icon-professional-evaluation.png"
                     type="image/png"
                   />
                   <img
                     className="img-responsive"
                     loading="lazy"
-                    src="https://masterspas.com/img/swimspas/icon-welcom-to-event.png"
+                    src="/img/swimspas/icon-welcom-to-event.png"
                     alt="Professional evaluates your space"
                   />
                 </picture>
@@ -771,17 +771,17 @@ const GeneralOverview = () => {
               <figure>
                 <picture>
                   <source
-                    srcSet="https://masterspas.com/img/swimspas/icon-installation.webp"
+                    srcSet="/img/swimspas/icon-installation.webp"
                     type="image/webp"
                   />
                   <source
-                    srcSet="https://masterspas.com/img/swimspas/icon-installation.png"
+                    srcSet="/img/swimspas/icon-installation.png"
                     type="image/png"
                   />
                   <img
                     className="img-responsive"
                     loading="lazy"
-                    src="https://masterspas.com/img/swimspas/icon-installation.png"
+                    src="/img/swimspas/icon-installation.png"
                     alt="Schedule hot tub or swim spa installation"
                   />
                 </picture>

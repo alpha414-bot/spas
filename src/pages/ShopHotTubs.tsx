@@ -410,7 +410,7 @@ const ShopHotTubs = () => {
                               width="20px"
                               height="20px"
                               alt="Blue icon of person"
-                              src="https://masterspascdn.com/img/icons/icon-person.png"
+                              src="/img/icons/icon-person.png"
                             />{" "}
                             :{" "}
                             <span className="seatingNumber">
@@ -424,7 +424,7 @@ const ShopHotTubs = () => {
                               width="20px"
                               height="20px"
                               alt="Blue icon of a dollar"
-                              src="https://masterspascdn.com/img/icons/icon-dollar.png"
+                              src="/img/icons/icon-dollar.png"
                             />{" "}
                             :{" "}
                             <span className="dollars">
@@ -457,7 +457,7 @@ const ShopHotTubs = () => {
                 </span>
                 <img
                   loading="lazy"
-                  src="https://masterspascdn.com/img/request-hot-tub-pricing.jpg"
+                  src="/img/request-hot-tub-pricing.jpg"
                   alt="find the spa that's right for you!"
                 />
               </Link>
@@ -485,7 +485,7 @@ const ShopHotTubs = () => {
                 </span>
                 <img
                   loading="lazy"
-                  src="https://masterspascdn.com/img/compare-hot-tubs.jpg"
+                  src="/img/compare-hot-tubs.jpg"
                   alt="Compare Hot Tubs"
                 />
               </Link>
@@ -515,7 +515,7 @@ const ShopHotTubs = () => {
                 </span>
                 <img
                   loading="lazy"
-                  src="https://masterspascdn.com//img/find-spa-no-text.jpg"
+                  src="/img/find-spa-no-text.jpg"
                   alt=""
                   title=""
                 />

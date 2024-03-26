@@ -176,7 +176,10 @@ const NavBar: React.FC<NavBarInterface> = ({}) => {
           </div>
         </>
       )}
-      
+      <nav>
+        <li></li>
+      </nav>
+
       <nav
         className="navbar navbar-default navbar-fixed-top bumpedNav"
         id="dtopNav"

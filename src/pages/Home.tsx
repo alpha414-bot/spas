@@ -686,11 +686,7 @@ const Home = () => {
                     <div className="row">
                       <div className="col-md-4">
                         <h3>Michael Phelps Legend Series LSX 800</h3>
-                        <div
-                          data-bv-show="inline_rating"
-                          data-bv-product-id="lsx-800"
-                          data-bv-redirect-url="https://www.masterspas.com/legend-series/lsx-800-hot-tub"
-                        ></div>
+                        {/*there is a review start here */}
                         <p>
                           This hot tub was inspired by the best so you can feel
                           your best. Designed with premium features for

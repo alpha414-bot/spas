@@ -12,7 +12,7 @@ const Footer = () => {
                   <img
                     loading="lazy"
                     className="img-responsive footerLogo"
-                    src="https://www.masterspas.com/img/ms-logo.png"
+                    src="/img/ms-logo.png"
                     alt="Master Spas Logo"
                   />
                 </Link>
@@ -40,16 +40,16 @@ const Footer = () => {
                     <span className="">
                       <picture>
                         <source
-                          srcSet="https://www.masterspas.com/img/social/houzz-social-icon.webp"
+                          srcSet="/img/social/houzz-social-icon.webp"
                           type="image/webp"
                         />
                         <source
-                          srcSet="https://www.masterspas.com/img/social/houzz-social-icon.png"
+                          srcSet="/img/social/houzz-social-icon.png"
                           type="image/png"
                         />
                         <img
                           loading="lazy"
-                          src="https://www.masterspas.com/img/social/houzz-social-icon.png"
+                          src="/img/social/houzz-social-icon.png"
                           alt="Relax with Master Spas on Houzz"
                         />
                       </picture>
@@ -81,16 +81,16 @@ const Footer = () => {
                     <span className="">
                       <picture>
                         <source
-                          srcSet="https://www.masterspas.com/img/social/threads-social-icon.webp"
+                          srcSet="/img/social/threads-social-icon.webp"
                           type="image/webp"
                         />
                         <source
-                          srcSet="https://www.masterspas.com/img/social/threads-social-icon.png"
+                          srcSet="/img/social/threads-social-icon.png"
                           type="image/png"
                         />
                         <img
                           loading="lazy"
-                          src="https://www.masterspas.com/img/social/threads-social-icon.png"
+                          src="/img/social/threads-social-icon.png"
                           alt="Relax with Master Spas on Threads"
                         />
                       </picture>
@@ -109,16 +109,16 @@ const Footer = () => {
                     <span className="">
                       <picture>
                         <source
-                          srcSet="https://www.masterspas.com/img/social/twitter-x-social-icon.webp"
+                          srcSet="/img/social/twitter-x-social-icon.webp"
                           type="image/webp"
                         />
                         <source
-                          srcSet="https://www.masterspas.com/img/social/twitter-x-social-icon.png"
+                          srcSet="/img/social/twitter-x-social-icon.png"
                           type="image/png"
                         />
                         <img
                           loading="lazy"
-                          src="https://www.masterspas.com/img/social/twitter-x-social-icon.png"
+                          src="/img/social/twitter-x-social-icon.png"
                           alt="Relax with Master Spas on Twitter"
                         />
                       </picture>
@@ -218,16 +218,16 @@ const Footer = () => {
                 <span>
                   <picture>
                     <source
-                      srcSet="https://www.masterspas.com/img/bbb2.webp"
+                      srcSet="/img/bbb2.webp"
                       type="image/webp"
                     />
                     <source
-                      srcSet="https://www.masterspas.com/img/bbb2.png"
+                      srcSet="/img/bbb2.png"
                       type="image/png"
                     />
                     <img
                       loading="lazy"
-                      src="https://www.masterspas.com/img/bbb2.png"
+                      src="/img/bbb2.png"
                       alt="Better Business Bureau A+ Accredidation"
                     />
                   </picture>
@@ -237,16 +237,16 @@ const Footer = () => {
                 <span>
                   <picture>
                     <source
-                      srcSet="https://www.masterspas.com/img/spa-certified2.webp"
+                      srcSet="/img/spa-certified2.webp"
                       type="image/webp"
                     />
                     <source
-                      srcSet="https://www.masterspas.com/img/spa-certified2.png"
+                      srcSet="/img/spa-certified2.png"
                       type="image/png"
                     />
                     <img
                       loading="lazy"
-                      src="https://www.masterspas.com/img/spa-certified2.png"
+                      src="/img/spa-certified2.png"
                       alt="Master Spas is a Spa Certified Manufacturer"
                     />
                   </picture>
@@ -256,16 +256,16 @@ const Footer = () => {
                 <span>
                   <picture>
                     <source
-                      srcSet="https://www.masterspas.com/img/torch2.webp"
+                      srcSet="/img/torch2.webp"
                       type="image/webp"
                     />
                     <source
-                      srcSet="https://www.masterspas.com/img/torch2.png"
+                      srcSet="/img/torch2.png"
                       type="image/png"
                     />
                     <img
                       loading="lazy"
-                      src="https://www.masterspas.com/img/torch2.png"
+                      src="/img/torch2.png"
                       alt="Master Spas is a Better Business Bureau Torch Award for Business Ethics Recipient"
                     />
                   </picture>
@@ -278,16 +278,16 @@ const Footer = () => {
                 <span>
                   <picture>
                     <source
-                      srcSet="https://www.masterspas.com/img/inspire2.webp"
+                      srcSet="/img/inspire2.webp"
                       type="image/webp"
                     />
                     <source
-                      srcSet="https://www.masterspas.com/img/inspire2.png"
+                      srcSet="/img/inspire2.png"
                       type="image/png"
                     />
                     <img
                       loading="lazy"
-                      src="https://www.masterspas.com/img/inspire2.png"
+                      src="/img/inspire2.png"
                       alt="Master Spas is an Inspire Award Winner"
                     />
                   </picture>
@@ -301,16 +301,16 @@ const Footer = () => {
                 <span>
                   <picture>
                     <source
-                      srcSet="https://www.masterspas.com/img/ernst2.webp"
+                      srcSet="/img/ernst2.webp"
                       type="image/webp"
                     />
                     <source
-                      srcSet="https://www.masterspas.com/img/ernst2.png"
+                      srcSet="/img/ernst2.png"
                       type="image/png"
                     />
                     <img
                       loading="lazy"
-                      src="https://www.masterspas.com/img/ernst2.png"
+                      src="/img/ernst2.png"
                       alt="Master Spas is an Ernst and Young Award Winner"
                     />
                   </picture>
@@ -323,16 +323,16 @@ const Footer = () => {
                 <span>
                   <picture>
                     <source
-                      srcSet="https://www.masterspas.com/img/ihta2.webp"
+                      srcSet="/img/ihta2.webp"
                       type="image/webp"
                     />
                     <source
-                      srcSet="https://www.masterspas.com/img/ihta2.png"
+                      srcSet="/img/ihta2.png"
                       type="image/png"
                     />
                     <img
                       loading="lazy"
-                      src="https://www.masterspas.com/img/ihta2.png"
+                      src="/img/ihta2.png"
                       alt="The Indiana Hot Tub Association"
                     />
                   </picture>
@@ -342,16 +342,16 @@ const Footer = () => {
                 <span>
                   <picture>
                     <source
-                      srcSet="https://www.masterspas.com/img/usms-logo.webp"
+                      srcSet="/img/usms-logo.webp"
                       type="image/webp"
                     />
                     <source
-                      srcSet="https://www.masterspas.com/img/usms-logo.png"
+                      srcSet="/img/usms-logo.png"
                       type="image/png"
                     />
                     <img
                       loading="lazy"
-                      src="https://www.masterspas.com/img/usms-logo.png"
+                      src="/img/usms-logo.png"
                       alt="US Masters Swimming Official Partner"
                     />
                   </picture>
@@ -384,16 +384,16 @@ const Footer = () => {
             Built in{" "}
             <picture>
               <source
-                srcSet="https://www.masterspas.com/img/usa.webp"
+                srcSet="/img/usa.webp"
                 type="image/webp"
               />
               <source
-                srcSet="https://www.masterspas.com/img/usa.jpg"
+                srcSet="/img/usa.jpg"
                 type="image/jpg"
               />
               <img
                 loading="lazy"
-                src="https://www.masterspas.com/img/usa.jpg"
+                src="/img/usa.jpg"
                 alt="United States Flag"
               />
             </picture>{" "}
