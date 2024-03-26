@@ -85,7 +85,7 @@ const NavBar: React.FC<NavBarInterface> = ({}) => {
                     <span className="mm-title">Swim Spas</span>
                   </div>
                   <ul className="mm-listview">
-                    <li className="dropdown-header">Gulf South Spas Swim Spas</li>
+                    <li className="dropdown-header">Gulfsouth Spas Swim Spas</li>
                     <li>
                       <Link to="/swim-spas">General Overview</Link>
                     </li>
@@ -119,7 +119,7 @@ const NavBar: React.FC<NavBarInterface> = ({}) => {
             <Link className="navbar-brand" to="/">
               <picture>
                 <source srcSet="/img/ms-logo.png" type="image/png" />
-                <img src="/img/ms-logo.png" alt="Gulf South Spas Logo" />
+                <img src="/img/ms-logo.png" alt="Gulfsouth Spas Logo" />
               </picture>
             </Link>
           </div>

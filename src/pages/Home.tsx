@@ -45,8 +45,8 @@ const Home = () => {
   };
   return (
     <MainLayout
-      title="Gulf South Spas"
-      description="Gulf South Spas is an award-winning hot tub and swim spa manufacturer. All of our hot tub, swim spas and portable spas are full of top-of-the-line features and healing hydrotherapy."
+      title="Gulfsouth Spas"
+      description="Gulfsouth Spas is an award-winning hot tub and swim spa manufacturer. All of our hot tub, swim spas and portable spas are full of top-of-the-line features and healing hydrotherapy."
     >
       <div>
         {/* <div>
@@ -63,7 +63,7 @@ const Home = () => {
                       <div id="playerTextSubset">
                         <h2>
                           with America's finest hot tubs and swim spas, by
-                          Gulf South Spas&reg;
+                          Gulfsouth Spas
                         </h2>
                         <div id="videoCTA">
                           <Link to="javascript:void">
@@ -84,7 +84,7 @@ const Home = () => {
               />
               <img
                 className="img-responsive"
-                alt="Michael Phelps and family in a gulf south spas swim spa"
+                alt="Michael Phelps and family in a Gulfsouth spas swim spa"
                 src="/img/swimspas/widescreen-fallback.jpg"
                 title=""
               />
@@ -96,7 +96,7 @@ const Home = () => {
               />
               <img
                 className="img-responsive"
-                alt="Michael Phelps and family in a gulf south spas swim spa"
+                alt="Michael Phelps and family in a Gulfsouth spas swim spa"
                 src="/img/swimspas/video-preview.jpg"
                 title=""
               />
@@ -129,7 +129,7 @@ const Home = () => {
                     <p>
                       Creating your dream backyard oasis should be simple.{" "}
                       <br />
-                      With the Gulf South Spas&reg; range of ultra-therapeutic hot
+                      With the Gulfsouth Spas&reg; range of ultra-therapeutic hot
                       tubs hot tubs and swim spas, it is.
                     </p>
                   </div>
@@ -144,7 +144,7 @@ const Home = () => {
               <div className="row">
                 <div className="col-md-12">
                   <h2 className="bluetitlelg text-center">
-                    4 Distinct lines of hot tubs:
+                    3 Distinct lines of hot tubs:
                   </h2>
                 </div>
                 <div className="col-md-6">
@@ -158,7 +158,7 @@ const Home = () => {
                       </Link>
                     </div>
                     <div className="hotTubLineDescription">
-                      <h3>Michael Phelps Legend Series</h3>
+                      <h3>Trident</h3>
                       <p>
                         Legendary performance for those who don't believe in
                         second best.
@@ -180,7 +180,7 @@ const Home = () => {
                       </Link>
                     </div>
                     <div className="hotTubLineDescription">
-                      <h3>Twilight Series</h3>
+                      <h3>Nautical</h3>
                       <p>
                         Luxurious perfection designed for discriminating tastes.
                       </p>
@@ -201,30 +201,9 @@ const Home = () => {
                       </Link>
                     </div>
                     <div className="hotTubLineDescription">
-                      <h3>Clarity Spas</h3>
+                      <h3>Coastal</h3>
                       <p>
                         A stylish, modern approach to relaxation and wellness.
-                      </p>
-                      <div className="btn para">
-                        <Link to="javascript:void">See More</Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="hotTubLineWrapper getaway">
-                    <div className="threeQuarter">
-                      <Link to="javascript:void">
-                        <img
-                          alt="Getaway Hot Tub"
-                          src="/img/home-page/line-display/getaway-tub.png"
-                        />
-                      </Link>
-                    </div>
-                    <div className="hotTubLineDescription">
-                      <h3>Getaway Hot Tubs</h3>
-                      <p>
-                        Your passport to relaxation, offering quality and value.
                       </p>
                       <div className="btn para">
                         <Link to="javascript:void">See More</Link>
@@ -241,7 +220,7 @@ const Home = () => {
               <div className="row">
                 <div className="col-md-12">
                   <h2 className="bluetitlelg text-center">
-                    2 Premium lines of swim spas:
+                    Swim Spa Series
                   </h2>
                 </div>
                 <div className="col-md-6">
@@ -263,122 +242,10 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-md-6">
-                  <div className="swimSpaLineWrapper mpss">
-                    <div className="threeQuarter">
-                      <Link to="https://michaelphelpsswimspa.com">
-                        <img
-                          alt="Michael Phelps Signature swim spa"
-                          src="/img/home-page/line-display/mpss-spa.png"
-                        />
-                      </Link>
-                    </div>
-                    <div className="swimSpaLineDescription">
-                      <h3>Michael Phelps Signature Swim Spas</h3>
-                      <p>
-                        Propulsion swim spas with a powerful, smooth current.
-                      </p>
-                      <div className="btn para">
-                        <Link to="https://michaelphelpsswimspa.com">
-                          See More
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </section>
 
-          <section className="awards">
-            <h4 className="text-center bluetitlelg">
-              Gulf South Spas&reg; is an award winning company you can trust.
-            </h4>
-            <Link to="#">
-              <span>
-                <picture>
-                  <source srcSet="/img/bbb2.webp" type="image/webp" />
-                  <source srcSet="/img/bbb2.png" type="image/png" />
-                  <img
-                    src="/img/bbb2.png"
-                    alt="Better Business Bureau A+ Accredidation"
-                  />
-                </picture>
-              </span>
-            </Link>
-            <Link to="javascript:void">
-              <span>
-                <picture>
-                  <source srcSet="/img/spa-certified2.webp" type="image/webp" />
-                  <source srcSet="/img/spa-certified2.png" type="image/png" />
-                  <img
-                    src="/img/spa-certified2.png"
-                    alt="Gulf South Spas is a Spa Certified Manufacturer"
-                  />
-                </picture>
-              </span>
-            </Link>
-            <Link to="javascript:void">
-              <span>
-                <picture>
-                  <source srcSet="/img/torch2.webp" type="image/webp" />
-                  <source srcSet="/img/torch2.png" type="image/png" />
-                  <img
-                    src="/img/torch2.png"
-                    alt="Gulf South Spas is a Better Business Bureau Torch Award for Business Ethics Recipient"
-                  />
-                </picture>
-                <p>
-                  Torch <br /> Award
-                </p>
-              </span>
-            </Link>
-            <Link to="javascript:void">
-              <span>
-                <picture>
-                  <source srcSet="/img/inspire2.webp" type="image/webp" />
-                  <source srcSet="/img/inspire2.png" type="image/png" />
-                  <img
-                    src="/img/inspire2.png"
-                    alt="Gulf South Spas is an Inspire Award Winner"
-                  />
-                </picture>
-
-                <p>
-                  Inspire <br /> Award
-                </p>
-              </span>
-            </Link>
-            <Link to="javascript:void">
-              <span>
-                <picture>
-                  <source srcSet="/img/ernst2.webp" type="image/webp" />
-                  <source srcSet="/img/ernst2.png" type="image/png" />
-                  <img
-                    src="/img/ernst2.png"
-                    alt="Gulf South Spas is an Ernst and Young Award Winner"
-                  />
-                </picture>
-                <p>
-                  Ernst &amp; Young <br /> Entrepreneur <br /> of the year
-                </p>
-              </span>
-            </Link>
-            <Link to="javascript:void">
-              <span>
-                <picture>
-                  <source srcSet="/img/apsp2.webp" type="image/webp" />
-                  <source srcSet="/img/apsp2.png" type="image/png" />
-                  <img
-                    src="/img/apsp2.png"
-                    alt="The Association of Pool & Spa Professionals and Indiana Hot Tub Association"
-                  />
-                </picture>
-              </span>
-            </Link>
-            <br />
-            <br />
-          </section>
           <section className="feltItToo parallax">
             <div className="mobile blueOverlay"></div>
             <div className="container">
@@ -391,7 +258,7 @@ const Home = () => {
                     </h4>
                     <h5>We've felt it too.</h5>
                     <p>
-                      At Gulf South Spas&trade;, we understand that your hot tub or
+                      At Gulfsouth Spas&trade;, we understand that your hot tub or
                       swim spa has to meet your unique needs.
                     </p>
                     <p>
@@ -419,7 +286,7 @@ const Home = () => {
               <div className="row">
                 <div className="col-md-12">
                   <h3 className="text-center bluetitlelg">
-                    Finding your perfect Gulf South Spas&reg; hot tub or swim spa is
+                    Finding your perfect Gulfsouth Spas&reg; hot tub or swim spa is
                     simple.
                   </h3>
                 </div>
@@ -429,7 +296,7 @@ const Home = () => {
                 <div className="col-md-8">
                   <ol className="bigNumberList">
                     <li>
-                      <h4>Find Your Gulf South Spas&reg; Dealer</h4>
+                      <h4>Find Your Gulfsouth Spas&reg; Dealer</h4>
                       <p>
                         Explore our full range of premium spas with confidence
                         as your local dealer answers any questions you may have.
@@ -438,7 +305,7 @@ const Home = () => {
                     <li>
                       <h4>Choose Your Perfect Spa</h4>
                       <p>
-                        Your Gulf South Spas&reg; dealer is there to help as you
+                        Your Gulfsouth Spas&reg; dealer is there to help as you
                         choose the model that is right for your lifestyle and
                         space.{" "}
                       </p>
@@ -447,7 +314,7 @@ const Home = () => {
                       <h4>Live Better</h4>
                       <p>
                         Enjoy better daily living from the comfort of your own
-                        home with Gulf South Spas&reg;
+                        home with Gulfsouth Spas&reg;
                       </p>
                     </li>
                   </ol>
@@ -463,13 +330,13 @@ const Home = () => {
               <div className="row">
                 <div className="col-md-12">
                   <div className="parallaxText">
-                    <h2>Experience the Gulf South Spas&reg; difference.</h2>
+                    <h2>Experience the Gulfsouth Spas&reg; difference.</h2>
                     <h3>
                       You'll wonder how you ever lived <br /> without one.
                     </h3>
                     <p>
                       Quality construction and innovative <br />
-                      designs make Gulf South Spas hot tubs
+                      designs make Gulfsouth Spas hot tubs
                       <br />
                       and swim spas easy to enjoy and <br />
                       easy to own.
@@ -845,7 +712,7 @@ const Home = () => {
                       </h6>
                       <p>
                         Your essential guide to planning for the installation of
-                        your Gulf South Spas hot tub or swim spa.
+                        your Gulfsouth Spas hot tub or swim spa.
                       </p>
                       <div className="doublebuttons">
                         <div className="btn para">

@@ -112,7 +112,7 @@ const CustomerSupport = () => {
                     <h4>Facebook Live Videos</h4>
                     <img src="/img/icons/icon-facebook-live.png" alt="facebook live icon" />
                     <p>
-                      Gulf South Spas' Ben Gilliam and Mari Cuticelli answer your swim spa questions
+                      Gulfsouth Spas' Ben Gilliam and Mari Cuticelli answer your swim spa questions
                       <br />
                     </p>
                   </div>
@@ -180,9 +180,9 @@ const CustomerSupport = () => {
               <div className="col-sm-6 col-md-4">
                 <Link to="javascript:void">
                   <div className="support">
-                    <h4>Gulf South Spas News</h4>
+                    <h4>Gulfsouth Spas News</h4>
                     <img src="/img/icons/icon-news.png" alt="news icon" />
-                    <p>Read up on the latest information involving Gulf South Spas</p>
+                    <p>Read up on the latest information involving Gulfsouth Spas</p>
                   </div>
                 </Link>
               </div>*/}

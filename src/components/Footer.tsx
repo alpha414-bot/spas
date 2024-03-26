@@ -13,30 +13,24 @@ const Footer = () => {
                     loading="lazy"
                     className="img-responsive footerLogo"
                     src="/img/ms-logo.png"
-                    alt="Gulf South Spas Logo"
+                    alt="Gulfsouth Spas Logo"
                   />
                 </Link>
                 <br />
                 <p>
                   Creating your dream backyard oasis should be simple. With the
-                  Gulf South Spas&reg; range of ultra-therapeutic hot tubs and swim
-                  spas, it is.
+                  Gulfsouth Spas&reg; range of ultra-therapeutic hot tubs and
+                  swim spas, it is.
                 </p>
 
                 <section className="socmed">
-                  <Link
-                    to="javascript:void"
-                    target="_blank"
-                  >
+                  <Link to="javascript:void" target="_blank">
                     <span className="">
                       <i className="fab fa-facebook"></i>
                     </span>
                   </Link>
 
-                  <Link
-                    to="javascript:void"
-                    target="_blank"
-                  >
+                  <Link to="javascript:void" target="_blank">
                     <span className="">
                       <picture>
                         <source
@@ -50,34 +44,25 @@ const Footer = () => {
                         <img
                           loading="lazy"
                           src="/img/social/houzz-social-icon.png"
-                          alt="Relax with Gulf South Spas on Houzz"
+                          alt="Relax with Gulfsouth Spas on Houzz"
                         />
                       </picture>
                     </span>
                   </Link>
 
-                  <Link
-                    to="javascript:void"
-                    target="_blank"
-                  >
+                  <Link to="javascript:void" target="_blank">
                     <span className="">
                       <i className="fab fa-instagram"></i>
                     </span>
                   </Link>
 
-                  <Link
-                    to="javascript:void"
-                    target="_blank"
-                  >
+                  <Link to="javascript:void" target="_blank">
                     <span className="">
                       <i className="fab fa-pinterest"></i>
                     </span>
                   </Link>
 
-                  <Link
-                    to="javascript:void"
-                    target="_blank"
-                  >
+                  <Link to="javascript:void" target="_blank">
                     <span className="">
                       <picture>
                         <source
@@ -91,16 +76,13 @@ const Footer = () => {
                         <img
                           loading="lazy"
                           src="/img/social/threads-social-icon.png"
-                          alt="Relax with Gulf South Spas on Threads"
+                          alt="Relax with Gulfsouth Spas on Threads"
                         />
                       </picture>
                     </span>
                   </Link>
 
-                  <Link
-                    to="javascript:void"
-                    target="_blank"
-                  >
+                  <Link to="javascript:void" target="_blank">
                     <span className="">
                       <i className="fab fa-tiktok"></i>
                     </span>
@@ -119,15 +101,12 @@ const Footer = () => {
                         <img
                           loading="lazy"
                           src="/img/social/twitter-x-social-icon.png"
-                          alt="Relax with Gulf South Spas on Twitter"
+                          alt="Relax with Gulfsouth Spas on Twitter"
                         />
                       </picture>
                     </span>
                   </Link>
-                  <Link
-                    to="javascript:void"
-                    target="_blank"
-                  >
+                  <Link to="javascript:void" target="_blank">
                     <span className="">
                       <i className="fab fa-youtube"></i>
                     </span>
@@ -210,162 +189,13 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-
-            <section className="footerDivider"></section>
-
-            <section className="awards">
-              <Link to="javascript:void">
-                <span>
-                  <picture>
-                    <source
-                      srcSet="/img/bbb2.webp"
-                      type="image/webp"
-                    />
-                    <source
-                      srcSet="/img/bbb2.png"
-                      type="image/png"
-                    />
-                    <img
-                      loading="lazy"
-                      src="/img/bbb2.png"
-                      alt="Better Business Bureau A+ Accredidation"
-                    />
-                  </picture>
-                </span>
-              </Link>
-              <Link to="javascript:void">
-                <span>
-                  <picture>
-                    <source
-                      srcSet="/img/spa-certified2.webp"
-                      type="image/webp"
-                    />
-                    <source
-                      srcSet="/img/spa-certified2.png"
-                      type="image/png"
-                    />
-                    <img
-                      loading="lazy"
-                      src="/img/spa-certified2.png"
-                      alt="Gulf South Spas is a Spa Certified Manufacturer"
-                    />
-                  </picture>
-                </span>
-              </Link>
-              <Link to="javascript:void">
-                <span>
-                  <picture>
-                    <source
-                      srcSet="/img/torch2.webp"
-                      type="image/webp"
-                    />
-                    <source
-                      srcSet="/img/torch2.png"
-                      type="image/png"
-                    />
-                    <img
-                      loading="lazy"
-                      src="/img/torch2.png"
-                      alt="Gulf South Spas is a Better Business Bureau Torch Award for Business Ethics Recipient"
-                    />
-                  </picture>
-                  <p>
-                    Torch <br /> Award
-                  </p>
-                </span>
-              </Link>
-              <Link to="javascript:void">
-                <span>
-                  <picture>
-                    <source
-                      srcSet="/img/inspire2.webp"
-                      type="image/webp"
-                    />
-                    <source
-                      srcSet="/img/inspire2.png"
-                      type="image/png"
-                    />
-                    <img
-                      loading="lazy"
-                      src="/img/inspire2.png"
-                      alt="Gulf South Spas is an Inspire Award Winner"
-                    />
-                  </picture>
-
-                  <p>
-                    Inspire <br /> Award
-                  </p>
-                </span>
-              </Link>
-              <Link to="javascript:void">
-                <span>
-                  <picture>
-                    <source
-                      srcSet="/img/ernst2.webp"
-                      type="image/webp"
-                    />
-                    <source
-                      srcSet="/img/ernst2.png"
-                      type="image/png"
-                    />
-                    <img
-                      loading="lazy"
-                      src="/img/ernst2.png"
-                      alt="Gulf South Spas is an Ernst and Young Award Winner"
-                    />
-                  </picture>
-                  <p>
-                    Ernst &amp; Young <br /> Entrepreneur <br /> of the year
-                  </p>
-                </span>
-              </Link>
-              <Link to="javascript:void">
-                <span>
-                  <picture>
-                    <source
-                      srcSet="/img/ihta2.webp"
-                      type="image/webp"
-                    />
-                    <source
-                      srcSet="/img/ihta2.png"
-                      type="image/png"
-                    />
-                    <img
-                      loading="lazy"
-                      src="/img/ihta2.png"
-                      alt="The Indiana Hot Tub Association"
-                    />
-                  </picture>
-                </span>
-              </Link>
-              <Link to="javascript:void">
-                <span>
-                  <picture>
-                    <source
-                      srcSet="/img/usms-logo.webp"
-                      type="image/webp"
-                    />
-                    <source
-                      srcSet="/img/usms-logo.png"
-                      type="image/png"
-                    />
-                    <img
-                      loading="lazy"
-                      src="/img/usms-logo.png"
-                      alt="US Masters Swimming Official Partner"
-                    />
-                  </picture>
-                </span>
-              </Link>
-              <br />
-              <br />
-            </section>
           </div>
         </section>
         <section className="text-center">
           <br />
           <p>
-            Copyright &copy; 2024, Gulf South Spas | <Link to="javascript:void">Legal</Link>
+            Copyright &copy; 2024, Gulfsouth Spas |{" "}
+            <Link to="javascript:void">Legal</Link>
           </p>
           <p>
             Manufacturer of{" "}
@@ -383,36 +213,26 @@ const Footer = () => {
           <p>
             Built in{" "}
             <picture>
-              <source
-                srcSet="/img/usa.webp"
-                type="image/webp"
-              />
-              <source
-                srcSet="/img/usa.jpg"
-                type="image/jpg"
-              />
-              <img
-                loading="lazy"
-                src="/img/usa.jpg"
-                alt="United States Flag"
-              />
+              <source srcSet="/img/usa.webp" type="image/webp" />
+              <source srcSet="/img/usa.jpg" type="image/jpg" />
+              <img loading="lazy" src="/img/usa.jpg" alt="United States Flag" />
             </picture>{" "}
             the USA
           </p>
         </section>
         <section className="footDisclaimer">
           <small>
-            Gulf South Spas&reg; products are made and assembled in the U.S.A. with
-            domestic and foreign components. Gulf South Spas reserves the right to
-            change product specifications or features without notice. Master
-            Spas is a manufacturer of spas and related products, and we stand
-            behind every product we produce pursuant to those representations
-            which are stated in our written limited warranty. Your dealer is an
-            independent businessperson or company and not an employee or agent
-            of Gulf South Spas. We cannot and do not accept any responsibility or
-            liability for any other representations, statements or contracts
-            made by any dealer beyond the provisions of our written limited
-            warranty.
+            Gulfsouth Spas&reg; products are made and assembled in the U.S.A.
+            with domestic and foreign components. Gulfsouth Spas reserves the
+            right to change product specifications or features without notice.
+            Master Spas is a manufacturer of spas and related products, and we
+            stand behind every product we produce pursuant to those
+            representations which are stated in our written limited warranty.
+            Your dealer is an independent businessperson or company and not an
+            employee or agent of Gulfsouth Spas. We cannot and do not accept any
+            responsibility or liability for any other representations,
+            statements or contracts made by any dealer beyond the provisions of
+            our written limited warranty.
           </small>
         </section>
       </footer>
