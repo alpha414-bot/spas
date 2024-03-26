@@ -1,6 +1,48 @@
+import { CustomSliderArrowType } from "@/function";
 import MainLayout from "@/layouts/MainLayout";
+import { Link } from "react-router-dom";
+import Slider, { Settings } from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 
 const Home = () => {
+  const slider_settings: Settings = {
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 25000,
+    // autoplaySpeed: 500,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
+  const CustomSliderArrow: React.FC<CustomSliderArrowType> = ({
+    type,
+    classes,
+    svgClassName = "w-5 h-5 text-gray-700",
+    onClick,
+    style,
+    ...rest
+  }) => {
+    return (
+      <Link
+        to="#"
+        {...rest}
+        onClick={onClick}
+        className={`carousel-control ${type == "prev" ? "left" : "right"}`}
+        style={{ zIndex: "9999" }}
+      >
+        <span
+          className={`glyphicon fa ${
+            type == "prev"
+              ? "glyphicon-chevron-left fa-chevron-left"
+              : "glyphicon-chevron-right fa-chevron-right"
+          }`}
+        ></span>
+        <span className="sr-only">{type == "prev" ? "Previous" : "Next"}</span>
+      </Link>
+    );
+  };
   return (
     <MainLayout
       title="Hot Tubs, Swim Spas and Portable Spas by Master Spas"
@@ -11,46 +53,6 @@ const Home = () => {
           I am loa
         </div> */}
         <div className="maincontent">
-          <div id="promoBanner">
-            <div className="container">
-              <div className="row">
-                <div className="col-sm-7"></div>
-                <div className="col-sm-5" id="promoColumn">
-                  <form
-                    className="form-inline"
-                    id="promoCode"
-                    name="promoCode"
-                    action=""
-                    method="post"
-                  >
-                    <div className="form-group">
-                      <input
-                        className="form-control"
-                        placeholder="Have a Promo Code?"
-                        type="text"
-                        name="code"
-                        id="code"
-                      />
-                      <input
-                        className="btn btn-default"
-                        value="Go"
-                        type="submit"
-                        name="submit"
-                        id="submit"
-                      />
-                      <div
-                        id="error_message"
-                        className="response alert alert-warning"
-                      >
-                        Examples
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <section id="cdnVideoHero">
             <div id="playerTextWrap">
               <div className="container">
@@ -64,9 +66,9 @@ const Home = () => {
                           Master Spas&reg;
                         </h2>
                         <div id="videoCTA">
-                          <a href="find-a-dealer">
+                          <Link to="#">
                             Find your local dealer and get pricing
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -83,7 +85,7 @@ const Home = () => {
               <img
                 className="img-responsive"
                 alt="Michael Phelps and family in a master spas swim spa"
-                src="https://michaelphelpsswimspa.com/_video/masterspas/home2021/widescreen-fallback.jpg"
+                src="/img/swimspas/widescreen-fallback.jpg"
                 title=""
               />
             </video>
@@ -95,7 +97,7 @@ const Home = () => {
               <img
                 className="img-responsive"
                 alt="Michael Phelps and family in a master spas swim spa"
-                src="img/swimspas/video-preview.jpg"
+                src="/img/swimspas/video-preview.jpg"
                 title=""
               />
             </video>
@@ -112,24 +114,15 @@ const Home = () => {
                     </h2>
                     <ul className="checkmarkList">
                       <li>
-                        <img
-                          alt="checkmark"
-                          src="https://masterspascdn.com/img/checkmark.png"
-                        />{" "}
-                        Enjoy Pure Relaxation
+                        <img alt="checkmark" src="/img/checkmark.png" /> Enjoy
+                        Pure Relaxation
                       </li>
                       <li>
-                        <img
-                          alt="checkmark"
-                          src="https://masterspascdn.com/img/checkmark.png"
-                        />{" "}
-                        Get Relief from Pain
+                        <img alt="checkmark" src="/img/checkmark.png" /> Get
+                        Relief from Pain
                       </li>
                       <li>
-                        <img
-                          alt="checkmark"
-                          src="https://masterspascdn.com/img/checkmark.png"
-                        />
+                        <img alt="checkmark" src="/img/checkmark.png" />
                         Reinvent Family Time
                       </li>
                     </ul>
@@ -157,12 +150,12 @@ const Home = () => {
                 <div className="col-md-6">
                   <div className="hotTubLineWrapper legend">
                     <div className="threeQuarter">
-                      <a href="legend-series/">
+                      <Link to="/brand/legend-series/">
                         <img
                           alt="Michael Phelps Legend Series Hot Tub"
-                          src="https://masterspascdn.com/img/home-page/line-display/legend-tub.png"
+                          src="/img/home-page/line-display/legend-tub.png"
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="hotTubLineDescription">
                       <h3>Michael Phelps Legend Series</h3>
@@ -171,7 +164,7 @@ const Home = () => {
                         second best.
                       </p>
                       <div className="btn para">
-                        <a href="legend-series/">See More</a>
+                        <Link to="/brand/legend-series/">See More</Link>
                       </div>
                     </div>
                   </div>
@@ -179,12 +172,12 @@ const Home = () => {
                 <div className="col-md-6">
                   <div className="hotTubLineWrapper twilight">
                     <div className="threeQuarter">
-                      <a href="twilight/">
+                      <Link to="/brand/twilight/">
                         <img
                           alt="Twilight Series Hot Tub"
-                          src="https://masterspascdn.com/img/home-page/line-display/twilight-tub.png"
+                          src="/img/home-page/line-display/twilight-tub.png"
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="hotTubLineDescription">
                       <h3>Twilight Series</h3>
@@ -192,7 +185,7 @@ const Home = () => {
                         Luxurious perfection designed for discriminating tastes.
                       </p>
                       <div className="btn para">
-                        <a href="twilight/">See More</a>
+                        <Link to="/brand/twilight/">See More</Link>
                       </div>
                     </div>
                   </div>
@@ -200,12 +193,12 @@ const Home = () => {
                 <div className="col-md-6">
                   <div className="hotTubLineWrapper clarity">
                     <div className="threeQuarter">
-                      <a href="clarity/">
+                      <Link to="/brand/clarity/">
                         <img
                           alt="Clarity Spas Hot Tub"
-                          src="https://masterspascdn.com/img/home-page/line-display/clarity-tub.png"
+                          src="/img/home-page/line-display/clarity-tub.png"
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="hotTubLineDescription">
                       <h3>Clarity Spas</h3>
@@ -213,7 +206,7 @@ const Home = () => {
                         A stylish, modern approach to relaxation and wellness.
                       </p>
                       <div className="btn para">
-                        <a href="clarity/">See More</a>
+                        <Link to="/brand/clarity/">See More</Link>
                       </div>
                     </div>
                   </div>
@@ -221,12 +214,12 @@ const Home = () => {
                 <div className="col-md-6">
                   <div className="hotTubLineWrapper getaway">
                     <div className="threeQuarter">
-                      <a href="getaway/">
+                      <Link to="/brand/getaway/">
                         <img
                           alt="Getaway Hot Tub"
-                          src="https://masterspascdn.com/img/home-page/line-display/getaway-tub.png"
+                          src="/img/home-page/line-display/getaway-tub.png"
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="hotTubLineDescription">
                       <h3>Getaway Hot Tubs</h3>
@@ -234,7 +227,7 @@ const Home = () => {
                         Your passport to relaxation, offering quality and value.
                       </p>
                       <div className="btn para">
-                        <a href="getaway/">See More</a>
+                        <Link to="/brand/getaway/">See More</Link>
                       </div>
                     </div>
                   </div>
@@ -254,18 +247,18 @@ const Home = () => {
                 <div className="col-md-6">
                   <div className="swimSpaLineWrapper h2x">
                     <div className="threeQuarter">
-                      <a href="https://h2xswimspa.com/">
+                      <Link to="https://h2xswimspa.com/">
                         <img
                           alt="H2X Fitness Swim Spa"
-                          src="https://masterspascdn.com/img/home-page/line-display/h2x-spa.png"
+                          src="/img/home-page/line-display/h2x-spa.png"
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="swimSpaLineDescription">
                       <h3>H2X Fitness Swim Spas</h3>
                       <p>Jetted swim spa for training, fitness, and therapy.</p>
                       <div className="btn para">
-                        <a href="https://h2xswimspa.com/">See More</a>
+                        <Link to="https://h2xswimspa.com/">See More</Link>
                       </div>
                     </div>
                   </div>
@@ -273,12 +266,12 @@ const Home = () => {
                 <div className="col-md-6">
                   <div className="swimSpaLineWrapper mpss">
                     <div className="threeQuarter">
-                      <a href="https://michaelphelpsswimspa.com">
+                      <Link to="https://michaelphelpsswimspa.com">
                         <img
                           alt="Michael Phelps Signature swim spa"
-                          src="https://masterspascdn.com/img/home-page/line-display/mpss-spa.png"
+                          src="/img/home-page/line-display/mpss-spa.png"
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="swimSpaLineDescription">
                       <h3>Michael Phelps Signature Swim Spas</h3>
@@ -286,7 +279,9 @@ const Home = () => {
                         Propulsion swim spas with a powerful, smooth current.
                       </p>
                       <div className="btn para">
-                        <a href="https://michaelphelpsswimspa.com">See More</a>
+                        <Link to="https://michaelphelpsswimspa.com">
+                          See More
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -299,55 +294,37 @@ const Home = () => {
             <h4 className="text-center bluetitlelg">
               Master Spas&reg; is an award winning company you can trust.
             </h4>
-            <a href="/awards#bba">
+            <Link to="#">
               <span>
                 <picture>
-                  <source
-                    srcSet="https://masterspascdn.com/img/bbb2.webp"
-                    type="image/webp"
-                  />
-                  <source
-                    srcSet="https://masterspascdn.com/img/bbb2.png"
-                    type="image/png"
-                  />
+                  <source srcSet="/img/bbb2.webp" type="image/webp" />
+                  <source srcSet="/img/bbb2.png" type="image/png" />
                   <img
-                    src="https://masterspascdn.com/img/bbb2.png"
+                    src="/img/bbb2.png"
                     alt="Better Business Bureau A+ Accredidation"
                   />
                 </picture>
               </span>
-            </a>
-            <a href="/awards#certified">
+            </Link>
+            <Link to="#">
               <span>
                 <picture>
-                  <source
-                    srcSet="https://masterspascdn.com/img/spa-certified2.webp"
-                    type="image/webp"
-                  />
-                  <source
-                    srcSet="https://masterspascdn.com/img/spa-certified2.png"
-                    type="image/png"
-                  />
+                  <source srcSet="/img/spa-certified2.webp" type="image/webp" />
+                  <source srcSet="/img/spa-certified2.png" type="image/png" />
                   <img
-                    src="https://masterspascdn.com/img/spa-certified2.png"
+                    src="/img/spa-certified2.png"
                     alt="Master Spas is a Spa Certified Manufacturer"
                   />
                 </picture>
               </span>
-            </a>
-            <a href="/awards#torch">
+            </Link>
+            <Link to="#">
               <span>
                 <picture>
-                  <source
-                    srcSet="https://masterspascdn.com/img/torch2.webp"
-                    type="image/webp"
-                  />
-                  <source
-                    srcSet="https://masterspascdn.com/img/torch2.png"
-                    type="image/png"
-                  />
+                  <source srcSet="/img/torch2.webp" type="image/webp" />
+                  <source srcSet="/img/torch2.png" type="image/png" />
                   <img
-                    src="https://masterspascdn.com/img/torch2.png"
+                    src="/img/torch2.png"
                     alt="Master Spas is a Better Business Bureau Torch Award for Business Ethics Recipient"
                   />
                 </picture>
@@ -355,20 +332,14 @@ const Home = () => {
                   Torch <br /> Award
                 </p>
               </span>
-            </a>
-            <a href="/awards#inspire">
+            </Link>
+            <Link to="#">
               <span>
                 <picture>
-                  <source
-                    srcSet="https://masterspascdn.com/img/inspire2.webp"
-                    type="image/webp"
-                  />
-                  <source
-                    srcSet="https://masterspascdn.com/img/inspire2.png"
-                    type="image/png"
-                  />
+                  <source srcSet="/img/inspire2.webp" type="image/webp" />
+                  <source srcSet="/img/inspire2.png" type="image/png" />
                   <img
-                    src="https://masterspascdn.com/img/inspire2.png"
+                    src="/img/inspire2.png"
                     alt="Master Spas is an Inspire Award Winner"
                   />
                 </picture>
@@ -377,20 +348,14 @@ const Home = () => {
                   Inspire <br /> Award
                 </p>
               </span>
-            </a>
-            <a href="/awards#ernst">
+            </Link>
+            <Link to="#">
               <span>
                 <picture>
-                  <source
-                    srcSet="https://masterspascdn.com/img/ernst2.webp"
-                    type="image/webp"
-                  />
-                  <source
-                    srcSet="https://masterspascdn.com/img/ernst2.png"
-                    type="image/png"
-                  />
+                  <source srcSet="/img/ernst2.webp" type="image/webp" />
+                  <source srcSet="/img/ernst2.png" type="image/png" />
                   <img
-                    src="https://masterspascdn.com/img/ernst2.png"
+                    src="/img/ernst2.png"
                     alt="Master Spas is an Ernst and Young Award Winner"
                   />
                 </picture>
@@ -398,25 +363,19 @@ const Home = () => {
                   Ernst &amp; Young <br /> Entrepreneur <br /> of the year
                 </p>
               </span>
-            </a>
-            <a href="/awards#ihta">
+            </Link>
+            <Link to="#">
               <span>
                 <picture>
-                  <source
-                    srcSet="https://masterspascdn.com/img/apsp2.webp"
-                    type="image/webp"
-                  />
-                  <source
-                    srcSet="https://masterspascdn.com/img/apsp2.png"
-                    type="image/png"
-                  />
+                  <source srcSet="/img/apsp2.webp" type="image/webp" />
+                  <source srcSet="/img/apsp2.png" type="image/png" />
                   <img
-                    src="https://masterspascdn.com/img/apsp2.png"
+                    src="/img/apsp2.png"
                     alt="The Association of Pool & Spa Professionals and Indiana Hot Tub Association"
                   />
                 </picture>
               </span>
-            </a>
+            </Link>
             <br />
             <br />
           </section>
@@ -447,7 +406,7 @@ const Home = () => {
                     <br />
                     <br />
                     <div className="btn para" style={{ width: "175px" }}>
-                      <a href="/find-my-spa/">Find my spa quiz</a>
+                      <Link to="#">Find my spa quiz</Link>
                     </div>
                   </div>
                 </div>
@@ -499,7 +458,7 @@ const Home = () => {
                 <div className="col-md-12">
                   <div className="doublebuttons">
                     <div className="btn para">
-                      <a href="find-a-dealer">Find a Dealer</a>
+                      <Link to="#">Find a Dealer</Link>
                     </div>
                   </div>
                 </div>
@@ -536,19 +495,19 @@ const Home = () => {
                   <div className="col-md-3">
                     <div className="row">
                       <div className="col-xs-4 col-md-12">
-                        <a href="/hot-tub-features/bio-magnetic-therapy">
+                        <Link to="/hot-tub-features/bio-magnetic-therapy">
                           <img
                             className="img-responsive imgctr"
                             alt="Bio magnetic therapy"
-                            src="https://masterspascdn.com/img/home-magnetic-therapy.jpg"
+                            src="/img/home-magnetic-therapy.jpg"
                           />
-                        </a>
+                        </Link>
                       </div>
                       <div className="col-xs-8 col-md-12">
                         <h3 className="bluetitle">
-                          <a href="/hot-tub-features/bio-magnetic-therapy">
+                          <Link to="/hot-tub-features/bio-magnetic-therapy">
                             Biomagnetic Therapy System
-                          </a>
+                          </Link>
                         </h3>
                         <p>
                           Applies magnetic therapy to pressure points on the
@@ -561,19 +520,19 @@ const Home = () => {
                   <div className="col-md-3">
                     <div className="row">
                       <div className="col-xs-4 col-md-12">
-                        <a href="/hot-tub-filter">
+                        <Link to="/hot-tub-filter">
                           <img
                             className="img-responsive imgctr"
                             alt="EcoPur&reg; Charge Filtration System"
-                            src="https://masterspascdn.com/img/home-eco-pur-filtration.jpg"
+                            src="/img/home-eco-pur-filtration.jpg"
                           />
-                        </a>
+                        </Link>
                       </div>
                       <div className="col-xs-8 col-md-12">
                         <h3 className="bluetitle">
-                          <a href="/hot-tub-filter">
+                          <Link to="/hot-tub-filter">
                             EcoPur&reg; Charge Filtration System
-                          </a>
+                          </Link>
                         </h3>
                         <p>
                           Inspired by nature, our water filtration system
@@ -586,25 +545,25 @@ const Home = () => {
                   <div className="col-md-3">
                     <div className="row">
                       <div className="col-xs-4 col-md-12">
-                        <a
-                          href="https://michaelphelpsswimspa.com/features-nonslip-floor-system"
+                        <Link
+                          to="https://michaelphelpsswimspa.com/features-nonslip-floor-system"
                           target="_blank"
                         >
                           <img
                             className="img-responsive imgctr"
                             alt="Nonslip, Comfort Floor System"
-                            src="https://masterspascdn.com/img/home-nonslip-floor-system.jpg"
+                            src="/img/home-nonslip-floor-system.jpg"
                           />
-                        </a>
+                        </Link>
                       </div>
                       <div className="col-xs-8 col-md-12">
                         <h3 className="bluetitle">
-                          <a
-                            href="https://michaelphelpsswimspa.com/features-nonslip-floor-system"
+                          <Link
+                            to="https://michaelphelpsswimspa.com/features-nonslip-floor-system"
                             target="_blank"
                           >
                             Nonslip, Comfort Floor System
-                          </a>
+                          </Link>
                         </h3>
                         <p>
                           Walk, jog, and exercise in the water without the need
@@ -618,25 +577,25 @@ const Home = () => {
                   <div className="col-md-3">
                     <div className="row">
                       <div className="col-xs-4 col-md-12">
-                        <a
-                          href="https://michaelphelpsswimspa.com/features-wave_technology"
+                        <Link
+                          to="https://michaelphelpsswimspa.com/features-wave_technology"
                           target="_blank"
                         >
                           <img
                             className="img-responsive imgctr"
                             alt="Wave technology propulsion system"
-                            src="https://masterspascdn.com/img/home-propulsion.jpg"
+                            src="/img/home-propulsion.jpg"
                           />
-                        </a>
+                        </Link>
                       </div>
                       <div className="col-xs-8 col-md-12">
                         <h3 className="bluetitle">
-                          <a
-                            href="https://michaelphelpsswimspa.com/features-wave_technology"
+                          <Link
+                            to="https://michaelphelpsswimspa.com/features-wave_technology"
                             target="_blank"
                           >
                             Wave Propulsion&reg; System
-                          </a>
+                          </Link>
                         </h3>
                         <p>
                           Creates a deep and wide current of pure water flow
@@ -648,7 +607,7 @@ const Home = () => {
                   <div className="col-md-12">
                     <div className="doublebuttons">
                       <div className="btn para">
-                        <a href="find-a-dealer">Find a Dealer</a>
+                        <Link to="#">Find a Dealer</Link>
                       </div>
                     </div>
                   </div>
@@ -665,14 +624,13 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div
-              id="myCarousel"
-              className="carousel slide"
-              data-ride="carousel"
-              style={{ marginTop: "25px" }}
-            >
-              <div className="carousel-inner">
-                <div className="item active">
+            <div style={{ marginTop: "25px" }}>
+              <Slider
+                {...slider_settings}
+                nextArrow={<CustomSliderArrow type="next" />}
+                prevArrow={<CustomSliderArrow type="prev" />}
+              >
+                <div className="item">
                   <div className="container">
                     <div className="row">
                       <div className="col-md-4">
@@ -689,9 +647,9 @@ const Home = () => {
                         </p>
                         <div className="doublebuttons dtop">
                           <div className="btn para">
-                            <a href="https://www.h2xswimspa.com/swim-spas/challenger-series/challenger-15-d">
+                            <Link to="https://www.h2xswimspa.com/swim-spas/challenger-series/challenger-15-d">
                               See Details
-                            </a>
+                            </Link>
                           </div>
                         </div>
                         <br />
@@ -704,18 +662,18 @@ const Home = () => {
                               "url('https://i1.ytimg.com/vi/F_w8renTAl8/sddefault.jpg')",
                           }}
                         >
-                          <a
-                            href="https://www.youtube.com/watch?v=F_w8renTAl8"
+                          <Link
+                            to="https://www.youtube.com/watch?v=F_w8renTAl8"
                             data-poster=""
                           >
                             <span></span>
-                          </a>
+                          </Link>
                         </div>
                         <div className="doublebuttons mobile">
                           <div className="btn para">
-                            <a href="https://www.h2xswimspa.com/swim-spas/challenger-series/challenger-15-d">
+                            <Link to="https://www.h2xswimspa.com/swim-spas/challenger-series/challenger-15-d">
                               See Details
-                            </a>
+                            </Link>
                           </div>
                         </div>
                       </div>
@@ -740,9 +698,9 @@ const Home = () => {
                         </p>
                         <div className="doublebuttons dtop">
                           <div className="btn para">
-                            <a href="legend-series/lsx-800-hot-tub">
+                            <Link to="legend-series/lsx-800-hot-tub">
                               See Details
-                            </a>
+                            </Link>
                           </div>
                         </div>
                         <br />
@@ -755,18 +713,18 @@ const Home = () => {
                               "url('https://i1.ytimg.com/vi/WCuDGEeX2u0/sddefault.jpg')",
                           }}
                         >
-                          <a
-                            href="https://www.youtube.com/watch?v=WCuDGEeX2u0"
+                          <Link
+                            to="https://www.youtube.com/watch?v=WCuDGEeX2u0"
                             data-poster=""
                           >
                             <span></span>
-                          </a>
+                          </Link>
                         </div>
                         <div className="doublebuttons mobile">
                           <div className="btn para">
-                            <a href="legend-series/lsx-800-hot-tub">
+                            <Link to="legend-series/lsx-800-hot-tub">
                               See Details
-                            </a>
+                            </Link>
                           </div>
                         </div>
                       </div>
@@ -778,11 +736,7 @@ const Home = () => {
                     <div className="row">
                       <div className="col-md-4">
                         <h3>Twilight Series 8.2</h3>
-                        <div
-                          data-bv-show="inline_rating"
-                          data-bv-product-id="ts-8_2"
-                          data-bv-redirect-url="https://www.masterspas.com/twilight/ts-82"
-                        ></div>
+                        {/* review star is here */}
                         <p>
                           Roomy and comfortable, this hot tub is recognized for
                           its jet power and seating versatility &mdash;
@@ -790,7 +744,7 @@ const Home = () => {
                         </p>
                         <div className="doublebuttons dtop">
                           <div className="btn para">
-                            <a href="twilight/ts-82">See Details</a>
+                            <Link to="twilight/ts-82">See Details</Link>
                           </div>
                         </div>
                         <br />
@@ -803,39 +757,23 @@ const Home = () => {
                               "url('https://i1.ytimg.com/vi/hf1dGlFs7w8/sddefault.jpg')",
                           }}
                         >
-                          <a
-                            href="https://www.youtube.com/watch?v=hf1dGlFs7w8"
+                          <Link
+                            to="https://www.youtube.com/watch?v=hf1dGlFs7w8"
                             data-poster=""
                           >
                             <span></span>
-                          </a>
+                          </Link>
                         </div>
                         <div className="doublebuttons mobile">
                           <div className="btn para">
-                            <a href="twilight/ts-82">See Details</a>
+                            <Link to="twilight/ts-82">See Details</Link>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <a
-                className="left carousel-control"
-                href="#myCarousel"
-                data-slide="prev"
-              >
-                <span className="glyphicon glyphicon-chevron-left fa fa-chevron-left"></span>
-                <span className="sr-only">Previous</span>
-              </a>
-              <a
-                className="right carousel-control"
-                href="#myCarousel"
-                data-slide="next"
-              >
-                <span className="glyphicon glyphicon-chevron-right fa fa-chevron-right"></span>
-                <span className="sr-only">Next</span>
-              </a>
+              </Slider>
             </div>
           </section>
           <section id="overviewTestimonial">
@@ -911,7 +849,7 @@ const Home = () => {
                 <div className="col-md-12">
                   <div className="doublebuttons">
                     <div className="btn para">
-                      <a href="find-a-dealer">Find My Dealer</a>
+                      <Link to="#">Find My Dealer</Link>
                     </div>
                   </div>
                 </div>
@@ -925,7 +863,7 @@ const Home = () => {
                   <img
                     className="img-responsive"
                     alt="swim spa set into a deck"
-                    src="https://masterspascdn.com/img/bypg.jpg"
+                    src="/img/bypg.jpg"
                   />
                 </div>
                 <div className="col-md-5">
@@ -940,7 +878,7 @@ const Home = () => {
                       </p>
                       <div className="doublebuttons">
                         <div className="btn para">
-                          <a href="backyard-oasis-guide">Download Now</a>
+                          <Link to="#">Download Now</Link>
                         </div>
                       </div>
                     </div>

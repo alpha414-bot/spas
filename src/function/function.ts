@@ -1,3 +1,6 @@
+import { RouteErrorInterface } from ".";
+import { useEffect } from "react";
+
 // toberemoved
 export const getErrorMessageViaStatus = (error: RouteErrorInterface) => {
   switch (error.status) {
@@ -15,4 +18,16 @@ export const getErrorMessageViaStatus = (error: RouteErrorInterface) => {
         longMessage: error.data,
       };
   }
+};
+
+export const importScript = (resourceUrl: string) => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = resourceUrl;
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, [resourceUrl]);
 };

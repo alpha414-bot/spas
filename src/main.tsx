@@ -11,7 +11,7 @@ const Client = new QueryClient({
   defaultOptions: { queries: { refetchInterval: false, staleTime: Infinity } },
 });
 
-ReactDOM.createRoot(document.getElementById("mm-0")!).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <QueryClientProvider client={Client}>
       <RouterProvider router={router} />

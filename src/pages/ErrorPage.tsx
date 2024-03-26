@@ -1,3 +1,4 @@
+import { RouteErrorInterface } from "@/function";
 import { getErrorMessageViaStatus } from "@/function/function";
 import MainLayout from "@/layouts/MainLayout";
 import { useRouteError } from "react-router-dom";

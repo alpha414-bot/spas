@@ -1,4 +1,5 @@
 import MainLayout from "@/layouts/MainLayout";
+import { Link } from "react-router-dom";
 
 const CustomerSupport = () => {
   return (
@@ -11,18 +12,18 @@ const CustomerSupport = () => {
           className="jumbotron overview owners"
           style={{
             background:
-              "url(https://masterspascdn.com/img/hot-tub-ideas-and-resources.jpg) no-repeat top center",
+              "url(/img/hot-tub-ideas-and-resources.jpg) no-repeat top center",
           }}
         >
           <h1>Ideas &amp; Support</h1>
           <div className="ownersAll">
             <div className="row cards">
               <div className="col-sm-6 col-md-4">
-                <a href="prep/">
+                <Link to="prep/">
                   <div className="support">
                     <h4>Answers While You Wait</h4>
                     <img
-                      src="https://masterspascdn.com/img/icons/icon-wyw.png"
+                      src="/img/icons/icon-wyw.png"
                       alt="while you wait icon"
                     />
                     <p>
@@ -31,14 +32,14 @@ const CustomerSupport = () => {
                       <br />
                     </p>
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="col-sm-6 col-md-4">
-                <a href="hot-tub-video-tutorials">
+                <Link to="hot-tub-video-tutorials">
                   <div className="support">
                     <h4>How To: Video Tutorials</h4>
                     <img
-                      src="https://masterspascdn.com/img/icons/icon-video-tutorials.png"
+                      src="/img/icons/icon-video-tutorials.png"
                       alt="video tutorials icon"
                     />
                     <p>
@@ -47,14 +48,14 @@ const CustomerSupport = () => {
                       <br />
                     </p>
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="col-sm-6 col-md-4">
-                <a href="facebook-live-videos/">
+                <Link to="facebook-live-videos/">
                   <div className="support">
                     <h4>Facebook Live Videos</h4>
                     <img
-                      src="https://masterspascdn.com/img/icons/icon-facebook-live.png"
+                      src="/img/icons/icon-facebook-live.png"
                       alt="facebook live icon"
                     />
                     <p>
@@ -63,14 +64,14 @@ const CustomerSupport = () => {
                       <br />
                     </p>
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="col-sm-6 col-md-4">
-                <a href="backyard-ideas">
+                <Link to="backyard-ideas">
                   <div className="support">
                     <h4>Backyard Ideas</h4>
                     <img
-                      src="https://masterspascdn.com/img/icons/icon-lightbulb.png"
+                      src="/img/icons/icon-lightbulb.png"
                       alt="lightbulb icon"
                     />
                     <p>
@@ -79,14 +80,14 @@ const CustomerSupport = () => {
                       backyard.
                     </p>
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="col-sm-6 col-md-4">
-                <a href="hot-tub-electrical-requirements">
+                <Link to="hot-tub-electrical-requirements">
                   <div className="support">
                     <h4>Electric Requirements</h4>
                     <img
-                      src="https://masterspascdn.com/img/icons/icon-power.png"
+                      src="/img/icons/icon-power.png"
                       alt="elextricity icon"
                     />
                     <p>
@@ -94,14 +95,14 @@ const CustomerSupport = () => {
                       to assist in hot tub electrical installation.
                     </p>
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="col-sm-6 col-md-4">
-                <a href="faq">
+                <Link to="faq">
                   <div className="support">
                     <h4>FAQs</h4>
                     <img
-                      src="https://masterspascdn.com/img/icons/icon-question.png"
+                      src="/img/icons/icon-question.png"
                       alt="question icon"
                     />
                     <p>
@@ -109,38 +110,38 @@ const CustomerSupport = () => {
                       questions.
                     </p>
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="col-sm-6 col-md-4">
-                <a href="documents/water-care-guide.pdf">
+                <Link to="documents/water-care-guide.pdf">
                   <div className="support">
                     <h4>Quick Start Guide</h4>
                     <img
-                      src="https://masterspascdn.com/img/icons/icon-quick-start.png"
+                      src="/img/icons/icon-quick-start.png"
                       alt="quick start icon"
                     />
                     <p>Start enjoying your hot tub quickly.</p>
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="col-sm-6 col-md-4">
-                <a href="/hot-tub-owners-manuals/">
+                <Link to="/hot-tub-owners-manuals/">
                   <div className="support">
                     <h4>Owner's Manuals</h4>
                     <img
-                      src="https://masterspascdn.com/img/icons/icon-open-pdf.png"
+                      src="/img/icons/icon-open-pdf.png"
                       alt="open pdf icon"
                     />
                     <p>Lost your manual? Download a new PDF version.</p>
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="col-sm-6 col-md-4">
-                <a href="swim-spa-resources">
+                <Link to="swim-spa-resources">
                   <div className="support">
                     <h4>Swim Spa Resources</h4>
                     <img
-                      src="https://masterspascdn.com/img/icons/icon-swim-spa-water.png"
+                      src="/img/icons/icon-swim-spa-water.png"
                       alt="swim spa icon"
                     />
                     <p>
@@ -148,14 +149,14 @@ const CustomerSupport = () => {
                       Spas
                     </p>
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="col-sm-6 col-md-4">
-                <a href="troubleshooting">
+                <Link to="troubleshooting">
                   <div className="support">
                     <h4>Troubleshooting</h4>
                     <img
-                      src="https://masterspascdn.com/img/icons/icon-toolbox.png"
+                      src="/img/icons/icon-toolbox.png"
                       alt="toolbox icon"
                     />
                     <p>
@@ -164,14 +165,14 @@ const CustomerSupport = () => {
                       <br /> &nbsp;
                     </p>
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="col-sm-6 col-md-4">
-                <a href="hot-tub-maintenance-guide">
+                <Link to="hot-tub-maintenance-guide">
                   <div className="support">
                     <h4>Hot Tub Maintenance Guide</h4>
                     <img
-                      src="https://masterspascdn.com/img/icons/maintenance-guide.png"
+                      src="/img/icons/maintenance-guide.png"
                       alt="Maintenance pdf icon"
                     />
                     <p>
@@ -180,14 +181,14 @@ const CustomerSupport = () => {
                       <br /> &nbsp;
                     </p>
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="col-sm-6 col-md-4">
-                <a href="request-service">
+                <Link to="request-service">
                   <div className="support">
                     <h4>Request Service</h4>
                     <img
-                      src="https://masterspascdn.com/img/icons/icon-gear-wrench.png"
+                      src="/img/icons/icon-gear-wrench.png"
                       alt="toolbox icon"
                     />
                     <p>
@@ -196,14 +197,14 @@ const CustomerSupport = () => {
                       <br /> &nbsp;
                     </p>
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="col-sm-6 col-md-4">
-                <a href="hot-tub-warranties/">
+                <Link to="hot-tub-warranties/">
                   <div className="support">
                     <h4>Warranties</h4>
                     <img
-                      src="https://masterspascdn.com/img/icons/icon-certificate.png"
+                      src="/img/icons/icon-certificate.png"
                       alt="warranty icon"
                     />
                     <p>
@@ -211,17 +212,16 @@ const CustomerSupport = () => {
                       or swim spa warranties here.
                     </p>
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="col-sm-6 col-md-4">
-                <a
-                  href="http://masterspasportal.com/msdealerportal/MSDP_RegisterSpa.aspx?RegisterType=Customer"
-                  target="_blank"
+                <Link
+                  to="#"
                 >
                   <div className="support">
                     <h4>Spa Registration</h4>
                     <img
-                      src="https://masterspascdn.com/img/icons/icon-clipboard.png"
+                      src="/img/icons/icon-clipboard.png"
                       alt="registration icon"
                     />
                     <p>
@@ -229,21 +229,21 @@ const CustomerSupport = () => {
                       questions or problems you might have.
                     </p>
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="col-sm-6 col-md-4">
-                <a href="news/">
+                <Link to="news/">
                   <div className="support">
                     <h4>Master Spas News</h4>
                     <img
-                      src="https://masterspascdn.com/img/icons/icon-news.png"
+                      src="/img/icons/icon-news.png"
                       alt="news icon"
                     />
                     <p>
                       Read up on the latest information involving Master Spas
                     </p>
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="col-sm-6 col-md-4" />
             </div>

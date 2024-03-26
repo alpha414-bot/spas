@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <>
@@ -6,14 +8,14 @@ const Footer = () => {
           <div className="container">
             <div className="row">
               <div className="col-sm-3">
-                <a href="https://www.masterspas.com/">
+                <Link to="/">
                   <img
                     loading="lazy"
                     className="img-responsive footerLogo"
                     src="https://www.masterspas.com/img/ms-logo.png"
                     alt="Master Spas Logo"
                   />
-                </a>
+                </Link>
                 <br />
                 <p>
                   Creating your dream backyard oasis should be simple. With the
@@ -22,17 +24,17 @@ const Footer = () => {
                 </p>
 
                 <section className="socmed">
-                  <a
-                    href="https://www.facebook.com/MasterSpas/"
+                  <Link
+                    to="https://www.facebook.com/MasterSpas/"
                     target="_blank"
                   >
                     <span className="">
                       <i className="fab fa-facebook"></i>
                     </span>
-                  </a>
+                  </Link>
 
-                  <a
-                    href="https://www.houzz.com/pro/masterspas"
+                  <Link
+                    to="https://www.houzz.com/pro/masterspas"
                     target="_blank"
                   >
                     <span className="">
@@ -52,27 +54,30 @@ const Footer = () => {
                         />
                       </picture>
                     </span>
-                  </a>
+                  </Link>
 
-                  <a
-                    href="https://www.instagram.com/masterspas/"
+                  <Link
+                    to="https://www.instagram.com/masterspas/"
                     target="_blank"
                   >
                     <span className="">
                       <i className="fab fa-instagram"></i>
                     </span>
-                  </a>
+                  </Link>
 
-                  <a
-                    href="https://www.pinterest.com/masterspas/"
+                  <Link
+                    to="https://www.pinterest.com/masterspas/"
                     target="_blank"
                   >
                     <span className="">
                       <i className="fab fa-pinterest"></i>
                     </span>
-                  </a>
+                  </Link>
 
-                  <a href="https://www.threads.net/@masterspas" target="_blank">
+                  <Link
+                    to="https://www.threads.net/@masterspas"
+                    target="_blank"
+                  >
                     <span className="">
                       <picture>
                         <source
@@ -90,17 +95,17 @@ const Footer = () => {
                         />
                       </picture>
                     </span>
-                  </a>
+                  </Link>
 
-                  <a
-                    href="https://www.tiktok.com/@masterspasofficial"
+                  <Link
+                    to="https://www.tiktok.com/@masterspasofficial"
                     target="_blank"
                   >
                     <span className="">
                       <i className="fab fa-tiktok"></i>
                     </span>
-                  </a>
-                  <a href="https://twitter.com/masterspas" target="_blank">
+                  </Link>
+                  <Link to="https://twitter.com/masterspas" target="_blank">
                     <span className="">
                       <picture>
                         <source
@@ -118,15 +123,15 @@ const Footer = () => {
                         />
                       </picture>
                     </span>
-                  </a>
-                  <a
-                    href="https://www.youtube.com/user/MasterSpas"
+                  </Link>
+                  <Link
+                    to="https://www.youtube.com/user/MasterSpas"
                     target="_blank"
                   >
                     <span className="">
                       <i className="fab fa-youtube"></i>
                     </span>
-                  </a>
+                  </Link>
 
                   <p>Relax with us on Social</p>
                 </section>
@@ -136,77 +141,70 @@ const Footer = () => {
                   <ul>
                     <li className="listTitle">Shop Products</li>
                     <li>
-                      <a href="https://www.masterspas.com/hot-tubs">Hot Tubs</a>
+                      <Link to="/hot-tubs">Hot Tubs</Link>
                     </li>
                     <li>
-                      <a href="https://www.masterspas.com/shop-swim-spas">Swim Spas</a>
+                      <Link to="/shop-swim-spas">Swim Spas</Link>
                     </li>
                     <li>
-                      <a href="https://www.masterspas.com/find-my-spa/">Find My Spa Quiz</a>
+                      <Link to="#">Find My Spa Quiz</Link>
                     </li>
                     <li>
-                      <a href="https://www.masterspas.com/buying-tools/">Buying Tools</a>
+                      <Link to="#">Buying Tools</Link>
                     </li>
                     <li>
-                      <a href="https://www.masterspas.com/compare-hot-tub-brands">
-                        Compare Hot Tub Brands
-                      </a>
+                      <Link to="#">Compare Hot Tub Brands</Link>
                     </li>
                   </ul>
 
                   <ul>
                     <li className="listTitle">Visit Us</li>
                     <li>
-                      <a href="https://www.masterspas.com/find-a-dealer">Find My Local Dealer</a>
+                      <Link to="#">Find My Local Dealer</Link>
                     </li>
                     <li>
-                      <a href="https://www.masterspas.com/get-hot-tub-pricing">Request Pricing</a>
+                      <Link to="#">Request Pricing</Link>
                     </li>
                     <li>
-                      <a href="https://www.masterspas.com/buying-tools/hot-tub-financing">Financing</a>
+                      <Link to="#">Financing</Link>
                     </li>
                     <li>
-                      <a href="https://www.masterspas.com/buying-tools/used-hot-tub-trade-in">Trade-In</a>
+                      <Link to="#">Trade-In</Link>
                     </li>
                   </ul>
 
                   <ul>
                     <li className="listTitle">Ideas &amp; Helpful Info</li>
                     <li>
-                      <a href="https://www.masterspas.com/blog/">Blog</a>
+                      <Link to="#">Backyard Ideas</Link>
                     </li>
                     <li>
-                      <a href="https://www.masterspas.com/backyard-ideas">Backyard Ideas</a>
+                      <Link to="#">Planning Guide</Link>
                     </li>
                     <li>
-                      <a href="https://www.masterspas.com/hot-tub-backyard-planning">Planning Guide</a>
+                      <Link to="#">FAQs</Link>
                     </li>
                     <li>
-                      <a href="https://www.masterspas.com/faq">FAQs</a>
-                    </li>
-                    <li>
-                      <a href="https://www.masterspas.com/about/">About Us</a>
+                      <Link to="#">About Us</Link>
                     </li>
                   </ul>
 
                   <ul>
                     <li className="listTitle">Owners &amp; Support</li>
                     <li>
-                      <a href="https://www.masterspas.com/photos">Upload Your Photo</a>
+                      <Link to="#">Upload Your Photo</Link>
                     </li>
                     <li>
-                      <a href="http://masterspasportal.com/msdealerportal/MSDP_RegisterSpa.aspx?RegisterType=Customer">
-                        Register My Spa
-                      </a>
+                      <Link to="#">Register My Spa</Link>
                     </li>
                     <li>
-                      <a href="https://www.masterspas.com/customer-support">Resources</a>
+                      <Link to="#">Resources</Link>
                     </li>
                     <li>
-                      <a href="https://www.masterspas.com/hot-tub-owners-manuals/">Owner's Manuals</a>
+                      <Link to="#">Owner's Manuals</Link>
                     </li>
                     <li>
-                      <a href="https://www.masterspas.com/video-tutorials">How-To Videos</a>
+                      <Link to="#">How-To Videos</Link>
                     </li>
                   </ul>
                 </div>
@@ -216,11 +214,17 @@ const Footer = () => {
             <section className="footerDivider"></section>
 
             <section className="awards">
-              <a href="https://www.masterspas.com/awards#bba">
+              <Link to="/awards#bba">
                 <span>
                   <picture>
-                    <source srcSet="https://www.masterspas.com/img/bbb2.webp" type="image/webp" />
-                    <source srcSet="https://www.masterspas.com/img/bbb2.png" type="image/png" />
+                    <source
+                      srcSet="https://www.masterspas.com/img/bbb2.webp"
+                      type="image/webp"
+                    />
+                    <source
+                      srcSet="https://www.masterspas.com/img/bbb2.png"
+                      type="image/png"
+                    />
                     <img
                       loading="lazy"
                       src="https://www.masterspas.com/img/bbb2.png"
@@ -228,15 +232,18 @@ const Footer = () => {
                     />
                   </picture>
                 </span>
-              </a>
-              <a href="https://www.masterspas.com/awards#certified">
+              </Link>
+              <Link to="/awards#certified">
                 <span>
                   <picture>
                     <source
                       srcSet="https://www.masterspas.com/img/spa-certified2.webp"
                       type="image/webp"
                     />
-                    <source srcSet="https://www.masterspas.com/img/spa-certified2.png" type="image/png" />
+                    <source
+                      srcSet="https://www.masterspas.com/img/spa-certified2.png"
+                      type="image/png"
+                    />
                     <img
                       loading="lazy"
                       src="https://www.masterspas.com/img/spa-certified2.png"
@@ -244,12 +251,18 @@ const Footer = () => {
                     />
                   </picture>
                 </span>
-              </a>
-              <a href="https://www.masterspas.com/awards#torch">
+              </Link>
+              <Link to="/awards#torch">
                 <span>
                   <picture>
-                    <source srcSet="https://www.masterspas.com/img/torch2.webp" type="image/webp" />
-                    <source srcSet="https://www.masterspas.com/img/torch2.png" type="image/png" />
+                    <source
+                      srcSet="https://www.masterspas.com/img/torch2.webp"
+                      type="image/webp"
+                    />
+                    <source
+                      srcSet="https://www.masterspas.com/img/torch2.png"
+                      type="image/png"
+                    />
                     <img
                       loading="lazy"
                       src="https://www.masterspas.com/img/torch2.png"
@@ -260,12 +273,18 @@ const Footer = () => {
                     Torch <br /> Award
                   </p>
                 </span>
-              </a>
-              <a href="https://www.masterspas.com/awards#inspire">
+              </Link>
+              <Link to="/awards#inspire">
                 <span>
                   <picture>
-                    <source srcSet="https://www.masterspas.com/img/inspire2.webp" type="image/webp" />
-                    <source srcSet="https://www.masterspas.com/img/inspire2.png" type="image/png" />
+                    <source
+                      srcSet="https://www.masterspas.com/img/inspire2.webp"
+                      type="image/webp"
+                    />
+                    <source
+                      srcSet="https://www.masterspas.com/img/inspire2.png"
+                      type="image/png"
+                    />
                     <img
                       loading="lazy"
                       src="https://www.masterspas.com/img/inspire2.png"
@@ -277,12 +296,18 @@ const Footer = () => {
                     Inspire <br /> Award
                   </p>
                 </span>
-              </a>
-              <a href="https://www.masterspas.com/awards#ernst">
+              </Link>
+              <Link to="/awards#ernst">
                 <span>
                   <picture>
-                    <source srcSet="https://www.masterspas.com/img/ernst2.webp" type="image/webp" />
-                    <source srcSet="https://www.masterspas.com/img/ernst2.png" type="image/png" />
+                    <source
+                      srcSet="https://www.masterspas.com/img/ernst2.webp"
+                      type="image/webp"
+                    />
+                    <source
+                      srcSet="https://www.masterspas.com/img/ernst2.png"
+                      type="image/png"
+                    />
                     <img
                       loading="lazy"
                       src="https://www.masterspas.com/img/ernst2.png"
@@ -293,12 +318,18 @@ const Footer = () => {
                     Ernst &amp; Young <br /> Entrepreneur <br /> of the year
                   </p>
                 </span>
-              </a>
-              <a href="https://www.masterspas.com/awards#ihta">
+              </Link>
+              <Link to="/awards#ihta">
                 <span>
                   <picture>
-                    <source srcSet="https://www.masterspas.com/img/ihta2.webp" type="image/webp" />
-                    <source srcSet="https://www.masterspas.com/img/ihta2.png" type="image/png" />
+                    <source
+                      srcSet="https://www.masterspas.com/img/ihta2.webp"
+                      type="image/webp"
+                    />
+                    <source
+                      srcSet="https://www.masterspas.com/img/ihta2.png"
+                      type="image/png"
+                    />
                     <img
                       loading="lazy"
                       src="https://www.masterspas.com/img/ihta2.png"
@@ -306,12 +337,18 @@ const Footer = () => {
                     />
                   </picture>
                 </span>
-              </a>
-              <a href="https://www.masterspas.com/awards">
+              </Link>
+              <Link to="/awards">
                 <span>
                   <picture>
-                    <source srcSet="https://www.masterspas.com/img/usms-logo.webp" type="image/webp" />
-                    <source srcSet="https://www.masterspas.com/img/usms-logo.png" type="image/png" />
+                    <source
+                      srcSet="https://www.masterspas.com/img/usms-logo.webp"
+                      type="image/webp"
+                    />
+                    <source
+                      srcSet="https://www.masterspas.com/img/usms-logo.png"
+                      type="image/png"
+                    />
                     <img
                       loading="lazy"
                       src="https://www.masterspas.com/img/usms-logo.png"
@@ -319,7 +356,7 @@ const Footer = () => {
                     />
                   </picture>
                 </span>
-              </a>
+              </Link>
               <br />
               <br />
             </section>
@@ -328,18 +365,17 @@ const Footer = () => {
         <section className="text-center">
           <br />
           <p>
-            Copyright &copy; 2024, Master Spas |{" "}
-            <a href="https://www.masterspas.com/legal">Legal</a>
+            Copyright &copy; 2024, Master Spas | <Link to="/legal">Legal</Link>
           </p>
           <p>
             Manufacturer of{" "}
-            <a href="http://legacywhirlpool.com/" target="_blank">
+            <Link to="http://legacywhirlpool.com/" target="_blank">
               Legacy Whirlpool
-            </a>
+            </Link>
           </p>
           <br />
           <p>
-            <a href="https://www.masterspas.com/privacy-statement">Privacy Statement</a>
+            <Link to="/privacy-statement">Privacy Statement</Link>
           </p>
           <br />
         </section>
@@ -347,25 +383,23 @@ const Footer = () => {
           <p>
             Built in{" "}
             <picture>
-              <source srcSet="https://www.masterspas.com/img/usa.webp" type="image/webp" />
-              <source srcSet="https://www.masterspas.com/img/usa.jpg" type="image/jpg" />
-              <img loading="lazy" src="https://www.masterspas.com/img/usa.jpg" alt="United States Flag" />
+              <source
+                srcSet="https://www.masterspas.com/img/usa.webp"
+                type="image/webp"
+              />
+              <source
+                srcSet="https://www.masterspas.com/img/usa.jpg"
+                type="image/jpg"
+              />
+              <img
+                loading="lazy"
+                src="https://www.masterspas.com/img/usa.jpg"
+                alt="United States Flag"
+              />
             </picture>{" "}
             the USA
           </p>
         </section>
-        <div className="linkgroup">
-          <div className="btn btn-default dealerlog">
-            <a href="http://masterspasportal.com/MSDealerPortal/MSDPLogin.aspx">
-              Dealer Log-in
-            </a>
-          </div>
-          <div className="btn btn-default dealerlog">
-            <a target="_blank" href="https://www.masterspasjobs.com">
-              Employment Opportunities
-            </a>
-          </div>
-        </div>
         <section className="footDisclaimer">
           <small>
             Master Spas&reg; products are made and assembled in the U.S.A. with
