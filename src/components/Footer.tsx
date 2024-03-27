@@ -19,8 +19,8 @@ const Footer = () => {
                 <br />
                 <p>
                   Creating your dream backyard oasis should be simple. With the
-                  Gulfsouth Spas&reg; range of ultra-therapeutic hot tubs and
-                  swim spas, it is.
+                  Gulfsouth Spas range of ultra-therapeutic hot tubs and swim
+                  spas, it is.
                 </p>
 
                 <section className="socmed">
@@ -197,12 +197,6 @@ const Footer = () => {
             Copyright &copy; 2024, Gulfsouth Spas |{" "}
             <Link to="javascript:void">Legal</Link>
           </p>
-          <p>
-            Manufacturer of{" "}
-            <Link to="javascript:void" target="_blank">
-              Legacy Whirlpool
-            </Link>
-          </p>
           <br />
           <p>
             <Link to="javascript:void">Privacy Statement</Link>
@@ -222,17 +216,27 @@ const Footer = () => {
         </section>
         <section className="footDisclaimer">
           <small>
-            Gulfsouth Spas&reg; products are made and assembled in the U.S.A.
-            with domestic and foreign components. Gulfsouth Spas reserves the
-            right to change product specifications or features without notice.
-            Master Spas is a manufacturer of spas and related products, and we
-            stand behind every product we produce pursuant to those
-            representations which are stated in our written limited warranty.
-            Your dealer is an independent businessperson or company and not an
-            employee or agent of Gulfsouth Spas. We cannot and do not accept any
-            responsibility or liability for any other representations,
-            statements or contracts made by any dealer beyond the provisions of
-            our written limited warranty.
+            The Gulfsouth Spas line of spas has been designed, produced and
+            perfected by our team in Tennessee for since 2010. We are a family
+            business of dedicated spa professionals offering lifetime factory
+            service that supports its products, so that consumers can enjoy
+            peace of mind and can take advantage of the lifelong health benefits
+            of their spas. Spas are technically challenging deluxe products
+            which include amongst other things : plumbing, electricity, and
+            electronics. All components have to face the outdoor elements and
+            the variability of the seasons. You want to make certain that you
+            are dealing with someone who is going to be around for a long time
+            and who is dedicated with the service and upkeep of your spa, way
+            after your date of purchase. Our lifetime factory service ensures
+            that we will always support you. We offer training to our authorized
+            dealers and have a network of spa repair professionals throughout
+            the United States for field service issues, on top of our expert
+            inside team ready to support you and answer any questions. We are
+            proud of our 5-star quality program and our lifetime factory service
+            support. We value friendship and respect with our customers and live
+            by the golden rule. We care about others, and we care about you.
+            Don’t hesitate to email to us at anytime, it is always our pleasure
+            to serve you:
           </small>
         </section>
       </footer>

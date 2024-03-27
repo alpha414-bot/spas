@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import OutsideClick from './OutsideClick';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import OutsideClick from "./OutsideClick";
 interface NavBarInterface {
-  type?: 'announcement' | 'navbar';
+  type?: "announcement" | "navbar";
 }
 
 const NavBar: React.FC<NavBarInterface> = ({}) => {
   const [showSideMenu, setShowSideMenu] = useState<boolean>(false);
-  const [subMenu, setSubMenu] = useState<'hot-tubs' | 'swim-spas' | null>(null);
+  const [subMenu, setSubMenu] = useState<"hot-tubs" | "swim-spas" | null>(null);
   return (
     <>
       {showSideMenu && (
@@ -26,18 +26,20 @@ const NavBar: React.FC<NavBarInterface> = ({}) => {
             >
               <div className="mm-panels">
                 <div
-                  className={`mm-panel mm-hasnavbar ${!subMenu ? 'mm-opened mm-current' : 'mm-hidden'} `}
+                  className={`mm-panel mm-hasnavbar ${
+                    !subMenu ? "mm-opened mm-current" : "mm-hidden"
+                  } `}
                   id="mm-1"
                 >
                   <div className="mm-navbar">
                     <span className="mm-title">Menu</span>
                   </div>
                   <ul className="mm-listview">
-                    <li onClick={() => setSubMenu('hot-tubs')}>
+                    <li onClick={() => setSubMenu("hot-tubs")}>
                       <span className="mm-next" data-target="#mm-2" />
                       <Link to="javascript:void">Hot Tubs</Link>
                     </li>
-                    <li onClick={() => setSubMenu('swim-spas')}>
+                    <li onClick={() => setSubMenu("swim-spas")}>
                       <span className="mm-next" data-target="#mm-2" />
                       <Link to="javascript:void">Swim Spas</Link>
                     </li>
@@ -48,12 +50,18 @@ const NavBar: React.FC<NavBarInterface> = ({}) => {
                 </div>
                 <div
                   className={`mm-panel mm-hasnavbar ${
-                    subMenu && subMenu == 'hot-tubs' ? 'mm-opened mm-current' : 'mm-hidden'
+                    subMenu && subMenu == "hot-tubs"
+                      ? "mm-opened mm-current"
+                      : "mm-hidden"
                   }`}
                   id="mm-2"
                 >
                   <div className="mm-navbar">
-                    <span className="mm-btn mm-prev" onClick={() => setSubMenu(null)} data-target="#mm-1" />
+                    <span
+                      className="mm-btn mm-prev"
+                      onClick={() => setSubMenu(null)}
+                      data-target="#mm-1"
+                    />
                     <span className="mm-title">Hot Tubs</span>
                   </div>
                   <ul className="mm-listview">
@@ -76,16 +84,24 @@ const NavBar: React.FC<NavBarInterface> = ({}) => {
                 </div>
                 <div
                   className={`mm-panel mm-hasnavbar ${
-                    subMenu && subMenu == 'swim-spas' ? 'mm-opened mm-current' : 'mm-hidden'
+                    subMenu && subMenu == "swim-spas"
+                      ? "mm-opened mm-current"
+                      : "mm-hidden"
                   }`}
                   id="mm-3"
                 >
                   <div className="mm-navbar">
-                    <span className="mm-btn mm-prev" onClick={() => setSubMenu(null)} data-target="#mm-1" />
+                    <span
+                      className="mm-btn mm-prev"
+                      onClick={() => setSubMenu(null)}
+                      data-target="#mm-1"
+                    />
                     <span className="mm-title">Swim Spas</span>
                   </div>
                   <ul className="mm-listview">
-                    <li className="dropdown-header">Gulfsouth Spas Swim Spas</li>
+                    <li className="dropdown-header">
+                      Gulfsouth Spas Swim Spas
+                    </li>
                     <li>
                       <Link to="/swim-spas">General Overview</Link>
                     </li>
@@ -99,7 +115,10 @@ const NavBar: React.FC<NavBarInterface> = ({}) => {
           </OutsideClick>
         </>
       )}
-      <nav className="navbar navbar-default navbar-fixed-top bumpedNav" id="dtopNav">
+      <nav
+        className="navbar navbar-default navbar-fixed-top bumpedNav"
+        id="dtopNav"
+      >
         <div className="container ">
           <div className="">
             <button
@@ -138,7 +157,7 @@ const NavBar: React.FC<NavBarInterface> = ({}) => {
                         </Link>
                       </li>
                       <li>
-                        <Link preventScrollReset={false}  to="/hot-tubs">
+                        <Link preventScrollReset={false} to="/hot-tubs">
                           <span>Nautical Series</span>
                         </Link>
                       </li>
@@ -172,16 +191,23 @@ const NavBar: React.FC<NavBarInterface> = ({}) => {
                 <Link to="/customer-support">Ideas &amp; Support</Link>
               </li>
               <li>
-                <div className="btn para" style={{ backgroundColor: 'transparent', width: '20px' }}>
+                <div
+                  className="btn para"
+                  style={{ backgroundColor: "transparent", width: "20px" }}
+                >
                   {/*<a href="/find-a-dealer"></a>*/}
                 </div>
                 <div className="clearfix" />
               </li>
             </ul>
           </div>
-          <div id="theCurrentPage" style={{ display: 'none' }} data-id=""></div>
+          <div id="theCurrentPage" style={{ display: "none" }} data-id=""></div>
           <div id="navSearch">
-            <Link to="javascript:void" data-toggle="modal" data-target="#searchModal"></Link>
+            <Link
+              to="javascript:void"
+              data-toggle="modal"
+              data-target="#searchModal"
+            ></Link>
           </div>
         </div>
       </nav>

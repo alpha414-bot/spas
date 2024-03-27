@@ -129,7 +129,7 @@ const Home = () => {
                     <p>
                       Creating your dream backyard oasis should be simple.{" "}
                       <br />
-                      With the Gulfsouth Spas&reg; range of ultra-therapeutic
+                      With the Gulfsouth Spas range of ultra-therapeutic
                       hot tubs hot tubs and swim spas, it is.
                     </p>
                   </div>
@@ -232,7 +232,7 @@ const Home = () => {
                       </Link>
                     </div>
                     <div className="swimSpaLineDescription">
-                      <h3>H2X Fitness Swim Spas</h3>
+                      <h3>Swim Spas</h3>
                       <p>Jetted swim spa for training, fitness, and therapy.</p>
                       <div className="btn para">
                         <Link to="https://h2xswimspa.com/">See More</Link>
@@ -284,7 +284,7 @@ const Home = () => {
               <div className="row">
                 <div className="col-md-12">
                   <h3 className="text-center bluetitlelg">
-                    Finding your perfect Gulfsouth Spas&reg; hot tub or swim spa
+                    Finding your perfect Gulfsouth Spas hot tub or swim spa
                     is simple.
                   </h3>
                 </div>
@@ -294,7 +294,7 @@ const Home = () => {
                 <div className="col-md-8">
                   <ol className="bigNumberList">
                     <li>
-                      <h4>Find Your Gulfsouth Spas&reg; Dealer</h4>
+                      <h4>Contact Gulfsouth Spas</h4>
                       <p>
                         Explore our full range of premium spas with confidence
                         as your local dealer answers any questions you may have.
@@ -303,7 +303,7 @@ const Home = () => {
                     <li>
                       <h4>Choose Your Perfect Spa</h4>
                       <p>
-                        Your Gulfsouth Spas&reg; dealer is there to help as you
+                        Your Gulfsouth Spas dealer is there to help as you
                         choose the model that is right for your lifestyle and
                         space.{" "}
                       </p>
@@ -312,7 +312,7 @@ const Home = () => {
                       <h4>Live Better</h4>
                       <p>
                         Enjoy better daily living from the comfort of your own
-                        home with Gulfsouth Spas&reg;
+                        home with Gulfsouth Spas
                       </p>
                     </li>
                   </ol>
@@ -328,7 +328,7 @@ const Home = () => {
               <div className="row">
                 <div className="col-md-12">
                   <div className="parallaxText">
-                    <h2>Experience the Gulfsouth Spas&reg; difference.</h2>
+                    <h2>Experience the Gulfsouth Spas difference.</h2>
                     <h3>
                       You'll wonder how you ever lived <br /> without one.
                     </h3>
@@ -377,7 +377,7 @@ const Home = () => {
                         <Link to="javascript:void">
                           <img
                             className="img-responsive imgctr"
-                            alt="EcoPur&reg; Charge Filtration System"
+                            alt="EcoPur Charge Filtration System"
                             src="/img/home-eco-pur-filtration.jpg"
                           />
                         </Link>
