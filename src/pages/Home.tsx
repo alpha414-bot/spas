@@ -129,8 +129,8 @@ const Home = () => {
                     <p>
                       Creating your dream backyard oasis should be simple.{" "}
                       <br />
-                      With the Gulfsouth Spas&reg; range of ultra-therapeutic hot
-                      tubs hot tubs and swim spas, it is.
+                      With the Gulfsouth Spas&reg; range of ultra-therapeutic
+                      hot tubs hot tubs and swim spas, it is.
                     </p>
                   </div>
                 </div>
@@ -219,9 +219,7 @@ const Home = () => {
             <div className="container">
               <div className="row">
                 <div className="col-md-12">
-                  <h2 className="bluetitlelg text-center">
-                    Swim Spa Series
-                  </h2>
+                  <h2 className="bluetitlelg text-center">Swim Spa Series</h2>
                 </div>
                 <div className="col-md-6">
                   <div className="swimSpaLineWrapper h2x">
@@ -258,8 +256,8 @@ const Home = () => {
                     </h4>
                     <h5>We've felt it too.</h5>
                     <p>
-                      At Gulfsouth Spas&trade;, we understand that your hot tub or
-                      swim spa has to meet your unique needs.
+                      At Gulfsouth Spas&trade;, we understand that your hot tub
+                      or swim spa has to meet your unique needs.
                     </p>
                     <p>
                       As America's largest hot tub and swim spa manufacturer,
@@ -286,8 +284,8 @@ const Home = () => {
               <div className="row">
                 <div className="col-md-12">
                   <h3 className="text-center bluetitlelg">
-                    Finding your perfect Gulfsouth Spas&reg; hot tub or swim spa is
-                    simple.
+                    Finding your perfect Gulfsouth Spas&reg; hot tub or swim spa
+                    is simple.
                   </h3>
                 </div>
               </div>
@@ -363,14 +361,12 @@ const Home = () => {
                       </div>
                       <div className="col-xs-8 col-md-12">
                         <h3 className="bluetitle">
-                          <Link to="javascript:void">
-                            Biomagnetic Therapy System
-                          </Link>
+                          <Link to="javascript:void">In.Touch Features</Link>
                         </h3>
                         <p>
-                          Applies magnetic therapy to pressure points on the
-                          neck and back. Increases blood flow, improves
-                          circulation, and reduces swelling.
+                          Controll all functions of your spa from your iOS or
+                          Android smartphone or tablet and the In.touch.2® app.
+                          Use predefined spa experiences or customize your own.
                         </p>
                       </div>
                     </div>
@@ -388,14 +384,13 @@ const Home = () => {
                       </div>
                       <div className="col-xs-8 col-md-12">
                         <h3 className="bluetitle">
-                          <Link to="/hot-tub-filter">
-                            EcoPur&reg; Charge Filtration System
-                          </Link>
+                          <Link to="/hot-tub-filter">Stereo Features</Link>
                         </h3>
                         <p>
-                          Inspired by nature, our water filtration system
-                          utilizes copper and zinc to purify water so that it is
-                          crystal clear and fresh.
+                          Streamed from your spa, your favorite music never
+                          sounded so good! in.stream 2 audio station is a
+                          compact, rugged and splash proof all in one outdoor
+                          audio system.
                         </p>
                       </div>
                     </div>
@@ -420,14 +415,14 @@ const Home = () => {
                             to="https://michaelphelpsswimspa.com/features-nonslip-floor-system"
                             target="_blank"
                           >
-                            Nonslip, Comfort Floor System
+                            Digital Features
                           </Link>
                         </h3>
                         <p>
-                          Walk, jog, and exercise in the water without the need
-                          for water shoes. The Nonslip, Comfort Floor System
-                          prevents slips and provides a comfortable, cushioned
-                          surface.
+                          No matter what kind of Digital Topside Control you
+                          have on your GulfSouth Spa, It will be easy to use and
+                          manage with a different variety of Pumps, Packs and
+                          Digital Topsides.
                         </p>
                       </div>
                     </div>
@@ -452,12 +447,13 @@ const Home = () => {
                             to="https://michaelphelpsswimspa.com/features-wave_technology"
                             target="_blank"
                           >
-                            Wave Propulsion&reg; System
+                            Engineering Features
                           </Link>
                         </h3>
                         <p>
-                          Creates a deep and wide current of pure water flow
-                          with virtually no turbulence.
+                          At GulfSouth Spa we have a knowledgeable Engineering
+                          Department, that thrives to bring the consumer the
+                          very best up to date equipment available.
                         </p>
                       </div>
                     </div>
@@ -545,9 +541,7 @@ const Home = () => {
                         </p>
                         <div className="doublebuttons dtop">
                           <div className="btn para">
-                            <Link to="javascript:void">
-                              See Details
-                            </Link>
+                            <Link to="javascript:void">See Details</Link>
                           </div>
                         </div>
                         <br />
@@ -569,9 +563,7 @@ const Home = () => {
                         </div>
                         <div className="doublebuttons mobile">
                           <div className="btn para">
-                            <Link to="javascript:void">
-                              See Details
-                            </Link>
+                            <Link to="javascript:void">See Details</Link>
                           </div>
                         </div>
                       </div>
