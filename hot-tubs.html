@@ -128,53 +128,48 @@
                                              <h2>Hot Tub Brands</h2>
                                              <select class="brandFilter form-control">
                                                   <option value="">All Brands</option>
-                                                  <option value="Trident Series">Tident Series</option>
-                                                  <option value="Nautical Series">Nautical Series</option>
-                                                  <option value="Coastal Series">Coastal Series</option>
+                                                  <option value=".TridentSeries">Tident Series</option>
+                                                  <option value=".NauticalSeries">Nautical Series</option>
+                                                  <option value=".CoastalSeries">Coastal Series</option>
                                              </select>
                                         </fieldset>
                                    </div>
                                    <div class="col-sm-4 col-md-12">
-                                        <fieldset data-filter-group="">
+                                        <fieldset data-filter-group>
                                              <h2>Number of People</h2>
                                              <select class="seatingFilter form-control">
+                                                  <option value="" selected disabled>Select Seating Capacity</option>
                                                   <option value="">All Seating</option>
-                                                  <option value="1-3">1-3 Adults</option>
-                                                  <option value="4-5">4-5 Adults</option>
-                                                  <option value="6-8">6-8 Adults</option>
+                                                  <option value=".filter-seating-1">1-3 Adults</option>
+                                                  <option value=".filter-seating-2">4-5 Adults</option>
+                                                  <option value=".filter-seating-3">6-8 Adults</option>
                                              </select>
                                         </fieldset>
                                    </div>
                                    <div class="col-sm-4 col-md-12">
-                                        <fieldset data-filter-group="">
+                                        <fieldset data-filter-group>
                                              <h2>Price</h2>
                                              <select class="priceFilter form-control">
+                                                  <option value="" selected disabled>Select Price Range</option>
                                                   <option value="">All Prices</option>
-                                                  <option value="5">
-                                                       $$$$$
-                                                  </option>
-                                                  <option value="4">
-                                                       $$$$
-                                                  </option>
-                                                  <option value="3">
-                                                       $$$
-                                                  </option>
-                                                  <option value="2">
-                                                       $$
-                                                  </option>
-                                                  <option value="1">
-                                                       $
-                                                  </option>
+                                                  <option value=".filter-price-5">$$$$$ </option>
+                                                  <option value=".filter-price-4">$$$$ </option>
+                                                  <option value=".filter-price-3">$$$ </option>
+                                                  <option value=".filter-price-2">$$ </option>
+                                                  <option value=".filter-price-1">$</option>
                                              </select>
                                         </fieldset>
                                    </div>
                                    <div class="col-sm-4 col-md-12">
                                         <h2>Sort Order</h2>
                                         <select class="selectSort select-sort form-control">
-                                             <option value="price:asc">Price Ascending</option>
-                                             <option value="price:desc">Price Descending</option>
-                                             <option value="seat:asc">Seating Ascending</option>
-                                             <option value="seat:desc">Seating Descending</option>
+                                             <option value="" selected disabled>Sort Order</option>
+                                             <option data-sort="price:asc" value="price:asc">Price Ascending</option>
+                                             <option data-sort="price:desc" value="price:desc">Price Descending</option>
+                                             <option data-sort="seating:asc" value="seating:asc">Seating Ascending
+                                             </option>
+                                             <option data-sort="seating:desc" value="seating:desc">Seating Descending
+                                             </option>
                                         </select>
                                    </div>
                               </div>
@@ -190,13 +185,14 @@
                                    </div>
                               </div>
                               <div class="row items filter-area animated fadeIn">
-                                    <div class="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-seating-2 filter-price-1
-                                        Clarity Hot Tubs">
+                                   <div class="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-seating-3 filter-price-3 CoastalSeries"
+                                        data-price="3" data-seating="6" data-name="cs5l">
                                         <div class="row filter-item-details">
                                              <div class="col-xs-6">
                                                   <span class="tubwrap">
                                                        <picture>
-                                                            <source srcset="/img/home-page/products/cs5l.png" type="image/png" />
+                                                            <source srcset="/img/home-page/products/cs5l.png"
+                                                                 type="image/png" />
                                                             <img loading="lazy" class="img-responsive"
                                                                  src="/img/home-page/products/cs5l.png" />
                                                        </picture>
@@ -229,13 +225,14 @@
                                              </div>
                                         </div>
                                    </div>
-                                    <div class="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-seating-2 filter-price-1
-                                        Clarity Hot Tubs">
+                                   <div class="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-seating-3 filter-price-4 TridentSeries"
+                                        data-price="4" data-seating="6" data-name="ts7">
                                         <div class="row filter-item-details">
                                              <div class="col-xs-6">
                                                   <span class="tubwrap">
                                                        <picture>
-                                                            <source srcset="/img/home-page/products/ts7.png" type="image/png" />
+                                                            <source srcset="/img/home-page/products/ts7.png"
+                                                                 type="image/png" />
                                                             <img loading="lazy" class="img-responsive"
                                                                  src="/img/home-page/products/ts7.png" />
                                                        </picture>
@@ -268,13 +265,14 @@
                                              </div>
                                         </div>
                                    </div>
-                                   <div class="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-seating-2 filter-price-1
-                                        Clarity Hot Tubs">
+                                   <div class="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-seating-3 filter-price-4 CoastalSeries"
+                                        data-price="4" data-seating="6" data-name="cs7l">
                                         <div class="row filter-item-details">
                                              <div class="col-xs-6">
                                                   <span class="tubwrap">
                                                        <picture>
-                                                            <source srcset="/img/home-page/products/cs7l.png" type="image/png" />
+                                                            <source srcset="/img/home-page/products/cs7l.png"
+                                                                 type="image/png" />
                                                             <img loading="lazy" class="img-responsive"
                                                                  src="/img/home-page/products/cs7l.png" />
                                                        </picture>
@@ -282,7 +280,7 @@
                                              </div>
                                              <div class="col-xs-6 filter-item-specs">
                                                   <h3 class="bluetitle" style="font-size: 24;margin-top: 0;">
-                                            CS7L
+                                                       CS7L
                                                   </h3>
                                                   <p>
                                                        <img loading="lazy" width="20px" height="20px"
@@ -298,7 +296,7 @@
                                                             alt="Blue icon of a dollar"
                                                             src="/img/icons/icon-dollar.png" />:
                                                        <span class="dollars">
-                                                            $
+                                                            $$$$
                                                        </span>
                                                   </p>
                                                   <a class="btn btn-info btn-sm upper" href="javascript:void(0)">
@@ -307,21 +305,262 @@
                                              </div>
                                         </div>
                                    </div>
-                                                        <div class="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-seating-4 filter-price-1
-                                        Clarity Hot Tubs">
+                                   <div class="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-seating-3 filter-price-3 NauticalSeries"
+                                        data-price="3" data-seating="6" data-name="ns8l">
                                         <div class="row filter-item-details">
                                              <div class="col-xs-6">
                                                   <span class="tubwrap">
                                                        <picture>
-                                                            <source srcset="/img/home-page/products/cs7l.png" type="image/png" />
+                                                            <source srcset="/img/home-page/products/ns8l.png"
+                                                                 type="image/png" />
                                                             <img loading="lazy" class="img-responsive"
-                                                                 src="/img/home-page/products/cs7l.png" />
+                                                                 src="/img/home-page/products/ns8l.png" />
                                                        </picture>
                                                   </span>
                                              </div>
                                              <div class="col-xs-6 filter-item-specs">
                                                   <h3 class="bluetitle" style="font-size: 24;margin-top: 0;">
-                                            CS7L
+                                                       NS8L
+                                                  </h3>
+                                                  <p>
+                                                       <img loading="lazy" width="20px" height="20px"
+                                                            alt="Blue icon of person"
+                                                            src="/img/icons/icon-person.png" />
+                                                       :
+                                                       <span class="seatingNumber">
+                                                            6 Adults
+                                                       </span>
+                                                  </p>
+                                                  <p>
+                                                       <img loading="lazy" width="20px" height="20px"
+                                                            alt="Blue icon of a dollar"
+                                                            src="/img/icons/icon-dollar.png" />:
+                                                       <span class="dollars">
+                                                            $$$
+                                                       </span>
+                                                  </p>
+                                                  <a class="btn btn-info btn-sm upper" href="javascript:void(0)">
+                                                       View Details
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-seating-3 filter-price-4 TridentSeries"
+                                        data-price="4" data-seating="6" data-name="ts8">
+                                        <div class="row filter-item-details">
+                                             <div class="col-xs-6">
+                                                  <span class="tubwrap">
+                                                       <picture>
+                                                            <source srcset="/img/home-page/products/ts8.png"
+                                                                 type="image/png" />
+                                                            <img loading="lazy" class="img-responsive"
+                                                                 src="/img/home-page/products/ts8.png" />
+                                                       </picture>
+                                                  </span>
+                                             </div>
+                                             <div class="col-xs-6 filter-item-specs">
+                                                  <h3 class="bluetitle" style="font-size: 24;margin-top: 0;">
+                                                       TS8
+                                                  </h3>
+                                                  <p>
+                                                       <img loading="lazy" width="20px" height="20px"
+                                                            alt="Blue icon of person"
+                                                            src="/img/icons/icon-person.png" />
+                                                       :
+                                                       <span class="seatingNumber">
+                                                            6 Adults
+                                                       </span>
+                                                  </p>
+                                                  <p>
+                                                       <img loading="lazy" width="20px" height="20px"
+                                                            alt="Blue icon of a dollar"
+                                                            src="/img/icons/icon-dollar.png" />:
+                                                       <span class="dollars">
+                                                            $$$$
+                                                       </span>
+                                                  </p>
+                                                  <a class="btn btn-info btn-sm upper" href="javascript:void(0)">
+                                                       View Details
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-seating-3 filter-price-5 NauticalSeries"
+                                        data-price="5" data-seating="7" data-name="ns7">
+                                        <div class="row filter-item-details">
+                                             <div class="col-xs-6">
+                                                  <span class="tubwrap">
+                                                       <picture>
+                                                            <source srcset="/img/home-page/products/ns7.png"
+                                                                 type="image/png" />
+                                                            <img loading="lazy" class="img-responsive"
+                                                                 src="/img/home-page/products/ns7.png" />
+                                                       </picture>
+                                                  </span>
+                                             </div>
+                                             <div class="col-xs-6 filter-item-specs">
+                                                  <h3 class="bluetitle" style="font-size: 24;margin-top: 0;">
+                                                       NS7
+                                                  </h3>
+                                                  <p>
+                                                       <img loading="lazy" width="20px" height="20px"
+                                                            alt="Blue icon of person"
+                                                            src="/img/icons/icon-person.png" />
+                                                       :
+                                                       <span class="seatingNumber">
+                                                            7 Adults
+                                                       </span>
+                                                  </p>
+                                                  <p>
+                                                       <img loading="lazy" width="20px" height="20px"
+                                                            alt="Blue icon of a dollar"
+                                                            src="/img/icons/icon-dollar.png" />:
+                                                       <span class="dollars">
+                                                            $$$$$
+                                                       </span>
+                                                  </p>
+                                                  <a class="btn btn-info btn-sm upper" href="javascript:void(0)">
+                                                       View Details
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-seating-3 filter-price-4 CoastalSeries"
+                                        data-price="4" data-seating="6" data-name="cs61l">
+                                        <div class="row filter-item-details">
+                                             <div class="col-xs-6">
+                                                  <span class="tubwrap">
+                                                       <picture>
+                                                            <source srcset="/img/home-page/products/cs61l.png"
+                                                                 type="image/png" />
+                                                            <img loading="lazy" class="img-responsive"
+                                                                 src="/img/home-page/products/cs61l.png" />
+                                                       </picture>
+                                                  </span>
+                                             </div>
+                                             <div class="col-xs-6 filter-item-specs">
+                                                  <h3 class="bluetitle" style="font-size: 24;margin-top: 0;">
+                                                       CS6.1L
+                                                  </h3>
+                                                  <p>
+                                                       <img loading="lazy" width="20px" height="20px"
+                                                            alt="Blue icon of person"
+                                                            src="/img/icons/icon-person.png" />
+                                                       :
+                                                       <span class="seatingNumber">
+                                                            6 Adults
+                                                       </span>
+                                                  </p>
+                                                  <p>
+                                                       <img loading="lazy" width="20px" height="20px"
+                                                            alt="Blue icon of a dollar"
+                                                            src="/img/icons/icon-dollar.png" />:
+                                                       <span class="dollars">
+                                                            $$$$
+                                                       </span>
+                                                  </p>
+                                                  <a class="btn btn-info btn-sm upper" href="javascript:void(0)">
+                                                       View Details
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-seating-3 filter-price-3 CoastalSeries"
+                                        data-price="3" data-seating="6" data-name="cs62l">
+                                        <div class="row filter-item-details">
+                                             <div class="col-xs-6">
+                                                  <span class="tubwrap">
+                                                       <picture>
+                                                            <source srcset="/img/home-page/products/cs62l.png"
+                                                                 type="image/png" />
+                                                            <img loading="lazy" class="img-responsive"
+                                                                 src="/img/home-page/products/cs62l.png" />
+                                                       </picture>
+                                                  </span>
+                                             </div>
+                                             <div class="col-xs-6 filter-item-specs">
+                                                  <h3 class="bluetitle" style="font-size: 24;margin-top: 0;">
+                                                       CS6.2L
+                                                  </h3>
+                                                  <p>
+                                                       <img loading="lazy" width="20px" height="20px"
+                                                            alt="Blue icon of person"
+                                                            src="/img/icons/icon-person.png" />
+                                                       :
+                                                       <span class="seatingNumber">
+                                                            6 Adults
+                                                       </span>
+                                                  </p>
+                                                  <p>
+                                                       <img loading="lazy" width="20px" height="20px"
+                                                            alt="Blue icon of a dollar"
+                                                            src="/img/icons/icon-dollar.png" />:
+                                                       <span class="dollars">
+                                                            $$$
+                                                       </span>
+                                                  </p>
+                                                  <a class="btn btn-info btn-sm upper" href="javascript:void(0)">
+                                                       View Details
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-seating-3 filter-price-4 NauticalSeries"
+                                        data-price="4" data-seating="7" data-name="ns8">
+                                        <div class="row filter-item-details">
+                                             <div class="col-xs-6">
+                                                  <span class="tubwrap">
+                                                       <picture>
+                                                            <source srcset="/img/home-page/products/ns8.png"
+                                                                 type="image/png" />
+                                                            <img loading="lazy" class="img-responsive"
+                                                                 src="/img/home-page/products/ns8.png" />
+                                                       </picture>
+                                                  </span>
+                                             </div>
+                                             <div class="col-xs-6 filter-item-specs">
+                                                  <h3 class="bluetitle" style="font-size: 24;margin-top: 0;">
+                                                       NS8
+                                                  </h3>
+                                                  <p>
+                                                       <img loading="lazy" width="20px" height="20px"
+                                                            alt="Blue icon of person"
+                                                            src="/img/icons/icon-person.png" />
+                                                       :
+                                                       <span class="seatingNumber">
+                                                            7 Adults
+                                                       </span>
+                                                  </p>
+                                                  <p>
+                                                       <img loading="lazy" width="20px" height="20px"
+                                                            alt="Blue icon of a dollar"
+                                                            src="/img/icons/icon-dollar.png" />:
+                                                       <span class="dollars">
+                                                            $$$$
+                                                       </span>
+                                                  </p>
+                                                  <a class="btn btn-info btn-sm upper" href="javascript:void(0)">
+                                                       View Details
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-seating-2 filter-price-4 TridentSeries"
+                                        data-price="4" data-seating="5" data-name="ts7l">
+                                        <div class="row filter-item-details">
+                                             <div class="col-xs-6">
+                                                  <span class="tubwrap">
+                                                       <picture>
+                                                            <source srcset="/img/home-page/products/ts7l.png"
+                                                                 type="image/png" />
+                                                            <img loading="lazy" class="img-responsive"
+                                                                 src="/img/home-page/products/ts7l.png" />
+                                                       </picture>
+                                                  </span>
+                                             </div>
+                                             <div class="col-xs-6 filter-item-specs">
+                                                  <h3 class="bluetitle" style="font-size: 24;margin-top: 0;">
+                                                       TS7L
                                                   </h3>
                                                   <p>
                                                        <img loading="lazy" width="20px" height="20px"
@@ -337,7 +576,243 @@
                                                             alt="Blue icon of a dollar"
                                                             src="/img/icons/icon-dollar.png" />:
                                                        <span class="dollars">
+                                                            $$$$
+                                                       </span>
+                                                  </p>
+                                                  <a class="btn btn-info btn-sm upper" href="javascript:void(0)">
+                                                       View Details
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-seating-3 filter-price-3 NauticalSeries"
+                                        data-price="3" data-seating="6" data-name="ns7L">
+                                        <div class="row filter-item-details">
+                                             <div class="col-xs-6">
+                                                  <span class="tubwrap">
+                                                       <picture>
+                                                            <source srcset="/img/home-page/products/ns7l.png"
+                                                                 type="image/png" />
+                                                            <img loading="lazy" class="img-responsive"
+                                                                 src="/img/home-page/products/ns7l.png" />
+                                                       </picture>
+                                                  </span>
+                                             </div>
+                                             <div class="col-xs-6 filter-item-specs">
+                                                  <h3 class="bluetitle" style="font-size: 24;margin-top: 0;">
+                                                       NS7L
+                                                  </h3>
+                                                  <p>
+                                                       <img loading="lazy" width="20px" height="20px"
+                                                            alt="Blue icon of person"
+                                                            src="/img/icons/icon-person.png" />
+                                                       :
+                                                       <span class="seatingNumber">
+                                                            6 Adults
+                                                       </span>
+                                                  </p>
+                                                  <p>
+                                                       <img loading="lazy" width="20px" height="20px"
+                                                            alt="Blue icon of a dollar"
+                                                            src="/img/icons/icon-dollar.png" />:
+                                                       <span class="dollars">
                                                             $$$
+                                                       </span>
+                                                  </p>
+                                                  <a class="btn btn-info btn-sm upper" href="javascript:void(0)">
+                                                       View Details
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-seating-3 filter-price-4 CoastalSeries"
+                                        data-price="4" data-seating="6" data-name="cs61">
+                                        <div class="row filter-item-details">
+                                             <div class="col-xs-6">
+                                                  <span class="tubwrap">
+                                                       <picture>
+                                                            <source srcset="/img/placeholder.png" type="image/png" />
+                                                            <img loading="lazy" class="img-responsive"
+                                                                 src="/img/placeholder.png" />
+                                                       </picture>
+                                                  </span>
+                                             </div>
+                                             <div class="col-xs-6 filter-item-specs">
+                                                  <h3 class="bluetitle" style="font-size: 24;margin-top: 0;">
+                                                       CS6.1
+                                                  </h3>
+                                                  <p>
+                                                       <img loading="lazy" width="20px" height="20px"
+                                                            alt="Blue icon of person"
+                                                            src="/img/icons/icon-person.png" />
+                                                       :
+                                                       <span class="seatingNumber">
+                                                            6 Adults
+                                                       </span>
+                                                  </p>
+                                                  <p>
+                                                       <img loading="lazy" width="20px" height="20px"
+                                                            alt="Blue icon of a dollar"
+                                                            src="/img/icons/icon-dollar.png" />:
+                                                       <span class="dollars">
+                                                            $$$$
+                                                       </span>
+                                                  </p>
+                                                  <a class="btn btn-info btn-sm upper" href="javascript:void(0)">
+                                                       View Details
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-seating-3 filter-price-2 CoastalSeries"
+                                        data-price="2" data-seating="6" data-name="cs62">
+                                        <div class="row filter-item-details">
+                                             <div class="col-xs-6">
+                                                  <span class="tubwrap">
+                                                       <picture>
+                                                            <source srcset="/img/placeholder.png" type="image/png" />
+                                                            <img loading="lazy" class="img-responsive"
+                                                                 src="/img/placeholder.png" />
+                                                       </picture>
+                                                  </span>
+                                             </div>
+                                             <div class="col-xs-6 filter-item-specs">
+                                                  <h3 class="bluetitle" style="font-size: 24;margin-top: 0;">
+                                                       CS6.2
+                                                  </h3>
+                                                  <p>
+                                                       <img loading="lazy" width="20px" height="20px"
+                                                            alt="Blue icon of person"
+                                                            src="/img/icons/icon-person.png" />
+                                                       :
+                                                       <span class="seatingNumber">
+                                                            6 Adults
+                                                       </span>
+                                                  </p>
+                                                  <p>
+                                                       <img loading="lazy" width="20px" height="20px"
+                                                            alt="Blue icon of a dollar"
+                                                            src="/img/icons/icon-dollar.png" />:
+                                                       <span class="dollars">
+                                                            $$
+                                                       </span>
+                                                  </p>
+                                                  <a class="btn btn-info btn-sm upper" href="javascript:void(0)">
+                                                       View Details
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-seating-3 filter-price-5 TridentSeries"
+                                        data-price="5" data-seating="6" data-name="ts9llp">
+                                        <div class="row filter-item-details">
+                                             <div class="col-xs-6">
+                                                  <span class="tubwrap">
+                                                       <picture>
+                                                            <source srcset="/img/placeholder.png" type="image/png" />
+                                                            <img loading="lazy" class="img-responsive"
+                                                                 src="/img/placeholder.png" />
+                                                       </picture>
+                                                  </span>
+                                             </div>
+                                             <div class="col-xs-6 filter-item-specs">
+                                                  <h3 class="bluetitle" style="font-size: 24;margin-top: 0;">
+                                                       TS9LLP
+                                                  </h3>
+                                                  <p>
+                                                       <img loading="lazy" width="20px" height="20px"
+                                                            alt="Blue icon of person"
+                                                            src="/img/icons/icon-person.png" />
+                                                       :
+                                                       <span class="seatingNumber">
+                                                            6 Adults
+                                                       </span>
+                                                  </p>
+                                                  <p>
+                                                       <img loading="lazy" width="20px" height="20px"
+                                                            alt="Blue icon of a dollar"
+                                                            src="/img/icons/icon-dollar.png" />:
+                                                       <span class="dollars">
+                                                            $$$$$
+                                                       </span>
+                                                  </p>
+                                                  <a class="btn btn-info btn-sm upper" href="javascript:void(0)">
+                                                       View Details
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-seating-3 filter-price-3 TridentSeries"
+                                        data-price="3" data-seating="6" data-name="ts82l">
+                                        <div class="row filter-item-details">
+                                             <div class="col-xs-6">
+                                                  <span class="tubwrap">
+                                                       <picture>
+                                                            <source srcset="/img/placeholder.png" type="image/png" />
+                                                            <img loading="lazy" class="img-responsive"
+                                                                 src="/img/placeholder.png" />
+                                                       </picture>
+                                                  </span>
+                                             </div>
+                                             <div class="col-xs-6 filter-item-specs">
+                                                  <h3 class="bluetitle" style="font-size: 24;margin-top: 0;">
+                                                       TS8.2L
+                                                  </h3>
+                                                  <p>
+                                                       <img loading="lazy" width="20px" height="20px"
+                                                            alt="Blue icon of person"
+                                                            src="/img/icons/icon-person.png" />
+                                                       :
+                                                       <span class="seatingNumber">
+                                                            6 Adults
+                                                       </span>
+                                                  </p>
+                                                  <p>
+                                                       <img loading="lazy" width="20px" height="20px"
+                                                            alt="Blue icon of a dollar"
+                                                            src="/img/icons/icon-dollar.png" />:
+                                                       <span class="dollars">
+                                                            $$$
+                                                       </span>
+                                                  </p>
+                                                  <a class="btn btn-info btn-sm upper" href="javascript:void(0)">
+                                                       View Details
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-seating-2 filter-price-3 TridentSeries"
+                                        data-price="4" data-seating="5" data-name="ts81l">
+                                        <div class="row filter-item-details">
+                                             <div class="col-xs-6">
+                                                  <span class="tubwrap">
+                                                       <picture>
+                                                            <source srcset="/img/home-page/products/ts81l.png"
+                                                                 type="image/png" />
+                                                            <img loading="lazy" class="img-responsive"
+                                                                 src="/img/home-page/products/ts81l.png" />
+                                                       </picture>
+                                                  </span>
+                                             </div>
+                                             <div class="col-xs-6 filter-item-specs">
+                                                  <h3 class="bluetitle" style="font-size: 24;margin-top: 0;">
+                                                       TS8.1L
+                                                  </h3>
+                                                  <p>
+                                                       <img loading="lazy" width="20px" height="20px"
+                                                            alt="Blue icon of person"
+                                                            src="/img/icons/icon-person.png" />
+                                                       :
+                                                       <span class="seatingNumber">
+                                                            5 Adults
+                                                       </span>
+                                                  </p>
+                                                  <p>
+                                                       <img loading="lazy" width="20px" height="20px"
+                                                            alt="Blue icon of a dollar"
+                                                            src="/img/icons/icon-dollar.png" />:
+                                                       <span class="dollars">
+                                                            $$$$
                                                        </span>
                                                   </p>
                                                   <a class="btn btn-info btn-sm upper" href="javascript:void(0)">
@@ -519,6 +994,98 @@
                     };
                } catch (e) { }
           })();
+     </script>
+
+     <script src="js/mixitup.min.js"></script>
+     <script src="js/mixitup-multifilter.min.js"></script>
+     <script>
+          // Must end url in #all if you want all tubs to display.
+
+          var containerEl = document.querySelector('.filter-area');
+          var brandFilter = document.querySelector('.brandFilter');
+          var seatingFilter = document.querySelector('.seatingFilter');
+          var priceFilter = document.querySelector('.priceFilter');
+          var selectSort = document.querySelector('.select-sort');
+
+
+
+          /*Get the # in the address bar, change it to a class, filter by that
+              ex: filter.php#Healthy
+                  filter.php#filter-seating-1
+      
+          */
+          var hash = window.location.hash;
+          var noHash = hash.replace("#", ".");
+
+
+
+          if (noHash == ".all" || noHash == "") {
+               var noHash = "all";
+          }
+
+
+          var mixer = mixitup(containerEl, {
+               multifilter: {
+                    enable: true
+               },
+               load: {
+                    filter: noHash
+               }
+          });
+
+
+
+          /*Echo the filter class inside the demo span for testing*/
+          /*document.getElementById("demo").innerHTML = noHash;*/
+
+
+
+          brandFilter.addEventListener('change', function () {
+               var brandSelector = brandFilter.value;
+
+               mixer.filter(brandSelector);
+          });
+
+          seatingFilter.addEventListener('change', function () {
+               var seatingSelector = seatingFilter.value;
+
+               mixer.filter(seatingSelector);
+          });
+
+          priceFilter.addEventListener('change', function () {
+               var priceSelector = priceFilter.value;
+
+               mixer.filter(priceSelector);
+          });
+
+          selectSort.addEventListener('change', function () {
+               var order = selectSort.value;
+
+               mixer.sort(order);
+          });
+
+
+
+
+          $("#not_matches").hide();
+
+          $('select').on('change', function () {
+               window.setTimeout(function () {
+                    if (!$('.filter-item:visible').length)
+                         $('#not_matches').fadeIn();
+               }, 1200);
+          });
+
+          $('select').on('change', function () {
+               if ($('#not_matches').is(':visible'))
+                    $('#not_matches').hide();
+          });
+
+
+          /*Force page reload when hash changes in address bar.*/
+          $(window).on('hashchange', function () {
+               window.location.reload(true);
+          });
      </script>
 </body>
 
