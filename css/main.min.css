@@ -2333,6 +2333,16 @@
      margin: auto;
      transition: 0.3s;
    }
+   .cards .a {
+     background: #fff;
+     display: block;
+     border: solid thin #00aad4;
+     text-align: center;
+     padding: 25px;
+     max-width: 400px;
+     margin: auto;
+     transition: 0.3s;
+   }
    .cards a p {
      text-transform: none;
      margin-top: 10px;
@@ -2348,7 +2358,13 @@
    .owners .cards a {
      min-height: 345px;
    }
+   .owners .cards .a {
+     min-height: 345px;
+   }
    .ownerManuals .cards a {
+     min-height: 135px;
+   }
+   .ownerManuals .cards .a {
      min-height: 135px;
    }
    .owners .manuals p a {
