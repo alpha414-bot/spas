@@ -293,16 +293,18 @@
      }
    }
    nav {
-     background-image: url("../img/colors-light-bg.webp");
-     background-repeat: no-repeat;
-     background-size: cover;
-     background-position: center;
+     /*background-image: url("../img/colors-light-bg.webp");*/
+     /*background-repeat: no-repeat;*/
+     /*background-size: cover;*/
+     /*background-position: center;*/
+     background-color: #136183 !important;
    }
    .no-webp nav {
-     background-image: url("../img/colors-light-bg.jpg");
-     background-repeat: no-repeat;
-     background-size: cover;
-     background-position: center;
+     /*background-image: url("../img/colors-light-bg.jpg");*/
+     /*background-repeat: no-repeat;*/
+     /*background-size: cover;*/
+     /*background-position: center;*/
+     background-color: #136183 !important;
    }
    .nav > li {
      margin-right: 10px;
@@ -423,6 +425,7 @@
    .navbar-toggle .icon-bar {
      width: 22px;
      transition: all 0.2s;
+     background-color: white !important;
    }
    .navbar-toggle .top-bar {
      transform: rotate(45deg);
