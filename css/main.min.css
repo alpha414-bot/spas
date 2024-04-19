@@ -614,7 +614,7 @@
    }
    @media only screen and (min-width: 200px) {
      #cdnVideoHero {
-       max-height: 700px;
+       max-height: 400px;
      }
      #cdnVideoHero #playerTextWrap h1 {
        font-size: 36px;
@@ -1182,22 +1182,23 @@
    }
    .overview,
    .detail {
-     background: url(../img/overview-bg.jpg) no-repeat top left;
+     /*background: url(../img/overview-bg.jpg) no-repeat top left;*/
    }
    .about {
      background: url(../img/about-bg.jpg) no-repeat top left;
    }
    .mplegend {
-     background: url(../img/mpl-features.jpg) no-repeat top left;
+     /*background: url(../img/mpl-features.jpg) no-repeat top left;*/
    }
    .twilight {
      background: url(../img/ts-features.jpg) no-repeat top right;
    }
    .clarity {
-     background: url(../img/cls-features.jpg) no-repeat top left;
+     /*background: url(../img/cls-features.jpg) no-repeat top left;*/
    }
    .owners {
-     background: url(../img/owners-bg.jpg) no-repeat top left;
+     background: url(../img/swimspas/widescreen-fallback.jpg) no-repeat top left;
+     /*background: url(../img/owners-bg.jpg) no-repeat top left;*/
    }
    @media only screen and (min-width: 300px) {
      .owners {
@@ -1482,7 +1483,7 @@
    }
    @media only screen and (min-width: 1200px) {
      #doubleButtonHome {
-       top: 60%;
+       top: 50%;
      }
    }
    .doublebuttons {
