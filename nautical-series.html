@@ -71,7 +71,8 @@
      </style>
      <script>
           $(document).ready(function () {
-               $("#footer-components").load("/components/footer.html");
+                $("#navbar-components").load("/components/navbar.html");
+                $("#footer-components").load("/components/footer.html");
           });
      </script>
 </head>
@@ -99,97 +100,98 @@
                </ul>
           </nav>
      </div>
-     <nav class="navbar navbar-default navbar-fixed-top bumpedNav" id="dtopNav">
-          <div class="container ">
-               <div class="">
-                    <a href="#mobaMenu" id="toggle" type="button" class="navbar-toggle collapsed toggle openNav">
-                         <span class="sr-only">Toggle navigation</span>
-                         <span class="icon-bar top-bar"></span>
-                         <span class="icon-bar middle-bar"></span>
-                         <span class="icon-bar bottom-bar"></span>
-                    </a>
-                    <a class="navbar-brand" href="/">
-                         <picture>
-                              <source srcSet="/img/ms-logo.png" type="image/png" />
-                              <img src="/img/ms-logo.png" alt="Gulfsouth Spas Logo" />
-                         </picture>
-                    </a>
-               </div>
-               <div id="navbar" class="collapse navbar-collapse pull-right">
-                    <ul class="nav navbar-nav">
-                         <li class="dropdown dropdown-large">
-                              <a href="/hot-tubs.html">
-                                   Hot Tubs <b class="caret"></b>
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu-large row">
-                                   <li class="col-sm-12">
-                                        <ul class="dropdown-brands">
-                                             <li>
-                                                  <a href="/trident-series.html">
-                                                       <span>Trident Series</span>
-                                                  </a>
-                                             </li>
-                                             <li>
-                                                  <a href="/nautical-series.html">
-                                                       <span>Nautical Series</span>
-                                                  </a>
-                                             </li>
-                                             <li>
-                                                  <a href="/coastal-series.html">
-                                                       <span>Coastal Series</span>
-                                                  </a>
-                                             </li>
-                                        </ul>
-                                   </li>
-                              </ul>
-                         </li>
-                         <li class="dropdown dropdown-large">
-                              <a href="/swim-spas.html">
-                                   Swim Spas <b class="caret"></b>
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu-large row">
-                                   <li class="col-sm-12">
-                                        <ul>
-                                             <li>
-                                                  <a href="/swim-spas.html">General Overview</a>
-                                             </li>
-                                             <li>
-                                                  <a href="/shop-swim-spas.html">Shop all swim spas</a>
-                                             </li>
-                                        </ul>
-                                   </li>
-                              </ul>
-                         </li>
-                         <li>
-                              <a href="/customer-support.html">Ideas &amp; Support</a>
-                         </li>
-                         <li>
-                              <div class="btn para" style='background-color: transparent; width:20px'>
+     <!--<nav class="navbar navbar-default navbar-fixed-top bumpedNav" id="dtopNav">-->
+     <!--     <div class="container ">-->
+     <!--          <div class="">-->
+     <!--               <a href="#mobaMenu" id="toggle" type="button" class="navbar-toggle collapsed toggle openNav">-->
+     <!--                    <span class="sr-only">Toggle navigation</span>-->
+     <!--                    <span class="icon-bar top-bar"></span>-->
+     <!--                    <span class="icon-bar middle-bar"></span>-->
+     <!--                    <span class="icon-bar bottom-bar"></span>-->
+     <!--               </a>-->
+     <!--               <a class="navbar-brand" href="/">-->
+     <!--                    <picture>-->
+     <!--                         <source srcSet="/img/ms-logo.png" type="image/png" />-->
+     <!--                         <img src="/img/ms-logo.png" alt="Gulfsouth Spas Logo" />-->
+     <!--                    </picture>-->
+     <!--               </a>-->
+     <!--          </div>-->
+     <!--          <div id="navbar" class="collapse navbar-collapse pull-right">-->
+     <!--               <ul class="nav navbar-nav">-->
+     <!--                    <li class="dropdown dropdown-large">-->
+     <!--                         <a href="/hot-tubs.html">-->
+     <!--                              Hot Tubs <b class="caret"></b>-->
+     <!--                         </a>-->
+     <!--                         <ul class="dropdown-menu dropdown-menu-large row">-->
+     <!--                              <li class="col-sm-12">-->
+     <!--                                   <ul class="dropdown-brands">-->
+     <!--                                        <li>-->
+     <!--                                             <a href="/trident-series.html">-->
+     <!--                                                  <span>Trident Series</span>-->
+     <!--                                             </a>-->
+     <!--                                        </li>-->
+     <!--                                        <li>-->
+     <!--                                             <a href="/nautical-series.html">-->
+     <!--                                                  <span>Nautical Series</span>-->
+     <!--                                             </a>-->
+     <!--                                        </li>-->
+     <!--                                        <li>-->
+     <!--                                             <a href="/coastal-series.html">-->
+     <!--                                                  <span>Coastal Series</span>-->
+     <!--                                             </a>-->
+     <!--                                        </li>-->
+     <!--                                   </ul>-->
+     <!--                              </li>-->
+     <!--                         </ul>-->
+     <!--                    </li>-->
+     <!--                    <li class="dropdown dropdown-large">-->
+     <!--                         <a href="/swim-spas.html">-->
+     <!--                              Swim Spas <b class="caret"></b>-->
+     <!--                         </a>-->
+     <!--                         <ul class="dropdown-menu dropdown-menu-large row">-->
+     <!--                              <li class="col-sm-12">-->
+     <!--                                   <ul>-->
+     <!--                                        <li>-->
+     <!--                                             <a href="/swim-spas.html">General Overview</a>-->
+     <!--                                        </li>-->
+     <!--                                        <li>-->
+     <!--                                             <a href="/shop-swim-spas.html">Shop all swim spas</a>-->
+     <!--                                        </li>-->
+     <!--                                   </ul>-->
+     <!--                              </li>-->
+     <!--                         </ul>-->
+     <!--                    </li>-->
+     <!--                    <li>-->
+     <!--                         <a href="/customer-support.html">Ideas &amp; Support</a>-->
+     <!--                    </li>-->
+     <!--                    <li>-->
+     <!--                         <div class="btn para" style='background-color: transparent; width:20px'>-->
                                    <!-- {/*<a href="/find-a-dealer"></a>*/} -->
-                              </div>
-                         </li>
-                    </ul>
-               </div>
-               <div id="theCurrentPage" style='display:none' data-id=""></div>
-               <div id="popover-wrapper">
-                    <div class="nav-popover healthy-pop">
-                         <div>
-                              <div><img alt="Arrow pointing dowon to second navigation menu" src="/img/arrow-down.png">
-                              </div>
-                              <ul>
-                                   <li id="theGalleryLink"><a
-                                             href="/subpages/nautical-gallery.html"><span>Gallery</span></a>
-                                   </li>
-                                   <li id="theFeatureLink"><a
-                                             href="/subpages/nautical-features.html"><span>Features</span></a></li>
-                                   <li id="theModelsLink"><a href="/hot-tubs.html"><span>Models</span></a>
-                                   </li>
-                              </ul>
-                         </div>
-                    </div>
-               </div>
-          </div>
-     </nav>
+     <!--                         </div>-->
+     <!--                    </li>-->
+     <!--               </ul>-->
+     <!--          </div>-->
+     <!--          <div id="theCurrentPage" style='display:none' data-id=""></div>-->
+     <!--          <div id="popover-wrapper">-->
+     <!--               <div class="nav-popover healthy-pop">-->
+     <!--                    <div>-->
+     <!--                         <div><img alt="Arrow pointing dowon to second navigation menu" src="/img/arrow-down.png">-->
+     <!--                         </div>-->
+     <!--                         <ul>-->
+     <!--                              <li id="theGalleryLink"><a-->
+     <!--                                        href="/subpages/nautical-gallery.html"><span>Gallery</span></a>-->
+     <!--                              </li>-->
+     <!--                              <li id="theFeatureLink"><a-->
+     <!--                                        href="/subpages/nautical-features.html"><span>Features</span></a></li>-->
+     <!--                              <li id="theModelsLink"><a href="/hot-tubs.html"><span>Models</span></a>-->
+     <!--                              </li>-->
+     <!--                         </ul>-->
+     <!--                    </div>-->
+     <!--               </div>-->
+     <!--          </div>-->
+     <!--     </div>-->
+     <!--</nav>-->
+    <div id="navbar-components"></div>
      <div id="page">
           <div id="wrapper">
                <div class="container tronTainer" id="twilight">
@@ -202,6 +204,7 @@
 
                          <div id="doubleButtonHome">
                               <div class="twilight-lead">
+                                   <img src="img/home-page/line-display/nautical-tub.png" alt="Nautical Series Hot Tub logo" style="width:100%;">
                                    <img src="/img/gallery/nautical-logo.png" alt="Nautical Series Hot Tub logo"
                                         class="twilight-logo-light">
                                    <img src="/img/gallery/nautical-logo-dark.png" alt="Nautical Series Hot Tub logo"
@@ -230,8 +233,8 @@
                     <div class="row mobile" id="carouselReplace">
                          <div class="col-md-12">
                               <h1>Sense of SERENITY!</h1>
-                              <p>Our Nautical Series, this Series is a even more soothing relaxation. Our Sterling
-                                   Series+ is a deeper (39”) version for the most discerning spa owners crave. The
+                              <p>Our Nautical Series, Nautical Series is a even more soothing relaxation. Our Nautical 
+                                   Series is a deeper (39”) version for the most discerning spa owners crave. The
                                    Nautical Series will bring a sense of beauty to your backyard and senseof serenity to
                                    your life. </p>
                               <div style="margin-top: 24px;margin-bottom:4px;">
@@ -250,8 +253,8 @@
                               <div>
                                    <img src="/img/gallery/nautical-logo-dark.png" alt="Nautical Series Hot Tub logo">
                                    <h2>Sense of SERENITY!</h2>
-                                   <p>Our Nautical Series, this Series is a even more soothing relaxation. Our Sterling
-                                        Series+ is a deeper (39”) version for the most discerning spa owners crave. The
+                                   <p>Our Nautical Series, Nautical Series is a even more soothing relaxation. Our Nautical
+                                        Series is a deeper (39”) version for the most discerning spa owners crave. The
                                         Nautical Series will bring a sense of beauty to your backyard and senseof
                                         serenity to
                                         your life. </p>
@@ -332,7 +335,6 @@
 
                     </section>
 
-
                     <section id="modelCarousel">
                          <div class="row">
                               <div class="col-md-2"></div>
@@ -390,6 +392,7 @@
                               </div>
                          </div>
                     </section>
+                    
                </div>
           </div>
      </div>

@@ -38,12 +38,13 @@
   margin: auto;
 }
 .controls {
-  background-image: url(/img/colors-light-bg.webp);
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: cover;
-  margin-top: 50px;
-  height: 100%;
+    background-color: #136183;
+  /*background-image: url(/img/colors-light-bg.webp);*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: top left;*/
+  /*background-size: cover;*/
+  /*margin-top: 50px;*/
+  /*height: 100%;*/
 }
 .no-webp .controls {
   background-image: url(/img/colors-light-bg.jpg);
