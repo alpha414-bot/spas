@@ -462,7 +462,7 @@ const Home = () => {
               </div>
             </div>
           </section>
-
+{/* 
           <section className="bgGray">
             <div className="container">
               <div className="row">
@@ -533,7 +533,6 @@ const Home = () => {
                     <div className="row">
                       <div className="col-md-4">
                         <h3>Michael Phelps Legend Series LSX 800</h3>
-                        {/*there is a review start here */}
                         <p>
                           This hot tub was inspired by the best so you can feel
                           your best. Designed with premium features for
@@ -575,7 +574,6 @@ const Home = () => {
                     <div className="row">
                       <div className="col-md-4">
                         <h3>Twilight Series 8.2</h3>
-                        {/* review star is here */}
                         <p>
                           Roomy and comfortable, this hot tub is recognized for
                           its jet power and seating versatility &mdash;
@@ -614,7 +612,7 @@ const Home = () => {
                 </div>
               </Slider>
             </div>
-          </section>
+          </section> */}
           <section id="overviewTestimonial">
             <div className="container">
               <div className="row">
