@@ -802,13 +802,16 @@
        margin-right: auto;
      }
      .hotTubLineWrapper.legend {
-       background-image: url("../img/home-page/line-display/legend-mobile-fade.jpg");
+       /*background-image: url("../img/home-page/line-display/legend-mobile-fade.jpg");*/
+       background-image: url("../img/home-page/line-display/Tri-mobile.jpg");
      }
      .hotTubLineWrapper.twilight {
        background-image: url("../img/home-page/line-display/twilight-mobile-fade.jpg");
+       /*background-image: url("../img/home-page/line-display/Nau-mobile.jpg");*/
      }
      .hotTubLineWrapper.clarity {
        background-image: url("../img/home-page/line-display/clarity-mobile-fade.jpg");
+       /*background-image: url("../img/home-page/line-display/Coa-mobile.jpg");*/
      }
      .hotTubLineWrapper.getaway {
        background-image: url("../img/home-page/line-display/getaway-mobile-fade.jpg");
@@ -817,7 +820,8 @@
        background-image: url("../img/home-page/line-display/h2x-mobile-fade.png");
      }
      .swimSpaLineWrapper.mpss {
-       background-image: url("../img/home-page/line-display/mpss-mobile-fade-a.png");
+       /*background-image: url("../img/home-page/line-display/mpss-mobile-fade-a.png");*/
+       background-image: url("../img/home-page/line-display/Swi-mobile.jpg");
      }
    }
    @media only screen and (min-width: 992px) {
@@ -875,13 +879,16 @@
        right: auto;
      }
      .hotTubLineWrapper.legend {
-       background-image: url("../img/home-page/line-display/legend.jpg");
+       /*background-image: url("../img/home-page/line-display/legend.jpg");*/
+       background-image: url("../img/home-page/line-display/Trid.jpg");
      }
      .hotTubLineWrapper.twilight {
        background-image: url("../img/home-page/line-display/twilight.jpg");
+       /*background-image: url("../img/home-page/line-display/Naut.jpg");*/
      }
      .hotTubLineWrapper.clarity {
        background-image: url("../img/home-page/line-display/clarity.jpg");
+       /*background-image: url("../img/home-page/line-display/Coas.jpg");*/
      }
      .hotTubLineWrapper.getaway {
        background-image: url("../img/home-page/line-display/getaway.jpg");
@@ -890,7 +897,8 @@
        background-image: url("../img/home-page/line-display/h2x.png");
      }
      .swimSpaLineWrapper.mpss {
-       background-image: url("../img/home-page/line-display/mpss-a.png");
+       /*background-image: url("../img/home-page/line-display/mpss-a.png");*/
+       background-image: url("../img/home-page/line-display/swim.jpg");
      }
    }
    @media only screen and (min-width: 1200px) {
@@ -1458,7 +1466,7 @@
    @media only screen and (min-width: 300px) {
      #doubleButtonHome {
        position: relative;
-       top: 5px;
+       top: -20px;
      }
      #doubleButtonHome .btn {
        display: block;

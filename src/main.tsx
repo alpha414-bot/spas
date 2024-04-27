@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { RouterProvider } from "react-router-dom";
 // import "./main.css";
 import router from "./services/router";
+import { AppProvider } from "./services/modules/middleware";
 
 const Client = new QueryClient({
   defaultOptions: { queries: { refetchInterval: false, staleTime: Infinity } },
@@ -12,9 +13,11 @@ const Client = new QueryClient({
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <QueryClientProvider client={Client}>
-      <RouterProvider router={router} />
-      {/*<ReactQueryDevtools />*/}
-    </QueryClientProvider>
+    <AppProvider>
+      <QueryClientProvider client={Client}>
+        <RouterProvider router={router} />
+        {/*<ReactQueryDevtools />*/}
+      </QueryClientProvider>
+    </AppProvider>
   </React.StrictMode>
 );

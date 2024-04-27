@@ -1,16 +1,23 @@
-import CustomerSupport from '@/pages/CustomerSupport';
-import ErrorPage from '@/pages/ErrorPage';
-import GeneralOverview from '@/pages/GeneralOverview';
-import Home from '@/pages/Home';
-import ShopHotTubs from '@/pages/ShopHotTubs';
-import { createBrowserRouter, useLocation } from 'react-router-dom';
-import { ProtectedRoute } from './modules/middleware';
-import { useLayoutEffect } from 'react';
+import ContactUs from "@/pages/ContactUs";
+import ErrorPage from "@/pages/ErrorPage";
+import GeneralOverview from "@/pages/GeneralOverview";
+import Home from "@/pages/Home";
+import ShopHotTubs from "@/pages/ShopHotTubs";
+import { useLayoutEffect } from "react";
+import { createBrowserRouter, useLocation } from "react-router-dom";
+import { ProtectedRoute } from "./modules/middleware";
+import CategoryPage from "@/pages/CategoryPage";
+import { CategoryLoader } from "./modules/data";
+import CustomerSupport from "@/pages/CustomerSupport";
+import HotTubElectricalRequirement from "@/pages/Support/HotTubElectricalRequirement";
+import HotTubOwnersManuals from "@/pages/Support/HotTubOwnersManuals";
+import HotTubMaintenanceGuide from "@/pages/Support/HotTubMaintenanceGuide";
+import ShopSwimSpas from "@/pages/ShopSwimSpas";
 
 export async function loader({ request }: { request?: any }) {
   const url = new URL(request.url);
-  const filter_price = url.searchParams.get('filter-price') || '';
-  const filter_seat = url.searchParams.get('filter-seating') || '';
+  const filter_price = url.searchParams.get("filter-price") || "";
+  const filter_seat = url.searchParams.get("filter-seating") || "";
   return { filter_price, filter_seat };
 }
 
@@ -33,9 +40,10 @@ const ScrollToTop = ({ children }: { children?: any }) => {
 
   return children;
 };
+
 const routes = [
   {
-    path: '/',
+    path: "/",
     element: (
       <ProtectedRoute>
         <Home />
@@ -45,15 +53,15 @@ const routes = [
     errorElement: <ErrorPage />,
   },
   {
-    path: '/customer-support',
+    path: "/contact-us",
     element: (
       <ProtectedRoute>
-        <CustomerSupport />
+        <ContactUs />
       </ProtectedRoute>
     ),
   },
   {
-    path: '/hot-tubs',
+    path: "/hot-tubs",
     loader: loader,
     element: (
       <ProtectedRoute>
@@ -62,10 +70,61 @@ const routes = [
     ),
   },
   {
-    path: '/swim-spas',
+    path: "/swim-spas",
     element: (
       <ProtectedRoute>
         <GeneralOverview />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/shop-swim-spas",
+    element: (
+      <ProtectedRoute>
+        <ShopSwimSpas />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/customer-support",
+    element: (
+      <ProtectedRoute>
+        <CustomerSupport />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/hot-tub-electrical-requirements",
+    element: (
+      <ProtectedRoute>
+        <HotTubElectricalRequirement />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/hot-tub-owners-manuals",
+    element: (
+      <ProtectedRoute>
+        <HotTubOwnersManuals />
+      </ProtectedRoute>
+    ),
+  },
+
+  {
+    path: "/hot-tub-maintenance-guide",
+    element: (
+      <ProtectedRoute>
+        <HotTubMaintenanceGuide />
+      </ProtectedRoute>
+    ),
+  },
+
+  {
+    path: "/category/:category_name",
+    loader: CategoryLoader,
+    element: (
+      <ProtectedRoute>
+        <CategoryPage />
       </ProtectedRoute>
     ),
   },

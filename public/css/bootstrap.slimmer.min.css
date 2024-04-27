@@ -3,7 +3,7 @@
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */ /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-html {
+ html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
@@ -2319,11 +2319,11 @@ tbody.collapse.in {
 }
 .navbar-default .navbar-nav > li > a,
 .navbar-default .navbar-text {
-	color: #fff;
+	color: #ffffff;
 }
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > li > a:hover {
-	color: #f1f1f1;
+	color: #ffffff;
 	background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a,

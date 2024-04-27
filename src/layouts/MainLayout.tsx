@@ -14,7 +14,7 @@ const MainLayout: React.FC<{
       {/* for mobile */}
       <NavBar />
       <div id="page">
-        <div id="wrapper"> {children}</div>
+        <div id="wrapper">{children}</div>
       </div>
       <Footer />
     </>
