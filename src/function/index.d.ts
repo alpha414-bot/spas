@@ -9,24 +9,33 @@ export type TubBrandType =
   | "Nautical Series"
   | "";
 
+type ExclusiveFeaturesType =
+  | "Comfortable Headrests"
+  | "Choice of Arcylic and Skirt Color"
+  | "K.1000 Digital Topside"
+  | "In.Touch 2®"
+  | "Digital Topside";
+
 export interface ProductHotTubsInterface {
   image: string;
   name: string;
-  seat: number;
+  seats: number;
   brand: TubBrandType;
   price: number;
   measurements: string;
   gallons: number;
   jets: number;
-  seating: number;
   weight_dry: number;
   weight_full: number;
-  power_requirement: number;
-  led_lighting: string;
-  exclusive_features: string[] | string;
-  premium_options: string[] | string;
-  standard_features: string[];
-  
+  power_requirement: string;
+  led_lighting: number;
+  water_fall?: number;
+  eth_water_fall?: number;
+  sth_water_fall?: number;
+  fountains?: number;
+  exclusive_features?: ExclusiveFeaturesType[] | string;
+  premium_options?: string[] | string;
+  standard_features?: string[];
 }
 
 export interface HotTubsBrandInterface {
@@ -34,6 +43,7 @@ export interface HotTubsBrandInterface {
   title: "Trident Series" | "Nautical Series" | "Coastal Series";
   slogan: string;
   heroImage: string;
+  heroMobileImage: string;
   brandLogo: string;
   brandDarkLogo: string;
   textDescription: string;

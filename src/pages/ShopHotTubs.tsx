@@ -1,8 +1,5 @@
 import "@/assets/css/tubfilter.css";
-import {
-  LoaderInterface,
-  TubBrandType
-} from "@/function";
+import { LoaderInterface, TubBrandType } from "@/function";
 import MainLayout from "@/layouts/MainLayout";
 import { _TubsData } from "@/services/modules/data";
 import _ from "lodash";
@@ -23,7 +20,7 @@ const ShopHotTubs = () => {
   const [searchPrice, setSearchPrice] = useState<string | null>(
     filter_price || null
   );
-  const [searchSortOrder, setSearchSortOrder] = useState<
+  const [searchSortOrder] = useState<
     "price:asc" | "price:desc" | "seat:asc" | "seat:desc" | ""
   >("");
   useEffect(() => {
@@ -36,7 +33,7 @@ const ShopHotTubs = () => {
           ? _.lowerCase(item.brand) === _.lowerCase(searchBrand || "")
           : true;
         let seatInRange: boolean = !!searchSeat
-          ? _.inRange(Number(item.seat), lowerBound, upperBound + 1)
+          ? _.inRange(Number(item.seats), lowerBound, upperBound + 1)
           : true;
         let priceEqui: boolean = !!searchPrice
           ? Number(item.price) === Number(searchPrice)
@@ -186,27 +183,14 @@ const ShopHotTubs = () => {
                             :{" "}
                             <span className="seatingNumber">
                               {" "}
-                              {item.seat} Adults
-                            </span>
-                          </p>
-                          <p>
-                            <img
-                              loading="lazy"
-                              width="20px"
-                              height="20px"
-                              alt="Blue icon of a dollar"
-                              src="/img/icons/icon-dollar.png"
-                            />{" "}
-                            :{" "}
-                            <span className="dollars">
-                              {"$".repeat(item.price)}
+                              {item.seats} Adults
                             </span>
                           </p>
                           <Link
                             className="btn btn-info btn-sm upper"
-                            to={`/${category_slug}/${_.lowerCase(
+                            to={`/products/${category_slug}/${_.lowerCase(
                               item.name
-                            ).replace(/\s+/g, "-")}`}
+                            ).replace(/\s+/g, "")}`}
                           >
                             View Details
                           </Link>

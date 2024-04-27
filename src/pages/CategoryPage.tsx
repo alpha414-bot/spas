@@ -1,6 +1,10 @@
 import { HotTubsBrandInterface, ProductHotTubsInterface } from "@/function";
 import MainLayout from "@/layouts/MainLayout";
-import { useLoaderData } from "react-router-dom";
+import Glider from "glider-js";
+import { useEffect } from "react";
+import "@/assets/css/glider.css";
+import { Link, useLoaderData } from "react-router-dom";
+import _ from "lodash";
 
 interface CategoryLoaderData {
   category: HotTubsBrandInterface;
@@ -8,8 +12,26 @@ interface CategoryLoaderData {
 const CategoryPage = () => {
   const { category } = useLoaderData() as CategoryLoaderData;
 
+  useEffect(() => {
+    let glider: HTMLHtmlElement | null = document.querySelector(".glider");
+    if (glider) {
+      new Glider(glider, {
+        slidesToScroll: 1,
+        slidesToShow: 3.5,
+        draggable: true,
+        dots: ".dots",
+        arrows: {
+          prev: ".glider-prev",
+          next: ".glider-next",
+        },
+      });
+    }
+  }, []);
   return (
-    <MainLayout title={category.title} description={category.slogan}>
+    <MainLayout
+      title={`${category.title} -   ulfsouth Spas`}
+      description={category.slogan}
+    >
       <>
         <div className="container tronTainer" id="twilight">
           <section id="doubleButtonWrap">
@@ -206,68 +228,22 @@ const CategoryPage = () => {
                       (item: ProductHotTubsInterface, i: any) => {
                         return (
                           <div key={i} className="modelItem">
-                            <a href="javascript:void(0)">
+                            <Link
+                              to={`/products/${category.slug}/${_.lowerCase(
+                                item.name
+                              ).replace(/\s+/g, "")}`}
+                            >
                               <img
                                 src="/img/home-page/products/ts7.png"
                                 alt="The Trident Series 240 Hot Tub"
                               />
                               <h4>{item.name}</h4>
-                              <p>Measurements 84" x 84" x 39" </p>
-                            </a>
+                              <p>Measurements {item.measurements} </p>
+                            </Link>
                           </div>
                         );
                       }
                     )}
-                    <div className="modelItem">
-                      <a href="javascript:void(0)">
-                        <img
-                          src="/img/home-page/products/ts7l.png"
-                          alt="The Trident Series 6.2 Hot Tub"
-                        />
-                        <h4>Trident Series 7L</h4>
-                        <p>Measurements 82" x 82" x 39" </p>
-                      </a>
-                    </div>
-                    <div className="modelItem">
-                      <a href="javascript:void(0)">
-                        <img
-                          src="/img/home-page/products/ts8.png"
-                          alt="The Trident Series 67.25 Hot Tub"
-                        />
-                        <h4>Trident Series 8</h4>
-                        <p>Measurements 92" x 92" x 39" </p>
-                      </a>
-                    </div>
-                    <div className="modelItem">
-                      <a href="javascript:void(0)">
-                        <img
-                          src="/img/home-page/products/ts81l.png"
-                          alt="The Trident Series 7.2 Hot Tub"
-                        />
-                        <h4>Trident Series 8.1L</h4>
-                        <p>Measurements 92" x 92" x 39"</p>
-                      </a>
-                    </div>
-                    <div className="modelItem">
-                      <a href="javascript:void(0)">
-                        <img
-                          src="/img/home-page/products/ts81l.png"
-                          alt="The Trident Series 7.25 Hot Tub"
-                        />
-                        <h4>Trident Series 8.2L</h4>
-                        <p>Measurements 92" x 92" x 39" </p>
-                      </a>
-                    </div>
-                    <div className="modelItem">
-                      <a href="javascript:void(0)">
-                        <img
-                          src="/img/home-page/products/ts81l.png"
-                          alt="The Trident Series 7.25 Hot Tub"
-                        />
-                        <h4>Trident Series TS11P</h4>
-                        <p>Measurements 92" x 92" x 39" </p>
-                      </a>
-                    </div>
                   </div>
                   <div role="tablist" className="dots" />
                 </div>

@@ -13,7 +13,7 @@ const nautical_series = [
       "K.1000 Digital Topside",
       "(1) Waterfall",
       "(28) LED Lights",
-      "Comfortable Headsets",
+      "Comfortable Headrests",
       "Choice of Acrylic and Skirt Color",
       "220 volt (2) x 6 BHP",
       "Dry Weight 650 lbs. - Filled Weight 3,571 lbs",

@@ -1,18 +1,19 @@
+import CategoryPage from "@/pages/CategoryPage";
 import ContactUs from "@/pages/ContactUs";
+import CustomerSupport from "@/pages/CustomerSupport";
 import ErrorPage from "@/pages/ErrorPage";
 import GeneralOverview from "@/pages/GeneralOverview";
 import Home from "@/pages/Home";
+import ProductPage from "@/pages/ProductPage";
 import ShopHotTubs from "@/pages/ShopHotTubs";
+import ShopSwimSpas from "@/pages/ShopSwimSpas";
+import HotTubElectricalRequirement from "@/pages/Support/HotTubElectricalRequirement";
+import HotTubMaintenanceGuide from "@/pages/Support/HotTubMaintenanceGuide";
+import HotTubOwnersManuals from "@/pages/Support/HotTubOwnersManuals";
 import { useLayoutEffect } from "react";
 import { createBrowserRouter, useLocation } from "react-router-dom";
+import { CategoryLoader, ProductLoader } from "./modules/data";
 import { ProtectedRoute } from "./modules/middleware";
-import CategoryPage from "@/pages/CategoryPage";
-import { CategoryLoader } from "./modules/data";
-import CustomerSupport from "@/pages/CustomerSupport";
-import HotTubElectricalRequirement from "@/pages/Support/HotTubElectricalRequirement";
-import HotTubOwnersManuals from "@/pages/Support/HotTubOwnersManuals";
-import HotTubMaintenanceGuide from "@/pages/Support/HotTubMaintenanceGuide";
-import ShopSwimSpas from "@/pages/ShopSwimSpas";
 
 export async function loader({ request }: { request?: any }) {
   const url = new URL(request.url);
@@ -125,6 +126,15 @@ const routes = [
     element: (
       <ProtectedRoute>
         <CategoryPage />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/products/:category_slug/:product_slug",
+    loader: ProductLoader,
+    element: (
+      <ProtectedRoute>
+        <ProductPage />
       </ProtectedRoute>
     ),
   },
