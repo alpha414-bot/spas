@@ -4,6 +4,7 @@ import _ from "lodash";
 export const _TubsData = [
   {
     brand: "Coastal Series",
+    type: "5l",
     name: "CS5L",
     seats: 6,
     image: "cs5l",
@@ -19,6 +20,7 @@ export const _TubsData = [
   },
   {
     brand: "Trident Series",
+    type: "7",
     name: "TS7",
     seats: 6,
     image: "ts7",
@@ -41,6 +43,7 @@ export const _TubsData = [
   },
   {
     brand: "Coastal Series",
+    type: "7l",
     name: "CS7L",
     seats: 6,
     image: "cs7l",
@@ -61,6 +64,7 @@ export const _TubsData = [
   },
   {
     brand: "Nautical Series",
+    type: "8l",
     name: "NS8L",
     seats: 6,
     image: "ns8l",
@@ -81,6 +85,7 @@ export const _TubsData = [
   },
   {
     brand: "Trident Series",
+    type: "8",
     name: "TS8",
     seats: 6,
     image: "ts8",
@@ -103,6 +108,7 @@ export const _TubsData = [
   },
   {
     brand: "Nautical Series",
+    type: "7",
     name: "NS7",
     seats: 7,
     image: "ns7",
@@ -123,6 +129,7 @@ export const _TubsData = [
   },
   {
     brand: "Coastal Series",
+    type: "6.1l",
     name: "CS6.1L",
     seats: 6,
     image: "cs61l",
@@ -138,6 +145,7 @@ export const _TubsData = [
   },
   {
     brand: "Coastal Series",
+    type: "6.2l",
     name: "CS6.2L",
     seats: 6,
     image: "cs62l",
@@ -157,6 +165,7 @@ export const _TubsData = [
   },
   {
     brand: "Nautical Series",
+    type: "8",
     name: "NS8",
     seats: 7,
     image: "ns8",
@@ -177,6 +186,7 @@ export const _TubsData = [
   },
   {
     brand: "Trident Series",
+    type: "7l",
     name: "TS7L",
     seats: 5,
     image: "ts7l",
@@ -199,6 +209,7 @@ export const _TubsData = [
   },
   {
     brand: "Nautical Series",
+    type: "7l",
     name: "NS7L",
     seats: 6,
     image: "ns7l",
@@ -219,6 +230,7 @@ export const _TubsData = [
   },
   {
     brand: "Coastal Series",
+    type: "6.1",
     name: "CS6.1",
     seats: 6,
     image: "cs61",
@@ -238,6 +250,7 @@ export const _TubsData = [
   },
   {
     brand: "Coastal Series",
+    type: "6.2",
     name: "CS6.2",
     seats: 6,
     image: "cs62",
@@ -257,6 +270,7 @@ export const _TubsData = [
   },
   {
     brand: "Trident Series",
+    type: "8.2l",
     name: "TS8.2L",
     seats: 7,
     image: "ts82l",
@@ -278,6 +292,7 @@ export const _TubsData = [
   },
   {
     brand: "Trident Series",
+    type: "8.1l",
     name: "TS8.1L",
     seats: 6,
     image: "ts81l",
@@ -300,6 +315,7 @@ export const _TubsData = [
   },
   {
     brand: "Trident Series",
+    type: "9llp",
     name: "TS9LLP",
     seats: 6,
     image: "ts9llp",
@@ -367,7 +383,7 @@ export async function CategoryLoader({ params }: { params?: any }) {
     (item) => item.brand.toLowerCase() === category?.title.toLowerCase()
   );
   if (category) {
-    category.products = products;
+    category.products = _.sortBy(products, (item) => item.name);
   }
   return { category };
 }

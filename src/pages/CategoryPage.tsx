@@ -29,7 +29,7 @@ const CategoryPage = () => {
   }, []);
   return (
     <MainLayout
-      title={`${category.title} -   ulfsouth Spas`}
+      title={`${category.title} - Gulfsouth Spas`}
       description={category.slogan}
     >
       <>
@@ -226,19 +226,21 @@ const CategoryPage = () => {
                   <div className="glider">
                     {category.products.map(
                       (item: ProductHotTubsInterface, i: any) => {
+                        let slugged_name = _.lowerCase(item.name).replace(
+                          /\s+/g,
+                          ""
+                        );
                         return (
                           <div key={i} className="modelItem">
                             <Link
-                              to={`/products/${category.slug}/${_.lowerCase(
-                                item.name
-                              ).replace(/\s+/g, "")}`}
+                              to={`/products/${category.slug}/${slugged_name}`}
                             >
                               <img
-                                src="/img/home-page/products/ts7.png"
-                                alt="The Trident Series 240 Hot Tub"
+                                src={`/img/home-page/products/${slugged_name}.png`}
+                                alt={`${item.name} Hot Tub on Gulfsouthspas `}
                               />
-                              <h4>{item.name}</h4>
-                              <p>Measurements {item.measurements} </p>
+                              <h4>{item.brand} {item.type.toUpperCase()}</h4>
+                              <p>{item.measurements} </p>
                             </Link>
                           </div>
                         );

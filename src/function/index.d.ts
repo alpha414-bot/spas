@@ -19,6 +19,7 @@ type ExclusiveFeaturesType =
 export interface ProductHotTubsInterface {
   image: string;
   name: string;
+  type: string;
   seats: number;
   brand: TubBrandType;
   price: number;
