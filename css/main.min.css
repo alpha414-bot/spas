@@ -802,8 +802,8 @@
        margin-right: auto;
      }
      .hotTubLineWrapper.legend {
-       /*background-image: url("../img/home-page/line-display/legend-mobile-fade.jpg");*/
-       background-image: url("../img/home-page/line-display/Tri-mobile.jpg");
+       background-image: url("../img/home-page/line-display/legend-mobile-fade.jpg");
+       /*background-image: url("../img/home-page/line-display/Tri-mobile.jpg");*/
      }
      .hotTubLineWrapper.twilight {
        background-image: url("../img/home-page/line-display/twilight-mobile-fade.jpg");
@@ -879,8 +879,8 @@
        right: auto;
      }
      .hotTubLineWrapper.legend {
-       /*background-image: url("../img/home-page/line-display/legend.jpg");*/
-       background-image: url("../img/home-page/line-display/Trid.jpg");
+       background-image: url("../img/home-page/line-display/legend.jpg");
+       /*background-image: url("../img/home-page/line-display/Trid.jpg");*/
      }
      .hotTubLineWrapper.twilight {
        background-image: url("../img/home-page/line-display/twilight.jpg");
@@ -3763,10 +3763,16 @@
      background-image: url(../img/colors/acrylic/smoky-mountain.jpg);
    }
    #rotoshellOne {
-     background-image: url(../img/getaway/colors/pebble-beach.jpg);
+     background-image: url(../img/getaway/colors/Sterling.png);
    }
    #rotoshellTwo {
-     background-image: url(../img/getaway/colors/sea-salt.jpg);
+     background-image: url(../img/getaway/colors/Storm.png);
+   }
+   #rotoshellThree {
+     background-image: url(../img/getaway/colors/Tuscan.png);
+   }
+   #rotoshellFour {
+     background-image: url(../img/getaway/colors/Smoky.png);
    }
    #skirtOne {
      background-image: url(../img/colors/skirting/skirt-duramaster-espresso.jpg);
@@ -3784,10 +3790,16 @@
      background-image: url(../img/colors/skirting/skirt-dreamstone-canyonstone.jpg);
    }
    #rotoskirtOne {
-     background-image: url(../img/getaway/colors/roto-espresso.jpg);
+     background-image: url(../img/getaway/colors/Gray.png);
    }
    #rotoskirtTwo {
-     background-image: url(../img/getaway/colors/roto-graphite.jpg);
+     background-image: url(../img/getaway/colors/Black.png);
+   }
+   #rotoskirtThree {
+     background-image: url(../img/getaway/colors/Elite-Coastal.png);
+   }
+   #rotoskirtFour {
+     background-image: url(../img/getaway/colors/Elit-Ash.png);
    }
    .carousel.vertical {
      position: relative;
