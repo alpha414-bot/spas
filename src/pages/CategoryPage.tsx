@@ -237,7 +237,7 @@ const CategoryPage = () => {
                             >
                               <img
                                 src={`/img/home-page/products/${slugged_name}.png`}
-                                alt={`${item.name} Hot Tub on Gulfsouthspas `}
+                                alt={`${item.name} ${item.brand} Hot Tub on Gulfsouthspas `}
                               />
                               <h4>{item.brand} {item.type.toUpperCase()}</h4>
                               <p>{item.measurements} </p>

@@ -2,7 +2,7 @@ import CategoryPage from "@/pages/CategoryPage";
 import ContactUs from "@/pages/ContactUs";
 import CustomerSupport from "@/pages/CustomerSupport";
 import ErrorPage from "@/pages/ErrorPage";
-import GeneralOverview from "@/pages/GeneralOverview";
+import GeneralOverview from "@/pages/SwimSpas";
 import Home from "@/pages/Home";
 import ProductPage from "@/pages/ProductPage";
 import ShopHotTubs from "@/pages/ShopHotTubs";

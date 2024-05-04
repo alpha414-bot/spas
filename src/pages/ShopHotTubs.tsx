@@ -1,61 +1,62 @@
 import "@/assets/css/tubfilter.css";
-import { LoaderInterface, TubBrandType } from "@/function";
 import MainLayout from "@/layouts/MainLayout";
 import { _TubsData } from "@/services/modules/data";
 import _ from "lodash";
-import { useEffect, useState } from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import mixitup from "mixitup";
+import multifilter from "mixitup-multifilter";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const ShopHotTubs = () => {
-  const { filter_price, filter_seat } = useLoaderData() as LoaderInterface;
-  const BrandData: TubBrandType[] = [
-    "Nautical Series",
-    "Coastal Series",
-    "Trident Series",
-  ];
-
-  const [tubsQuery, setTubsQuery] = useState(_TubsData);
-  const [searchBrand, setSearchBrand] = useState<string | null>(null);
-  const [searchSeat, setSearchSeat] = useState<string>(filter_seat || "");
-  const [searchPrice, setSearchPrice] = useState<string | null>(
-    filter_price || null
-  );
-  const [searchSortOrder] = useState<
-    "price:asc" | "price:desc" | "seat:asc" | "seat:desc" | ""
-  >("");
   useEffect(() => {
-    let query = tubsQuery;
-    if (!!searchBrand || !!searchSeat || !searchPrice || !searchSortOrder) {
-      query = _.filter(_TubsData, (item) => {
-        let [lowerBound, upperBound] = searchSeat?.split("-").map(Number);
+    var containerEl = document.querySelector(".filter-area");
+    var brandFilter: HTMLSelectElement | null =
+      document.querySelector(".brandFilter");
+    var seatingFilter: HTMLSelectElement | null =
+      document.querySelector(".seatingFilter");
 
-        let brandsearch: boolean = !!searchBrand
-          ? _.lowerCase(item.brand) === _.lowerCase(searchBrand || "")
-          : true;
-        let seatInRange: boolean = !!searchSeat
-          ? _.inRange(Number(item.seats), lowerBound, upperBound + 1)
-          : true;
-        let priceEqui: boolean = !!searchPrice
-          ? Number(item.price) === Number(searchPrice)
-          : true;
+    /*Get the # in the address bar, change it to a class, filter by that
+      ex: filter.php#Healthy
+      filter.php#filter-seating-1
+      
+      */
+    var hash = window.location.hash;
+    var noHash = hash.replace("#", ".");
 
-        return brandsearch && seatInRange && priceEqui;
-      });
-      if (!!searchSortOrder) {
-        const [sortBy, sortOrder] = searchSortOrder.split(":");
-        console.log(searchSortOrder, sortBy, sortOrder);
-        query = _.orderBy(query, sortBy, sortOrder as "asc" | "desc");
-      }
-
-      setTubsQuery(query);
-    } else {
-      setTubsQuery(_TubsData);
+    if (noHash == ".all" || noHash == "") {
+      var noHash = "all";
     }
-  }, [searchBrand, searchSeat, searchSeat, searchPrice, searchSortOrder]);
-  useEffect(() => {
-    setSearchPrice(filter_price);
-    setSearchSeat(filter_seat);
-  }, [filter_price, filter_seat]);
+
+    if (containerEl) {
+      mixitup.use(multifilter);
+      var mixer = mixitup(containerEl, {
+        multifilter: {
+          enable: true,
+        },
+        load: {
+          filter: noHash,
+        },
+      });
+    }
+
+    /*Echo the filter class inside the demo span for testing*/
+    /*document.getElementById("demo").innerHTML = noHash;*/
+
+    if (brandFilter)
+      brandFilter.addEventListener("change", function () {
+        var brandSelector = brandFilter?.value;
+        mixer.filter(brandSelector);
+      });
+
+    if (seatingFilter)
+      seatingFilter.addEventListener("change", function () {
+        var seatingSelector = seatingFilter?.value;
+        mixer.filter(seatingSelector);
+      });
+  }, []);
+  // let products = _TubsData;
+  let products = _.filter(_TubsData, (item) => item.brand !== "Swim Series");
+
   return (
     <MainLayout
       title="Shop Hot Tubs by Brand, Size and Price"
@@ -75,7 +76,7 @@ const ShopHotTubs = () => {
             <p>
               Shop all models, or narrow your search using the brand, size and
               price filters, to find hot tubs that fit your criteria. Select any
-              spa to learn more about its unique features.{" "}
+              spa to learn more about its unique features.
             </p>
           </div>
         </div>
@@ -85,122 +86,95 @@ const ShopHotTubs = () => {
               <div className="col-sm-4 col-md-12">
                 <fieldset data-filter-group="">
                   <h2>Hot Tub Brands</h2>
-                  <select
-                    className="brandFilter form-control"
-                    onChange={(e) => {
-                      setSearchBrand(e.target.value);
-                    }}
-                  >
+                  <select className="brandFilter form-control">
                     <option value="">All Brands</option>
-                    {BrandData.map((item, index) => {
-                      return (
-                        <option key={index} value={item}>
-                          {item}
-                        </option>
-                      );
-                    })}
+                    <option value=".TridentSeries">Trident Series</option>
+                    <option value=".NauticalSeries">Nautical Series</option>
+                    <option value=".CoastalSeries">Coastal Series</option>
                   </select>
                 </fieldset>
               </div>
               <div className="col-sm-4 col-md-12">
                 <fieldset data-filter-group="">
                   <h2>Number of People</h2>
-                  <select
-                    className="seatingFilter form-control"
-                    defaultValue={filter_seat}
-                    onChange={(e) => {
-                      setSearchSeat(e.target.value);
-                    }}
-                  >
+                  <select className="seatingFilter form-control">
+                    <option value="" selected disabled>
+                      Select Seating Capacity
+                    </option>
                     <option value="">All Seating</option>
-                    <option value="1-3">1-3 Adults</option>
-                    <option value="4-5">4-5 Adults</option>
-                    <option value="6-8">6-8 Adults</option>
+                    {/*<option value=".filter-seating-1">1-3 Adults</option>*/}
+                    <option value=".filter-seating-2">4-5 Adults</option>
+                    <option value=".filter-seating-3">6-8 Adults</option>
                   </select>
                 </fieldset>
               </div>
             </div>
           </div>
           <div className="col-md-9">
-            {(tubsQuery?.length == 0 && (
-              <div className="row" id="not_matches">
-                <div className="col-md-12">
-                  <h2>No Results</h2>
-                  <p>
-                    It looks like your search criteria did not return any
-                    results. Try changing your search parameters.
-                  </p>
-                </div>
-              </div>
-            )) || (
-              <div className="row items filter-area animated fadeIn">
-                {tubsQuery.map((item, index) => {
-                  let category_slug = _.lowerCase(item.brand).replace(
-                    /\s+/g,
-                    "-"
-                  );
-                  // let category_slug =
-                  //   item.brand == "MP Legend"
-                  //     ? "legend"
-                  //     : _.lowerCase(item.brand).replace(/\s+/g, "-");
-                  return (
-                    <div
-                      className={`col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-seating-2 filter-price-1 ${item.brand} Hot Tubs`}
-                      key={index}
-                    >
-                      <div className="row filter-item-details">
-                        <div className="col-xs-6">
-                          <span className="tubwrap">
-                            <picture>
-                              <source
-                                srcSet={`/img/home-page/products/${item.image}.png`}
-                                type="image/png"
-                              />
-                              <img
-                                loading="lazy"
-                                className="img-responsive"
-                                src={`/img/home-page/products/${item.image}.png`}
-                                alt={`${item.name} ${item.brand}`}
-                              />
-                            </picture>
+            <div className="row items filter-area animated fadeIn">
+              {products.map((item, index) => {
+                let category_slug = _.lowerCase(item.brand).replace(
+                  /\s+/g,
+                  "-"
+                );
+                return (
+                  <div
+                    className={`col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-seating-${
+                      item.seats == 4 || item.seats == 5 ? "2" : "3"
+                    } filter-price-${item.price} ${_.upperFirst(
+                      _.replace(item.brand, " ", "")
+                    )}`}
+                    data-price={item.price}
+                    data-seating={item.seats}
+                    data-name={item.name}
+                    key={index}
+                  >
+                    <div className="row filter-item-details">
+                      <div className="col-xs-6">
+                        <span className="tubwrap">
+                          <img
+                            loading="lazy"
+                            className="img-responsive"
+                            src={`/img/home-page/products/${item.image}.png`}
+                            alt={`${item.name} ${item.brand}`}
+                          />
+                        </span>
+                      </div>
+                      <div className="col-xs-6 filter-item-specs">
+                        <h3
+                          className="bluetitle"
+                          style={{ fontSize: 24, marginTop: 0 }}
+                        >
+                          {item.name}
+                        </h3>
+                        <p>
+                          <img
+                            loading="lazy"
+                            width="20px"
+                            height="20px"
+                            alt="Blue icon of person"
+                            src="/img/icons/icon-person.png"
+                          />{" "}
+                          :{" "}
+                          <span className="seatingNumber">
+                            {" "}
+                            {item.seats} Adults
                           </span>
-                        </div>
-                        <div className="col-xs-6 filter-item-specs">
-                          <h3
-                            className="bluetitle"
-                            style={{ fontSize: 24, marginTop: 0 }}
-                          >
-                            {item.name}
-                          </h3>
-                          <p>
-                            <img
-                              loading="lazy"
-                              width="20px"
-                              height="20px"
-                              alt="Blue icon of person"
-                              src="/img/icons/icon-person.png"
-                            />{" "}
-                            :{" "}
-                            <span className="seatingNumber">
-                              {" "}
-                              {item.seats} Adults
-                            </span>
-                          </p>
-                          <Link
-                            className="btn btn-info btn-sm upper"
-                            to={`/products/${category_slug}/${_.lowerCase(
-                              item.name
-                            ).replace(/\s+/g, "")}`}
-                          >
-                            View Details
-                          </Link>
-                        </div>
+                        </p>
+                        <Link
+                          className="btn btn-info btn-sm upper"
+                          to={`/products/${category_slug}/${_.lowerCase(
+                            item.name
+                          ).replace(/\s+/g, "")}`}
+                        >
+                          View Details
+                        </Link>
                       </div>
                     </div>
-                  );
-                })}
-              </div>
-            )}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
         <section className="homemore row">
@@ -232,6 +206,36 @@ const ShopHotTubs = () => {
               </div>
             </div>
           </div>
+          {/*<div class="col-xs-12 col-md-4 ">*/}
+          {/*     <div>*/}
+          {/*          <a href="/contact-us">*/}
+          {/*               <span>*/}
+          {/*                    <p>Compare the features of all Gulfsouth Spas hot tubs.</p>*/}
+          {/*               </span>*/}
+          {/*               <img loading="lazy" src="/img/home-page/line-display/mpss-a.png" alt="Compare Hot Tubs" />*/}
+          {/*          </a>*/}
+          {/*          <div class="btn para outline blue infillWhite"*/}
+          {/*               style="position: absolute; bottom: 50; left:0;right:0;margin:auto;padding-top:6 ;padding-bottom: 3;">*/}
+          {/*               <a href="/contact-us">Compare Hot Tubs</a>*/}
+          {/*          </div>*/}
+          {/*     </div>*/}
+          {/*</div>*/}
+          {/*<div class="col-xs-12 col-md-4 ">*/}
+          {/*     <div>*/}
+          {/*          <a href="/contact-us">*/}
+          {/*               <span>*/}
+          {/*                    <p style=" color: #00aad4">*/}
+          {/*                         Use our tool to discover your new hot tub.*/}
+          {/*                    </p>*/}
+          {/*               </span>*/}
+          {/*               <img loading="lazy" src="/img/home-page/line-display/mpss-a.png" alt="" title="" />*/}
+          {/*          </a>*/}
+          {/*          <div class="btn para"*/}
+          {/*               style="position: absolute; bottom: 50; left:0;right:0;margin:auto;padding-top:6 ;padding-bottom: 3;">*/}
+          {/*               <a href="/contact-us">Find a Hot Tub</a>*/}
+          {/*          </div>*/}
+          {/*     </div>*/}
+          {/*</div>*/}
         </section>
       </div>
     </MainLayout>

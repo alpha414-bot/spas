@@ -1,7 +1,71 @@
 import "@/assets/css/tubfilter.css";
 import MainLayout from "@/layouts/MainLayout";
+import { _TubsData } from "@/services/modules/data";
+import $ from "jquery";
+import _ from "lodash";
+import mixitup from "mixitup";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import multifilter from "mixitup-multifilter";
 
 const ShopSwimSpas = () => {
+  useEffect(() => {
+    var containerEl = document.querySelector(".filter-area");
+    var brandFilter: HTMLSelectElement | null =
+      document.querySelector(".brandFilter");
+    var swimmingFilter: HTMLSelectElement | null =
+      document.querySelector(".swimmingFilter");
+    var hash = window.location.hash;
+    var noHash = hash.replace("#", ".");
+
+    if (noHash == ".all" || noHash == "") {
+      var noHash = "all";
+    }
+    // mixitup(".filter-area");
+    if (containerEl) {
+      mixitup.use(multifilter);
+      var mixer = mixitup(containerEl, {
+        multifilter: {
+          enable: true,
+        },
+        load: {
+          filter: noHash,
+        },
+      });
+    }
+
+    if (brandFilter) {
+      brandFilter.addEventListener("change", function () {
+        var brandSelector = brandFilter?.value;
+
+        mixer.filter(brandSelector);
+      });
+    }
+    if (swimmingFilter) {
+      swimmingFilter.addEventListener("change", function () {
+        var swimmingSelector = swimmingFilter?.value;
+
+        mixer.filter(swimmingSelector);
+      });
+    }
+
+    $("#not_matches").hide();
+
+    $("select").on("change", function () {
+      window.setTimeout(function () {
+        if (!$(".filter-item:visible").length) $("#not_matches").fadeIn();
+      }, 1200);
+    });
+
+    $("select").on("change", function () {
+      if ($("#not_matches").is(":visible")) $("#not_matches").hide();
+    });
+  }, []);
+  let products = _.filter(
+    _TubsData,
+    (item) => item.brand.toLowerCase() === "Swim Series".toLowerCase()
+  );
+
   return (
     <MainLayout
       title="Swim Spas by Gulfsouth Spas"
@@ -62,39 +126,71 @@ const ShopSwimSpas = () => {
           </div>
           <div className="col-md-9">
             <div className="row items filter-area animated swim-spas fadeIn display-flex">
-              <div
-                className="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-therapy-1 filter-recreation-1 filter-endurance-0 filter-sprint-0 SwimSeries"
-                data-price={5}
-              >
-                <div className="row filter-item-details">
-                  <div className="col-xs-12">
-                    <span className="tubwrap">
-                      <a href="javascript:void(0)">
-                        <img
-                          alt="Swim Series"
-                          className="img-responsive"
-                          src="/img/home-page/products/TS11PS.png"
-                        />
-                      </a>
-                    </span>
+              {products.map((item, index) => {
+                let category_slug = _.lowerCase(item.brand).replace(
+                  /\s+/g,
+                  "-"
+                );
+                // if
+                return (
+                  <div
+                    key={index}
+                    className={`col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-therapy-${
+                      !!item.therapy_fitness ? 1 : 0
+                    } filter-recreation-${
+                      !!item.recreation_swim_fitness ? 1 : 0
+                    } filter-endurance-${
+                      !!item.endurance_swim_training ? 1 : 0
+                    } filter-sprint-${!!item.fast_sprint ? 1 : 0} SwimSeries`}
+                    data-price={item.price}
+                  >
+                    <div className="row filter-item-details">
+                      <div className="col-xs-12">
+                        <span className="tubwrap">
+                          <Link
+                            to={`/products/${category_slug}/${_.lowerCase(
+                              item.name
+                            ).replace(/\s+/g, "")}`}
+                          >
+                            <img
+                              loading="lazy"
+                              className="img-responsive"
+                              src={`/img/home-page/products/${item.image}.png`}
+                              alt={`${item.name} ${item.brand}`}
+                            />
+                          </Link>
+                        </span>
+                      </div>
+                      <div className="filter-item-specs">
+                        <h3
+                          className="bluetitle"
+                          style={{ fontSize: 24, marginTop: 0 }}
+                        >
+                          {item.name}
+                        </h3>
+                        <p>
+                          {!!item.therapy_fitness ? "Therapy / Fitness" : ""}{" "}
+                          {!!item.recreation_swim_fitness
+                            ? "Recreation / Swim / Fitness"
+                            : ""}
+                          {!!item.endurance_swim_training
+                            ? " / Endurance "
+                            : ""}
+                          {!!item.fast_sprint ? " / Fast Sprint " : ""}
+                        </p>
+                        <Link
+                          className="btn btn-info btn-sm upper"
+                          to={`/products/${category_slug}/${_.lowerCase(
+                            item.name
+                          ).replace(/\s+/g, "")}`}
+                        >
+                          View Details
+                        </Link>
+                      </div>
+                    </div>
                   </div>
-                  <div className="filter-item-specs">
-                    <h3
-                      className="bluetitle"
-                      style={{ fontSize: 24, marginTop: 0 }}
-                    >
-                      TS11P
-                    </h3>
-                    <p>Therapy / Fitness / Recreation</p>
-                    <a
-                      className="btn btn-info btn-sm upper"
-                      href="products/ts11p.html"
-                    >
-                      View Details
-                    </a>
-                  </div>
-                </div>
-              </div>
+                );
+              })}
               <div
                 className="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-therapy-0 filter-recreation-1 filter-endurance-0 filter-sprint-0 SwimSeries"
                 data-price={5}
@@ -106,7 +202,7 @@ const ShopSwimSpas = () => {
                         <img
                           alt=""
                           className="img-responsive"
-                          src="/img/home-page/products/SS12GS.png"
+                          src="/img/home-page/products/ss12.png"
                         />
                       </a>
                     </span>

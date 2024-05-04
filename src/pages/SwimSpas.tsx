@@ -1,14 +1,32 @@
 import "@/assets/css/sequencetheme.css";
 import "@/assets/css/swimspas.css";
 import MainLayout from "@/layouts/MainLayout";
-import { useState } from "react";
+import { _TubsData } from "@/services/modules/data";
+import Glider from "glider-js";
+import _ from "lodash";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
-const GeneralOverview = () => {
-  const [sequenceState, setSequenceState] = useState(1);
-  const NextSequence = () =>
-    setSequenceState((current) => (current < 4 ? current + 1 : 1));
-  const PrevSequence = () =>
-    setSequenceState((current) => (current > 1 ? current - 1 : 4));
+const SwimSpas = () => {
+  useEffect(() => {
+    let glider: HTMLHtmlElement | null = document.querySelector(".glider");
+    if (glider) {
+      new Glider(glider, {
+        slidesToScroll: 1,
+        slidesToShow: 3.5,
+        draggable: true,
+        dots: ".dots",
+        arrows: {
+          prev: ".glider-prev",
+          next: ".glider-next",
+        },
+      });
+    }
+  }, []);
+  let products = _.filter(
+    _TubsData,
+    (item) => item.brand.toLowerCase() === "Swim Series".toLowerCase()
+  );
   return (
     <MainLayout
       title="Swim Spas by Gulfsouth Spas"
@@ -48,8 +66,7 @@ const GeneralOverview = () => {
         </div>
       </section>
       <div id="swimSpaVideo">
-        <div className="dtop">
-        </div>
+        <div className="dtop"></div>
       </div>
       <div className="container tronTainer">
         <section id="homeLead" style={{ paddingTop: 20 }}>
@@ -262,7 +279,7 @@ const GeneralOverview = () => {
               <a href="/subpages/swimspas-gallery.html">
                 <span>
                   <p style={{ color: "#00aad4" }}>
-                    Envision yourself in a Trident Series hot tub.
+                    Envision yourself in a Swim Series hot tub.
                   </p>
                 </span>
                 <img
@@ -291,7 +308,7 @@ const GeneralOverview = () => {
             <div>
               <a href="/subpages/swimspas-features.html">
                 <span>
-                  <p>Explore all the magical features Trident brings.</p>
+                  <p>Explore all the magical features Swim series brings.</p>
                 </span>
                 <img
                   src="/img/Features.png"
@@ -366,66 +383,26 @@ const GeneralOverview = () => {
             <div className="col-md-12">
               <div className="glider-contain">
                 <div className="glider">
-                  <div className="modelItem">
-                    <a href="javascript:void(0)">
-                      <img
-                        src="/img/home-page/products/TS11PS.png"
-                        alt="The Trident Series 240 Hot Tub"
-                      />
-                      <h4>TS11P</h4>
-                      <p>Measurements 92” X 144” X 55" </p>
-                    </a>
-                  </div>
-                  <div className="modelItem">
-                    <a href="javascript:void(0)">
-                      <img
-                        src="/img/home-page/products/SS12GS.png"
-                        alt="The Trident Series 6.2 Hot Tub"
-                      />
-                      <h4>SS12</h4>
-                      <p>Measurements 92” X 144” X 55" </p>
-                    </a>
-                  </div>
-                  <div className="modelItem">
-                    <a href="javascript:void(0)">
-                      <img
-                        src="/img/home-page/products/ssp13.png"
-                        alt="The Trident Series 67.25 Hot Tub"
-                      />
-                      <h4>SSP13</h4>
-                      <p>Measurements 92” X 144” X 55” </p>
-                    </a>
-                  </div>
-                  <div className="modelItem">
-                    <a href="javascript:void(0)">
-                      <img
-                        src="/img/home-page/products/ss14.png"
-                        alt="The Trident Series 7.2 Hot Tub"
-                      />
-                      <h4>SS14</h4>
-                      <p>Measurements 92” X 168” X 55”</p>
-                    </a>
-                  </div>
-                  <div className="modelItem">
-                    <a href="javascript:void(0)">
-                      <img
-                        src="/img/home-page/products/ss16.png"
-                        alt="The Trident Series 7.25 Hot Tub"
-                      />
-                      <h4>SS16</h4>
-                      <p>Measurements 92” X 192” X 55” </p>
-                    </a>
-                  </div>
-                  <div className="modelItem">
-                    <a href="javascript:void(0)">
-                      <img
-                        src="/img/home-page/products/ss19.png"
-                        alt="The Trident Series 7.25 Hot Tub"
-                      />
-                      <h4>SS19</h4>
-                      <p>Measurements 92” X 244” X 55” </p>
-                    </a>
-                  </div>
+                  {products.map((item, index) => {
+                    let slugged_name = _.lowerCase(item.name).replace(
+                      /\s+/g,
+                      ""
+                    );
+                    return (
+                      <div className="modelItem" key={index}>
+                        <Link to={`/products/swim-series/${slugged_name}`}>
+                          <img
+                            src={`/img/home-page/products/${slugged_name}.png`}
+                            alt={`${item.name} ${item.brand} Hot Tub on Gulfsouthspas `}
+                          />
+                          <h4>
+                            {item.brand} {item.type.toUpperCase()}
+                          </h4>
+                          <p>{item.measurements} </p>
+                        </Link>
+                      </div>
+                    );
+                  })}
                 </div>
                 <div role="tablist" className="dots" />
               </div>
@@ -437,4 +414,4 @@ const GeneralOverview = () => {
   );
 };
 
-export default GeneralOverview;
+export default SwimSpas;

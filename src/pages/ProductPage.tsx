@@ -59,12 +59,12 @@ const ProductPage = () => {
                 <span>&nbsp;</span>
               </div>
               <div className="jets">
-                <span>Jets</span>
+                <span>OVO Jets</span>
                 <span>{product?.jets}</span>
                 <span>&nbsp;</span>
               </div>
               <div className="seating">
-                <span>Seating</span>
+                <span>Seat(s)</span>
                 <span>{product.seats}</span>
                 <span>&nbsp;</span>
               </div>
@@ -452,40 +452,100 @@ const ProductPage = () => {
             <div className="row">
               <div className="col-md-6">
                 <p className="shellLabel bluetitle">
-                  SHELL: <span>Pebble Beach</span>
+                  Acrylic: <span>Color Options</span>
                 </p>
                 <div id="shellSwatches">
-                  <a
-                    id="rotoshellOne"
-                    className="shellOne shellSelected"
-                    title="Pebble Beach"
-                    href=""
-                  />
-                  <a
-                    id="rotoshellTwo"
-                    className="shellTwo"
-                    title="Sea Salt"
-                    href=""
-                  />
+                  <div>
+                    <a
+                      id="rotoshellOne"
+                      className="shellOne shellSelected"
+                      title="Sterling Marble"
+                      href="javascript:void(0)"
+                    />
+                    <p className="text-center">Sterling marble</p>
+                  </div>
+                  <div>
+                    <a
+                      id="rotoshellTwo"
+                      className="shellTwo"
+                      title="Storm Cloud"
+                      href="javascript:void(0)"
+                    />
+                    <p className="text-center">Storm Clouds</p>
+                  </div>
+                  <div>
+                    <a
+                      id="rotoshellThree"
+                      className="shellThree"
+                      title="Tuscan Sun"
+                      href="javascript:void(0)"
+                    />
+                    <p className="text-center">Tuscan Sun</p>
+                  </div>
+                  <div>
+                    <a
+                      id="rotoshellFour"
+                      className="shellFour"
+                      title="Smoky Mountain"
+                      href="javascript:void(0)"
+                    />
+                    <p className="text-center">Smoky Mountain</p>
+                  </div>
                 </div>
               </div>
               <div className="col-md-6">
                 <p className="skirtLabel bluetitle">
-                  SKIRTING: <span>DuraMaster Espresso</span>
+                  Skirt: <span>Color Options</span>
                 </p>
                 <div id="skirtSwatches">
-                  <a
-                    id="rotoskirtOne"
-                    className="skirtOne skirtSelected"
-                    title="DuraMaster Espresso"
-                    href=""
-                  />
-                  <a
-                    id="rotoskirtTwo"
-                    className="skirtTwo"
-                    title="DuraMaster Graphite"
-                    href=""
-                  />
+                  <div>
+                    <a
+                      id="rotoskirtOne"
+                      className="skirtOne skirtSelected"
+                      title="DuraMaster Espresso"
+                      href="javascript:void(0)"
+                    />
+                    <p className="text-center">
+                      Gray <br />
+                      (STANDARD)
+                    </p>
+                  </div>
+                  <div>
+                    <a
+                      id="rotoskirtTwo"
+                      className="skirtTwo"
+                      title="DuraMaster Graphite"
+                      href="javascript:void(0)"
+                    />
+                    <p className="text-center">
+                      Black <br />
+                      (STANDARD)
+                    </p>
+                  </div>
+                  <div>
+                    <a
+                      id="rotoskirtThree"
+                      className="skirtThree"
+                      title="Elite Coastal Gray"
+                      href="javascript:void(0)"
+                    />
+                    <p className="text-center">
+                      Elite Coastal Gray <br />
+                      (OPTIONAL)
+                    </p>
+                  </div>
+                  <div>
+                    <a
+                      id="rotoskirtFour"
+                      className="skirtFour"
+                      title="Elite Ash"
+                      href="javascript:void(0)"
+                    />
+                    <p className="text-center">
+                      Elite Ash <br />
+                      (OPTIONAL)
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -502,23 +562,6 @@ const ProductPage = () => {
             </div>
           </div>
         </div>
-        {/*<img class="img-responsive dtop" style="margin:auto; width:100%;"*/}
-        {/*     alt="Waterfall water feature on a getaway hot tub"*/}
-        {/*     src="/img/home-page/line-display/base-banner-bar-harbor-se.jpg">*/}
-        {/*<img class="img-responsive mobile" style="margin:auto; width:100%;"*/}
-        {/*     alt="Waterfall water feature on a getaway hot tub"*/}
-        {/*     src="/img/home-page/line-display/base-banner-bar-harbor-se-mobile.jpg">*/}
-        {/* <div class="container maincontent">
-                   <div class="row">
-                        <div class="col-md-12">
-                             <div class="doublebuttons">
-                                  <div class="btn para">
-                                       <a href="../find-a-dealer">Find a Dealer</a>
-                                  </div>
-                             </div>
-                        </div>
-                   </div>
-              </div> */}
         <br />
         <section className="bgGray">
           <div id="featureWrap" className="container maincontent">

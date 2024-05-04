@@ -86,6 +86,7 @@ html input[type='button'],
 input[type='reset'],
 input[type='submit'] {
 	-webkit-appearance: button;
+	appearance: button;
 	cursor: pointer;
 }
 button::-moz-focus-inner,
@@ -2323,7 +2324,7 @@ tbody.collapse.in {
 }
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > li > a:hover {
-	color: #333;
+	color: #ffffff;
 	background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a,
@@ -2834,6 +2835,7 @@ a.thumbnail:hover {
 }
 button.close {
 	-webkit-appearance: none;
+	appearance: button;
 	padding: 0;
 	cursor: pointer;
 	background: 0 0;
