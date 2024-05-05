@@ -392,19 +392,6 @@ const ProductPage = () => {
             </div>
           </div>
         </section>
-        <div className="container maincontent">
-          <div id="energyrow" className="row">
-            <div className="col-md-12">
-              <h2 className="energytitle">Estimated Monthly Operation Cost</h2>
-              {/*<h2 class="energycost">$$$.$$</h2>*/}
-              <div className="doublebuttons">
-                <div className="btn para">
-                  <Link to="/contact-us">Contact Us</Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <section id="colorPicker">
           <div className="container maincontent">
             <div className="row">

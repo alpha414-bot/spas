@@ -3126,10 +3126,12 @@ footer .footDisclaimer {
     padding: 0px 5px;
   }
   #lightgallery a {
-    display: block;
+    display: flex;
     max-width: 360px;
     width: 100%;
     margin: 5px auto;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -3729,7 +3731,7 @@ section#productionAccordion .container {
 } */
 #shellSwatches a,
 #skirtSwatches a {
-  display: inline-block;
+  display: block;
   margin-right: 15px;
 }
 #shellSwatches a.shellSelected,
@@ -3940,6 +3942,10 @@ section#productionAccordion .container {
   }
 }
 @media only screen and (min-width: 992px) {
+  #shellSwatches a,
+  #skirtSwatches a {
+    display: inline-block;
+  }
   .modelIntroVid {
     background-color: #e5e5e5;
     padding: 0px 0px;

@@ -199,7 +199,12 @@ const CategoryPage = () => {
                     paddingBottom: 3,
                   }}
                 >
-                  <Link to="/hot-tub-benefits">Swim SPA Benefits</Link>
+                  <Link to="/hot-tub-benefits">
+                    {category?.title === "Swim Series"
+                      ? "Swim Spas"
+                      : "Hot Tub"}{" "}
+                    Benefits
+                  </Link>
                 </div>
               </div>
             </div>
