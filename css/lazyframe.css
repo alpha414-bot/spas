@@ -172,7 +172,7 @@
   line-height: 16px;
   white-space: nowrap;
   z-index: 3;
-  positon: relative;
+  position: relative;
 }
 .lazyframe[data-vendor="vine"] .lazyframe__title:after {
   content: "";
