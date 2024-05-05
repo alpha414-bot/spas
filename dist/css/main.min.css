@@ -293,16 +293,18 @@ a:hover {
   }
 }
 nav {
-  background-image: url("../img/colors-light-bg.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  /*background-image: url("../img/colors-light-bg.webp");*/
+  /*background-repeat: no-repeat;*/
+  /*background-size: cover;*/
+  /*background-position: center;*/
+  background-color: #136183 !important;
 }
 .no-webp nav {
-  background-image: url("../img/colors-light-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  /*background-image: url("../img/colors-light-bg.jpg");*/
+  /*background-repeat: no-repeat;*/
+  /*background-size: cover;*/
+  /*background-position: center;*/
+  background-color: #136183 !important;
 }
 .nav > li {
   margin-right: 10px;
@@ -423,6 +425,7 @@ nav {
 .navbar-toggle .icon-bar {
   width: 22px;
   transition: all 0.2s;
+  background-color: white !important;
 }
 .navbar-toggle .top-bar {
   transform: rotate(45deg);
@@ -611,7 +614,7 @@ nav {
 }
 @media only screen and (min-width: 200px) {
   #cdnVideoHero {
-    max-height: 700px;
+    max-height: 400px;
   }
   #cdnVideoHero #playerTextWrap h1 {
     font-size: 36px;
@@ -641,7 +644,7 @@ nav {
   }
   #cdnVideoHero #playerTextWrap #playerText #playerTextSubset {
     height: auto;
-    bottom: 0px;
+    bottom: -13px;
     position: relative;
   }
 }
@@ -751,7 +754,7 @@ nav {
     max-width: 100%;
     left: 0;
     right: 0;
-    top: 33%;
+    top: 28%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -800,12 +803,15 @@ nav {
   }
   .hotTubLineWrapper.legend {
     background-image: url("../img/home-page/line-display/legend-mobile-fade.jpg");
+    /*background-image: url("../img/home-page/line-display/Tri-mobile.jpg");*/
   }
   .hotTubLineWrapper.twilight {
     background-image: url("../img/home-page/line-display/twilight-mobile-fade.jpg");
+    /*background-image: url("../img/home-page/line-display/Nau-mobile.jpg");*/
   }
   .hotTubLineWrapper.clarity {
     background-image: url("../img/home-page/line-display/clarity-mobile-fade.jpg");
+    /*background-image: url("../img/home-page/line-display/Coa-mobile.jpg");*/
   }
   .hotTubLineWrapper.getaway {
     background-image: url("../img/home-page/line-display/getaway-mobile-fade.jpg");
@@ -814,7 +820,8 @@ nav {
     background-image: url("../img/home-page/line-display/h2x-mobile-fade.png");
   }
   .swimSpaLineWrapper.mpss {
-    background-image: url("../img/home-page/line-display/mpss-mobile-fade-a.png");
+    /*background-image: url("../img/home-page/line-display/mpss-mobile-fade-a.png");*/
+    background-image: url("../img/home-page/line-display/Swi-mobile.jpg");
   }
 }
 @media only screen and (min-width: 992px) {
@@ -873,12 +880,15 @@ nav {
   }
   .hotTubLineWrapper.legend {
     background-image: url("../img/home-page/line-display/legend.jpg");
+    /*background-image: url("../img/home-page/line-display/Trid.jpg");*/
   }
   .hotTubLineWrapper.twilight {
     background-image: url("../img/home-page/line-display/twilight.jpg");
+    /*background-image: url("../img/home-page/line-display/Naut.jpg");*/
   }
   .hotTubLineWrapper.clarity {
     background-image: url("../img/home-page/line-display/clarity.jpg");
+    /*background-image: url("../img/home-page/line-display/Coas.jpg");*/
   }
   .hotTubLineWrapper.getaway {
     background-image: url("../img/home-page/line-display/getaway.jpg");
@@ -887,7 +897,8 @@ nav {
     background-image: url("../img/home-page/line-display/h2x.png");
   }
   .swimSpaLineWrapper.mpss {
-    background-image: url("../img/home-page/line-display/mpss-a.png");
+    /*background-image: url("../img/home-page/line-display/mpss-a.png");*/
+    background-image: url("../img/home-page/line-display/swim.jpg");
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -895,7 +906,7 @@ nav {
     margin-bottom: 50px;
   }
   #hotTubLines .hotTubLineWrapper .threeQuarter img {
-    width: 275px;
+    width: 295px;
   }
   #hotTubLines .hotTubLineWrapper .threeQuarter img {
     top: auto;
@@ -913,7 +924,7 @@ nav {
     right: 20px;
   }
   #swimSpaLines .swimSpaLineWrapper.h2x .threeQuarter img {
-    width: 264px;
+    width: 364px;
     top: auto;
     bottom: 0px;
   }
@@ -1179,22 +1190,26 @@ ol.bigNumberList h4 {
 }
 .overview,
 .detail {
-  background: url(../img/overview-bg.jpg) no-repeat top left;
+  /*background: url(../img/overview-bg.jpg) no-repeat top left;*/
+  left: 0;
 }
 .about {
   background: url(../img/about-bg.jpg) no-repeat top left;
 }
 .mplegend {
-  background: url(../img/mpl-features.jpg) no-repeat top left;
+  /*background: url(../img/mpl-features.jpg) no-repeat top left;*/
+  left: 0;
 }
 .twilight {
   background: url(../img/ts-features.jpg) no-repeat top right;
 }
 .clarity {
-  background: url(../img/cls-features.jpg) no-repeat top left;
+  /*background: url(../img/cls-features.jpg) no-repeat top left;*/
+  left: 0;
 }
 .owners {
-  background: url(../img/owners-bg.jpg) no-repeat top left;
+  background: url(../img/swimspas/widescreen-fallback.jpg) no-repeat top left;
+  /*background: url(../img/owners-bg.jpg) no-repeat top left;*/
 }
 @media only screen and (min-width: 300px) {
   .owners {
@@ -1479,7 +1494,7 @@ ol.bigNumberList h4 {
 }
 @media only screen and (min-width: 1200px) {
   #doubleButtonHome {
-    top: 60%;
+    top: 70%;
   }
 }
 .doublebuttons {
@@ -2333,6 +2348,16 @@ label.para input {
   margin: auto;
   transition: 0.3s;
 }
+.cards .a {
+  background: #fff;
+  display: block;
+  border: solid thin #00aad4;
+  text-align: center;
+  padding: 25px;
+  max-width: 400px;
+  margin: auto;
+  transition: 0.3s;
+}
 .cards a p {
   text-transform: none;
   margin-top: 10px;
@@ -2348,7 +2373,13 @@ label.para input {
 .owners .cards a {
   min-height: 345px;
 }
+.owners .cards .a {
+  min-height: 345px;
+}
 .ownerManuals .cards a {
+  min-height: 135px;
+}
+.ownerManuals .cards .a {
   min-height: 135px;
 }
 .owners .manuals p a {
@@ -3677,24 +3708,32 @@ section#productionAccordion .container {
 #shellSwatches,
 #skirtSwatches {
   display: flex;
+  gap: 1.2em;
   align-items: center;
   justify-content: center;
 }
+/* #shellSwatches div,
+#skirtSwatches div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
 #shellSwatches a,
 #skirtSwatches a {
   display: inline-block;
-  width: 90px;
-  height: 60px;
-  background-position: center;
   margin-right: 15px;
 }
 #shellSwatches a.shellSelected,
 #skirtSwatches a.shellSelected {
   border: solid 3px #00aad4;
 }
-#shellSwatches a.skirtSelected,
-#skirtSwatches a.skirtSelected {
+#shellSwatches .skirtSelected,
+#skirtSwatches .skirtSelected {
   border: solid 3px #00aad4;
+}
+#shellSwatches div p,
+#skirtSwatches div p {
+  text-align: center;
 }
 #skirt {
   position: relative;
@@ -3735,10 +3774,16 @@ section#productionAccordion .container {
   background-image: url(../img/colors/acrylic/smoky-mountain.jpg);
 }
 #rotoshellOne {
-  background-image: url(../img/getaway/colors/pebble-beach.jpg);
+  background-image: url(../img/getaway/colors/Sterling.png);
 }
 #rotoshellTwo {
-  background-image: url(../img/getaway/colors/sea-salt.jpg);
+  background-image: url(../img/getaway/colors/Storm.png);
+}
+#rotoshellThree {
+  background-image: url(../img/getaway/colors/Tuscan.png);
+}
+#rotoshellFour {
+  background-image: url(../img/getaway/colors/Smoky.png);
 }
 #skirtOne {
   background-image: url(../img/colors/skirting/skirt-duramaster-espresso.jpg);
@@ -3756,10 +3801,16 @@ section#productionAccordion .container {
   background-image: url(../img/colors/skirting/skirt-dreamstone-canyonstone.jpg);
 }
 #rotoskirtOne {
-  background-image: url(../img/getaway/colors/roto-espresso.jpg);
+  background-image: url(../img/getaway/colors/Gray.png);
 }
 #rotoskirtTwo {
-  background-image: url(../img/getaway/colors/roto-graphite.jpg);
+  background-image: url(../img/getaway/colors/Black.png);
+}
+#rotoskirtThree {
+  background-image: url(../img/getaway/colors/Elite-Coastal.png);
+}
+#rotoskirtFour {
+  background-image: url(../img/getaway/colors/Elit-Ash.png);
 }
 .carousel.vertical {
   position: relative;

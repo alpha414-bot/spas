@@ -169,9 +169,9 @@ const ShopSwimSpas = () => {
                           {item.name}
                         </h3>
                         <p>
-                          {!!item.therapy_fitness ? "Therapy / Fitness" : ""}{" "}
+                          {!!item.therapy_fitness ? "Therapy & Fitness" : ""}{" "}
                           {!!item.recreation_swim_fitness
-                            ? "Recreation / Swim / Fitness"
+                            ? "Recreation & Swim & Fitness"
                             : ""}
                           {!!item.endurance_swim_training
                             ? " / Endurance "
@@ -191,178 +191,13 @@ const ShopSwimSpas = () => {
                   </div>
                 );
               })}
-              <div
-                className="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-therapy-0 filter-recreation-1 filter-endurance-0 filter-sprint-0 SwimSeries"
-                data-price={5}
-              >
-                <div className="row filter-item-details">
-                  <div className="col-xs-12">
-                    <span className="tubwrap">
-                      <a href="javascript:void(0)">
-                        <img
-                          alt=""
-                          className="img-responsive"
-                          src="/img/home-page/products/ss12.png"
-                        />
-                      </a>
-                    </span>
-                  </div>
-                  <div className="filter-item-specs">
-                    <h3
-                      className="bluetitle"
-                      style={{ fontSize: 24, marginTop: 0 }}
-                    >
-                      SS12
-                    </h3>
-                    <p>Therapy / Fitness / Recreation</p>
-                    <a
-                      className="btn btn-info btn-sm upper"
-                      href="products/ss12.html"
-                    >
-                      View Details
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-therapy-1 filter-recreation-0 filter-endurance-1 filter-sprint-1 SwimSeries"
-                data-price={4}
-              >
-                <div className="row filter-item-details">
-                  <div className="col-xs-12">
-                    <span className="tubwrap">
-                      <a href="javascript:void(0)">
-                        <img
-                          alt=""
-                          className="img-responsive"
-                          src="/img/home-page/products/ssp13.png"
-                        />
-                      </a>
-                    </span>
-                  </div>
-                  <div className="filter-item-specs">
-                    <h3
-                      className="bluetitle"
-                      style={{ fontSize: 24, marginTop: 0 }}
-                    >
-                      SSP13
-                    </h3>
-                    <p>Therapy / Fitness / Recreation</p>
-                    <a
-                      className="btn btn-info btn-sm upper"
-                      href="products/ssp13.html"
-                    >
-                      View Details
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-therapy-0 filter-recreation-1 filter-endurance-0 filter-sprint-0 SwimSeries"
-                data-price={5}
-              >
-                <div className="row filter-item-details">
-                  <div className="col-xs-12">
-                    <span className="tubwrap">
-                      <a href="javascript:void(0)">
-                        <img
-                          alt="Swim Series"
-                          className="img-responsive"
-                          src="/img/home-page/products/ss14.png"
-                        />
-                      </a>
-                    </span>
-                  </div>
-                  <div className="filter-item-specs">
-                    <h3
-                      className="bluetitle"
-                      style={{ fontSize: 24, marginTop: 0 }}
-                    >
-                      SS14
-                    </h3>
-                    <p>Therapy / Fitness / Recreation</p>
-                    <a
-                      className="btn btn-info btn-sm upper"
-                      href="products/ss14.html"
-                    >
-                      View Details
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-therapy-1 filter-recreation-1 filter-endurance-1 filter-sprint-1 SwimSeries"
-                data-price={5}
-              >
-                <div className="row filter-item-details">
-                  <div className="col-xs-12">
-                    <span className="tubwrap">
-                      <a href="javascript:void(0)">
-                        <img
-                          alt="Swim Series"
-                          className="img-responsive"
-                          src="/img/home-page/products/ss16.png"
-                        />
-                      </a>
-                    </span>
-                  </div>
-                  <div className="filter-item-specs">
-                    <h3
-                      className="bluetitle"
-                      style={{ fontSize: 24, marginTop: 0 }}
-                    >
-                      SS16
-                    </h3>
-                    <p>Therapy / Fitness / Recreation</p>
-                    <a
-                      className="btn btn-info btn-sm upper"
-                      href="products/ss16.html"
-                    >
-                      View Details
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="col-xs-12 col-sm-6 col-lg-4 mix filter-item filter-therapy-1 filter-recreation-1 filter-endurance-0 filter-sprint-0 SwimSeries"
-                data-price={5}
-              >
-                <div className="row filter-item-details">
-                  <div className="col-xs-12">
-                    <span className="tubwrap">
-                      <a href="javascript:void(0)">
-                        <img
-                          alt="Swim Series"
-                          className="img-responsive"
-                          src="/img/home-page/products/ss19.png"
-                        />
-                      </a>
-                    </span>
-                  </div>
-                  <div className="filter-item-specs">
-                    <h3
-                      className="bluetitle"
-                      style={{ fontSize: 24, marginTop: 0 }}
-                    >
-                      SS19
-                    </h3>
-                    <p>Therapy / Fitness / Recreation</p>
-                    <a
-                      className="btn btn-info btn-sm upper"
-                      href="products/ss19.html"
-                    >
-                      View Details
-                    </a>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
         <section className="homemore row">
           <div className="col-xs-12 col-md-4 " style={{ textAlign: "center" }}>
             <div>
-              <a href="/contact-us.html">
+              <Link to="/contact-us">
                 <span>
                   <p>Found the perfect hot tub? Request pricing online.</p>
                 </span>
@@ -371,7 +206,7 @@ const ShopSwimSpas = () => {
                   src="/img/home-page/line-display/mpss-a.png"
                   alt="find the spa that's right for you!"
                 />
-              </a>
+              </Link>
               <div
                 className="btn para outline blue infillWhite"
                 style={{
@@ -384,7 +219,7 @@ const ShopSwimSpas = () => {
                   paddingBottom: 3,
                 }}
               >
-                <a href="/contact-us.html">Get Pricing</a>
+                <Link to="/contact-us">Get Pricing</Link>
               </div>
             </div>
           </div>

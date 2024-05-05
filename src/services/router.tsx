@@ -1,15 +1,18 @@
+import CategoryFeaturePage from "@/pages/CategoryFeaturePage";
+import CategoryGalleryPage from "@/pages/CategoryGalleryPage";
 import CategoryPage from "@/pages/CategoryPage";
 import ContactUs from "@/pages/ContactUs";
 import CustomerSupport from "@/pages/CustomerSupport";
 import ErrorPage from "@/pages/ErrorPage";
-import GeneralOverview from "@/pages/SwimSpas";
 import Home from "@/pages/Home";
+import HotTubBenefits from "@/pages/HotTubBenefits";
 import ProductPage from "@/pages/ProductPage";
 import ShopHotTubs from "@/pages/ShopHotTubs";
 import ShopSwimSpas from "@/pages/ShopSwimSpas";
 import HotTubElectricalRequirement from "@/pages/Support/HotTubElectricalRequirement";
 import HotTubMaintenanceGuide from "@/pages/Support/HotTubMaintenanceGuide";
 import HotTubOwnersManuals from "@/pages/Support/HotTubOwnersManuals";
+import GeneralOverview from "@/pages/SwimSpas";
 import { useLayoutEffect } from "react";
 import { createBrowserRouter, useLocation } from "react-router-dom";
 import { CategoryLoader, ProductLoader } from "./modules/data";
@@ -60,6 +63,7 @@ const routes = [
         <ContactUs />
       </ProtectedRoute>
     ),
+    errorElement: <ErrorPage />,
   },
   {
     path: "/hot-tubs",
@@ -69,6 +73,7 @@ const routes = [
         <ShopHotTubs />
       </ProtectedRoute>
     ),
+    errorElement: <ErrorPage />,
   },
   {
     path: "/swim-spas",
@@ -77,6 +82,7 @@ const routes = [
         <GeneralOverview />
       </ProtectedRoute>
     ),
+    errorElement: <ErrorPage />,
   },
   {
     path: "/shop-swim-spas",
@@ -85,6 +91,16 @@ const routes = [
         <ShopSwimSpas />
       </ProtectedRoute>
     ),
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/hot-tub-benefits",
+    element: (
+      <ProtectedRoute>
+        <HotTubBenefits />
+      </ProtectedRoute>
+    ),
+    errorElement: <ErrorPage />,
   },
   {
     path: "/customer-support",
@@ -93,6 +109,7 @@ const routes = [
         <CustomerSupport />
       </ProtectedRoute>
     ),
+    errorElement: <ErrorPage />,
   },
   {
     path: "/hot-tub-electrical-requirements",
@@ -101,6 +118,7 @@ const routes = [
         <HotTubElectricalRequirement />
       </ProtectedRoute>
     ),
+    errorElement: <ErrorPage />,
   },
   {
     path: "/hot-tub-owners-manuals",
@@ -109,6 +127,7 @@ const routes = [
         <HotTubOwnersManuals />
       </ProtectedRoute>
     ),
+    errorElement: <ErrorPage />,
   },
 
   {
@@ -118,6 +137,7 @@ const routes = [
         <HotTubMaintenanceGuide />
       </ProtectedRoute>
     ),
+    errorElement: <ErrorPage />,
   },
 
   {
@@ -128,6 +148,27 @@ const routes = [
         <CategoryPage />
       </ProtectedRoute>
     ),
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/gallery/:category_name",
+    loader: CategoryLoader,
+    element: (
+      <ProtectedRoute>
+        <CategoryGalleryPage />
+      </ProtectedRoute>
+    ),
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/features/:category_name",
+    loader: CategoryLoader,
+    element: (
+      <ProtectedRoute>
+        <CategoryFeaturePage />
+      </ProtectedRoute>
+    ),
+    errorElement: <ErrorPage />,
   },
   {
     path: "/products/:category_slug/:product_slug",
@@ -137,6 +178,7 @@ const routes = [
         <ProductPage />
       </ProtectedRoute>
     ),
+    errorElement: <ErrorPage />,
   },
 ];
 

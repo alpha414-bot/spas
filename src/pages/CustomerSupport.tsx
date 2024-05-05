@@ -1,4 +1,5 @@
 import MainLayout from "@/layouts/MainLayout";
+import { Link } from "react-router-dom";
 
 const CustomerSupport = () => {
   return (
@@ -15,7 +16,7 @@ const CustomerSupport = () => {
           <div className="ownersAll">
             <div className="row cards">
               <div className="col-sm-6 col-md-4">
-                <a href="hot-tub-electrical-requirements">
+                <Link to="/hot-tub-electrical-requirements">
                   <div className="support">
                     <h4>Electrical Requirements</h4>
                     <img
@@ -27,20 +28,10 @@ const CustomerSupport = () => {
                       to assist in hot tub electrical installation.
                     </p>
                   </div>
-                </a>
+                </Link>
               </div>
-              {/*<div class="col-sm-6 col-md-4">*/}
-              {/*     <a href="faq">*/}
-              {/*          <div class="support">*/}
-              {/*               <h4>FAQs</h4>*/}
-              {/*               <img src="/img/icons/icon-question.png" alt="question icon" />*/}
-              {/*               <p>Some quick answers to the most common hot tub and swim spa*/}
-              {/*                    questions.</p>*/}
-              {/*          </div>*/}
-              {/*     </a>*/}
-              {/*</div>*/}
               <div className="col-sm-6 col-md-4">
-                <a href="documents/quick-start-guide.pdf">
+                <Link target="_blank" to="/documents/quick-start-guide.pdf">
                   <div className="support">
                     <h4>Quick Start Guide</h4>
                     <img
@@ -49,10 +40,10 @@ const CustomerSupport = () => {
                     />
                     <p>Start enjoying your hot tub quickly.</p>
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="col-sm-6 col-md-4">
-                <a href="/hot-tub-owners-manuals">
+                <Link to="/hot-tub-owners-manuals">
                   <div className="support">
                     <h4>Owner's Manuals</h4>
                     <img
@@ -61,10 +52,10 @@ const CustomerSupport = () => {
                     />
                     <p>Lost your manual? Download a new PDF version.</p>
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="col-sm-6 col-md-4">
-                <a href="hot-tub-maintenance-guide">
+                <Link to="/hot-tub-maintenance-guide">
                   <div className="support">
                     <h4>Hot Tub Maintenance Guide</h4>
                     <img
@@ -77,10 +68,10 @@ const CustomerSupport = () => {
                       <br /> &nbsp;
                     </p>
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="col-sm-6 col-md-4">
-                <a href="/contact-us">
+                <Link to="/contact-us">
                   <div className="support">
                     <h4>Spa Registration</h4>
                     <img
@@ -92,7 +83,7 @@ const CustomerSupport = () => {
                       questions or problems you might have.
                     </p>
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="col-sm-6 col-md-4" />
             </div>

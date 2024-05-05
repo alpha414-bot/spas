@@ -1,10 +1,10 @@
+import "@/assets/css/glider.css";
 import { HotTubsBrandInterface, ProductHotTubsInterface } from "@/function";
 import MainLayout from "@/layouts/MainLayout";
 import Glider from "glider-js";
-import { useEffect } from "react";
-import "@/assets/css/glider.css";
-import { Link, useLoaderData } from "react-router-dom";
 import _ from "lodash";
+import { useLayoutEffect } from "react";
+import { Link, useLoaderData } from "react-router-dom";
 
 interface CategoryLoaderData {
   category: HotTubsBrandInterface;
@@ -12,7 +12,7 @@ interface CategoryLoaderData {
 const CategoryPage = () => {
   const { category } = useLoaderData() as CategoryLoaderData;
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     let glider: HTMLHtmlElement | null = document.querySelector(".glider");
     if (glider) {
       new Glider(glider, {
@@ -62,10 +62,10 @@ const CategoryPage = () => {
                 <p style={{ width: "100%" }}>{category.slogan}</p>
               </div>
               <div className="btn para">
-                <a href="/hot-tubs">Models</a>
+                <Link to="/hot-tubs">Models</Link>
               </div>
               <div className="btn para">
-                <a href="/contact-us">Get Pricing</a>
+                <Link to="/contact-us">Get Pricing</Link>
               </div>
             </div>
           </section>
@@ -80,7 +80,7 @@ const CategoryPage = () => {
               <p>{category.textDescription}. </p>
               <div style={{ marginTop: 24, marginBottom: 4 }}>
                 <div className="btn para outline blue">
-                  <a href="/hot-tubs">Models</a>
+                  <Link to="/hot-tubs">Models</Link>
                 </div>
               </div>
             </div>
@@ -99,7 +99,7 @@ const CategoryPage = () => {
                 <h2>{category.slogan}</h2>
                 <p>{category.textDescription}</p>
                 <div className="btn para outline blue">
-                  <a href="/hot-tubs">Models</a>
+                  <Link to="/hot-tubs">Models</Link>
                 </div>
               </div>
               <img
@@ -119,7 +119,7 @@ const CategoryPage = () => {
           <section className="homemore row">
             <div className="col-xs-12 col-md-4 ">
               <div>
-                <a href="/subpages/trident-gallery">
+                <Link to={`/gallery/${category?.slug}`}>
                   <span>
                     <p style={{ color: "#00aad4" }}>
                       Envision yourself in a {category.title} hot tub.
@@ -130,7 +130,7 @@ const CategoryPage = () => {
                     alt={`Image gallery of ${category.title}`}
                     title={`Navigate to gallery of images of ${category.title} Hot Tubs`}
                   />
-                </a>
+                </Link>
                 <div
                   className="btn para"
                   style={{
@@ -143,13 +143,13 @@ const CategoryPage = () => {
                     paddingBottom: 3,
                   }}
                 >
-                  <a href="/subpages/trident-gallery">Gallery</a>
+                  <Link to={`/gallery/${category?.slug}`}>Gallery</Link>
                 </div>
               </div>
             </div>
             <div className="col-xs-12 col-md-4 ">
               <div>
-                <a href="/subpages/trident-features">
+                <Link to={`/features/${category?.slug}`}>
                   <span>
                     <p>Explore all the magical features Swim SPA brings.</p>
                   </span>
@@ -158,7 +158,7 @@ const CategoryPage = () => {
                     alt="Trident Series Swim SPA features"
                     title="Navigate to Trident Series Swim SPA Features"
                   />
-                </a>
+                </Link>
                 <div
                   className="btn para outline blue infillWhite"
                   style={{
@@ -171,13 +171,13 @@ const CategoryPage = () => {
                     paddingBottom: 3,
                   }}
                 >
-                  <a href="/subpages/trident-features">Features</a>
+                  <Link to={`/features/${category?.slug}`}>Features</Link>
                 </div>
               </div>
             </div>
             <div className="col-xs-12 col-md-4 ">
               <div>
-                <a href="/hot-tub-benefits">
+                <Link to="/hot-tub-benefits">
                   <span>
                     <p>Improve your well-being with hydrotherapy</p>
                   </span>
@@ -186,7 +186,7 @@ const CategoryPage = () => {
                     alt="Swim SPA Benefits"
                     title="Navigate to Swim SPA Benefits"
                   />
-                </a>
+                </Link>
                 <div
                   className="btn para"
                   style={{
@@ -199,7 +199,7 @@ const CategoryPage = () => {
                     paddingBottom: 3,
                   }}
                 >
-                  <a href="/hot-tub-benefits">Swim SPA Benefits</a>
+                  <Link to="/hot-tub-benefits">Swim SPA Benefits</Link>
                 </div>
               </div>
             </div>
@@ -239,7 +239,9 @@ const CategoryPage = () => {
                                 src={`/img/home-page/products/${slugged_name}.png`}
                                 alt={`${item.name} ${item.brand} Hot Tub on Gulfsouthspas `}
                               />
-                              <h4>{item.brand} {item.type.toUpperCase()}</h4>
+                              <h4>
+                                {item.brand} {item.type.toUpperCase()}
+                              </h4>
                               <p>{item.measurements} </p>
                             </Link>
                           </div>

@@ -1,4 +1,5 @@
 import MainLayout from "@/layouts/MainLayout";
+import { Link } from "react-router-dom";
 
 const HotTubElectricalRequirement = () => {
   return (
@@ -39,7 +40,7 @@ const HotTubElectricalRequirement = () => {
                 sizes that are too small for incurring power, may continually
                 blow fuses in the electrical equipment box, may damage the
                 internal electrical controls and components, is unsafe and will
-                void your <a href="javascript:void(0)">warranty</a>.{" "}
+                void your <Link to="javascript:void(0)">warranty</Link>.{" "}
               </p>
             </div>
           </div>

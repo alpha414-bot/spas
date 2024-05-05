@@ -180,7 +180,7 @@ const ShopHotTubs = () => {
         <section className="homemore row">
           <div className="col-xs-12 col-md-4 ">
             <div>
-              <a href="/contact-us">
+              <Link to="/contact-us">
                 <span>
                   <p>Found the perfect hot tub? Request pricing online.</p>
                 </span>
@@ -189,53 +189,20 @@ const ShopHotTubs = () => {
                   src="/img/home-page/line-display/mpss-a.png"
                   alt="find the spa that's right for you!"
                 />
-              </a>
+              </Link>
               <div
                 className="btn para outline blue infillWhite"
                 style={{
                   position: "absolute",
-                  bottom: 50,
                   left: 0,
                   right: 0,
                   margin: "auto",
-                  paddingTop: 6,
-                  paddingBottom: 3,
                 }}
               >
-                <a href="/contact-us">Get Pricing</a>
+                <Link to="/contact-us">Get Pricing</Link>
               </div>
             </div>
           </div>
-          {/*<div class="col-xs-12 col-md-4 ">*/}
-          {/*     <div>*/}
-          {/*          <a href="/contact-us">*/}
-          {/*               <span>*/}
-          {/*                    <p>Compare the features of all Gulfsouth Spas hot tubs.</p>*/}
-          {/*               </span>*/}
-          {/*               <img loading="lazy" src="/img/home-page/line-display/mpss-a.png" alt="Compare Hot Tubs" />*/}
-          {/*          </a>*/}
-          {/*          <div class="btn para outline blue infillWhite"*/}
-          {/*               style="position: absolute; bottom: 50; left:0;right:0;margin:auto;padding-top:6 ;padding-bottom: 3;">*/}
-          {/*               <a href="/contact-us">Compare Hot Tubs</a>*/}
-          {/*          </div>*/}
-          {/*     </div>*/}
-          {/*</div>*/}
-          {/*<div class="col-xs-12 col-md-4 ">*/}
-          {/*     <div>*/}
-          {/*          <a href="/contact-us">*/}
-          {/*               <span>*/}
-          {/*                    <p style=" color: #00aad4">*/}
-          {/*                         Use our tool to discover your new hot tub.*/}
-          {/*                    </p>*/}
-          {/*               </span>*/}
-          {/*               <img loading="lazy" src="/img/home-page/line-display/mpss-a.png" alt="" title="" />*/}
-          {/*          </a>*/}
-          {/*          <div class="btn para"*/}
-          {/*               style="position: absolute; bottom: 50; left:0;right:0;margin:auto;padding-top:6 ;padding-bottom: 3;">*/}
-          {/*               <a href="/contact-us">Find a Hot Tub</a>*/}
-          {/*          </div>*/}
-          {/*     </div>*/}
-          {/*</div>*/}
         </section>
       </div>
     </MainLayout>

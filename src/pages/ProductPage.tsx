@@ -1,6 +1,16 @@
 import { HotTubsBrandInterface, ProductHotTubsInterface } from "@/function";
 import MainLayout from "@/layouts/MainLayout";
-import { useLoaderData } from "react-router-dom";
+import LightGallery from "lightgallery/react";
+import { Link, useLoaderData } from "react-router-dom";
+
+// import styles
+import "lightgallery/css/lg-thumbnail.css";
+import "lightgallery/css/lg-zoom.css";
+import "lightgallery/css/lightgallery.css";
+
+// import plugins if you need
+import lgThumbnail from "lightgallery/plugins/thumbnail";
+import lgZoom from "lightgallery/plugins/zoom";
 
 interface ProductLoaderInterface {
   product: ProductHotTubsInterface;
@@ -34,13 +44,13 @@ const ProductPage = () => {
             <div className="col-xs-12 col-sm-8">
               <h1 itemProp="name" content="Coastal Series">
                 {/*<span itemprop="brand">Coastal Series</span>*/}
-                {category.title} - {product.name}
+                {category?.title} - {product?.name}
               </h1>
               <div
                 data-bv-show="rating_summary"
                 data-bv-productid="gs-bar-harbor-se"
               />
-              <p itemProp="description">{category.textDescription}</p>
+              <p itemProp="description">{category?.textDescription}</p>
             </div>
             <div className="col-sm-2" />
           </div>
@@ -50,7 +60,7 @@ const ProductPage = () => {
             <div className="newSpecs">
               <div className="dimensions">
                 <span>Dimensions</span>
-                <span>{product.measurements}</span>
+                <span>{product?.measurements}</span>
                 <span>&nbsp;</span>
               </div>
               <div className="gallons">
@@ -64,15 +74,15 @@ const ProductPage = () => {
                 <span>&nbsp;</span>
               </div>
               <div className="seating">
-                <span>Seat(s)</span>
-                <span>{product.seats}</span>
+                <span>Seats</span>
+                <span>{product?.seats}</span>
                 <span>&nbsp;</span>
               </div>
             </div>
           </div>
           <div className="doublebuttons">
             <div className="btn para outline blue infillWhite">
-              <a href="/contact-us">Contact Us</a>
+              <Link to="/contact-us">Contact Us</Link>
             </div>
           </div>
         </div>
@@ -81,13 +91,24 @@ const ProductPage = () => {
             <div className="container">
               <div className="row">
                 <div className="col-md-1" />
-                <div className="col-md-5">
-                  <div>
+                <div
+                  className="col-md-5"
+                  style={{
+                    padding:
+                      product?.brand === "Swim Series" ? "8em 0 0 0" : "",
+                  }}
+                >
+                  <div
+                    style={{
+                      transform:
+                        product?.brand === "Swim Series" ? "rotate(90deg)" : "",
+                    }}
+                  >
                     <span id="dissectBarHarborSE" className="dissectionWrap">
                       <img
                         itemProp="image"
-                        src={`/img/home-page/products/${product.image}.png`}
-                        alt="Bar Harbor SE downshot"
+                        src={`/img/home-page/products/${product?.image}.png`}
+                        alt={`${product?.name} ${product?.brand}`}
                       />
 
                       <button
@@ -113,15 +134,11 @@ const ProductPage = () => {
                       <div className="item active">
                         <h2>INSULATION</h2>
                         <span className="videoFeatureWrap">
-                          {/*<a href="https://www.youtube-nocookie.com/embed/zTW0s8qeOMo"*/}
-                          {/*     data-poster="">*/}
-                          {/*<span></span>*/}
                           <img
                             className="img-responsive"
                             alt="EcoPur Filtration feature video"
                             src="/img/home-page/products/0.png"
                           />
-                          {/*</a>*/}
                         </span>
                         <ul style={{ paddingLeft: "100px !important" }}>
                           <li>Up to 7 times the R-value of other hot tubs</li>
@@ -135,14 +152,6 @@ const ProductPage = () => {
                         </ul>
                       </div>
                     </div>
-                    {/*<a class="left carousel-control" href="#dissectionCarousel" data-slide="prev">
-                                       <img src="https://masterspascdn.com/img/arrow.png">
-                                       <span class="sr-only">Previous</span>
-                                   </a>
-                                   <a class="right carousel-control" href="#dissectionCarousel" data-slide="next">
-                                       <img src="https://masterspascdn.com/img/arrow.png">
-                                       <span class="sr-only">Next</span>
-                                   </a>*/}
                   </div>
                 </div>
                 <div className="col-md-1" />
@@ -185,44 +194,100 @@ const ProductPage = () => {
                     >
                       <div className="panel-body">
                         <h4 className="lineModelTitle text-center">
-                          <span>Coastal Series 5L</span>
+                          <span>
+                            {category?.title} - {product?.name.toUpperCase()}
+                          </span>
                         </h4>
                         <table className="table modelSpecifications">
                           <tbody>
                             <tr>
                               <td>Dimensions</td>
-                              <td>62” X 82.5” X 33”</td>
+                              <td>{product?.measurements}</td>
                             </tr>
+                            {product?.swim_jets && (
+                              <tr>
+                                <td>Swim Jets</td>
+                                <td>{product?.swim_jets}</td>
+                              </tr>
+                            )}
+                            {product?.water_fall && (
+                              <tr>
+                                <td>Water Falls</td>
+                                <td>({product?.water_fall}) Water Fall</td>
+                              </tr>
+                            )}
+                            {product?.eth_water_fall && (
+                              <tr>
+                                <td>18" Water Fall</td>
+                                <td>{product?.eth_water_fall}</td>
+                              </tr>
+                            )}
+                            {product?.sth_water_fall && (
+                              <tr>
+                                <td>7" Water Fall</td>
+                                <td>{product?.sth_water_fall}</td>
+                              </tr>
+                            )}
+                            {product?.fountains && (
+                              <tr>
+                                <td>Fountains</td>
+                                <td>{product?.fountains}</td>
+                              </tr>
+                            )}
                             <tr>
                               <td>Weight (Dry/Full)</td>
                               <td>
-                                Dry Weight 375 lbs. - Filled Weight 2,275 lbs.
+                                Dry Weight {product?.weight_dry} lbs. - Filled
+                                Weight {product?.weight_filled.toLocaleString()}{" "}
+                                lbs.
                               </td>
                             </tr>
                             <tr>
                               <td>Gallons</td>
-                              <td>225</td>
+                              <td>{product?.gallons}</td>
                             </tr>
                             <tr>
                               <td>Power Requirement</td>
-                              <td>220 volt (1) x 3 BHP</td>
+                              <td>{product?.power_requirement}</td>
                             </tr>
                             <tr>
                               <td>Seating Capacity</td>
-                              <td>6</td>
+                              <td>{product?.seats}</td>
                             </tr>
                             <tr>
                               <td>LED Lighting</td>
-                              <td>(1)LED Light</td>
+                              <td>({product?.led_lighting}) LED Light</td>
                             </tr>
-                            <tr>
-                              <td>Exclusive Features</td>
-                              <td>Digital Topside</td>
-                            </tr>
-                            <tr>
-                              <td>Premium Options</td>
-                              <td>Comfortable Headsets</td>
-                            </tr>
+                            {product?.exclusive_features &&
+                              product?.exclusive_features?.length > 0 && (
+                                <tr>
+                                  <td>Exclusive Features</td>
+                                  <td>
+                                    {product?.exclusive_features?.join(", ")}.
+                                  </td>
+                                </tr>
+                              )}
+                            {category?.title === "Swim Series" && (
+                              <tr>
+                                <td>Premium Options</td>
+                                <td>
+                                  <strong>
+                                    {!!product?.therapy_fitness
+                                      ? "Therapy & Fitness"
+                                      : ""}{" "}
+                                    {!!product?.recreation_swim_fitness
+                                      ? "Recreation & Swim & Fitness"
+                                      : ""}
+                                    {!!product?.endurance_swim_training
+                                      ? " / Endurance "
+                                      : ""}
+                                    {!!product?.fast_sprint
+                                      ? " / Fast Sprint "
+                                      : ""}
+                                  </strong>
+                                </td>
+                              </tr>
+                            )}
                           </tbody>
                         </table>
                       </div>
@@ -320,88 +385,6 @@ const ProductPage = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="panel panel-default">
-                    <div className="panel-heading" role="tab" id="headingThree">
-                      <h4 className="panel-title">
-                        <a
-                          className="collapsed"
-                          role="button"
-                          data-toggle="collapse"
-                          data-parent="#accordion"
-                          href="#collapseThree"
-                          aria-expanded="false"
-                          aria-controls="collapseThree"
-                        >
-                          + Premium Options
-                        </a>
-                      </h4>
-                    </div>
-                    <div
-                      id="collapseThree"
-                      className="panel-collapse collapse"
-                      role="tabpanel"
-                      aria-labelledby="headingThree"
-                    >
-                      <div className="panel-body">
-                        <div className="row" id="premiumOptions">
-                          <div className="col-sm-6 col-md-4">
-                            <div>
-                              <span className="videoFeatureWrap">
-                                <img
-                                  alt="Bluetooth Speaker feature video"
-                                  className="img-responsive"
-                                  src="/img/home-page/products/5.png"
-                                />
-                              </span>
-                              <h4>Bluetooth Speaker</h4>
-                              <p>
-                                It comes with an in.p4 docking station that
-                                connects, protects and lets you control your
-                                audio player or smartphone directly from your
-                                spa keypad.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="panel panel-default">
-                    <div className="panel-heading" role="tab" id="headingFour">
-                      <h4 className="panel-title">
-                        <a
-                          className="collapsed"
-                          role="button"
-                          data-toggle="collapse"
-                          data-parent="#accordion"
-                          href="#collapseFour"
-                          aria-expanded="false"
-                          aria-controls="collapseFour"
-                        >
-                          + Warranty
-                        </a>
-                      </h4>
-                    </div>
-                    <div
-                      id="collapseFour"
-                      className="panel-collapse collapse"
-                      role="tabpanel"
-                      aria-labelledby="headingFour"
-                    >
-                      <div className="panel-body">
-                        <ul className="warrantyList">
-                          <li>20 YEARS - Shell Structure</li>
-                          <li>3 YEAR - Surface Finish</li>
-                          <li>5 YEAR - Electrical Equipment Components</li>
-                          <li>5 YEAR - PLUMBING</li>
-                          <li>1 YEAR - Other Components </li>
-                        </ul>
-                        <p>
-                          <small>*If equipped. Options vary by model.</small>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
               <div className="col-md-1" />
@@ -415,7 +398,7 @@ const ProductPage = () => {
               {/*<h2 class="energycost">$$$.$$</h2>*/}
               <div className="doublebuttons">
                 <div className="btn para">
-                  <a href="/contact-us">Contact Us</a>
+                  <Link to="/contact-us">Contact Us</Link>
                 </div>
               </div>
             </div>
@@ -424,23 +407,27 @@ const ProductPage = () => {
         <section id="colorPicker">
           <div className="container maincontent">
             <div className="row">
-              <div className="col-md-12">
-                <div className="tubContainer">
+              <div
+                className="col-md-12"
+                style={{
+                  padding: product?.brand === "Swim Series" ? "3em 0 0 0" : "",
+                  minHeight: product?.brand === "Swim Series" ? "30em" : "",
+                }}
+              >
+                <div
+                  className="tubContainer"
+                  style={{
+                    transform:
+                      product?.brand === "Swim Series" ? "rotate(90deg)" : "",
+                  }}
+                >
                   <div id="shell">
                     <img
-                      alt="Pebble Beach"
                       id="shellImageOne"
-                      src="/img/home-page/products/cs5l.png"
+                      src={`/img/home-page/products/${product?.image}.png`}
+                      alt={`${product?.name} ${product?.brand}`}
                     />
-                    {/*<img alt="Sea Salt" id="shellImageTwo"*/}
-                    {/*     src="/img/home-page/products/cs5l.png" />*/}
                   </div>
-                  {/* <div id="skirt" class="skirtGetaway">
-                                            <img alt="Espresso Skirting" id="skirtImageOne"
-                                                 src="/img/color-picker/render/getaway/skirt/espresso.png" />
-                                            <img alt="Graphite Grey Skirting" id="skirtImageTwo"
-                                                 src="/img/color-picker/render/getaway/skirt/graphite-grey.png" />
-                                       </div> */}
                 </div>
               </div>
             </div>
@@ -455,42 +442,52 @@ const ProductPage = () => {
                   Acrylic: <span>Color Options</span>
                 </p>
                 <div id="shellSwatches">
-                  <div>
+                  <LightGallery speed={500} plugins={[lgThumbnail, lgZoom]}>
                     <a
-                      id="rotoshellOne"
-                      className="shellOne shellSelected"
-                      title="Sterling Marble"
-                      href="javascript:void(0)"
-                    />
-                    <p className="text-center">Sterling marble</p>
-                  </div>
-                  <div>
+                      data-sub-html={`<h3>Sterling Marble</h3>`}
+                      href={`/img/getaway/colors/Sterling.png`}
+                    >
+                      <img
+                        src={`/img/getaway/colors/Sterling.png`}
+                        className="img-responsive"
+                      />
+
+                      <p className="text-center">Sterling Marble</p>
+                    </a>
                     <a
-                      id="rotoshellTwo"
-                      className="shellTwo"
-                      title="Storm Cloud"
-                      href="javascript:void(0)"
-                    />
-                    <p className="text-center">Storm Clouds</p>
-                  </div>
-                  <div>
+                      data-sub-html={`<h3>Sterling Marble</h3>`}
+                      href={`/img/getaway/colors/Storm.png`}
+                    >
+                      <img
+                        src={`/img/getaway/colors/Storm.png`}
+                        className="img-responsive"
+                      />
+
+                      <p className="text-center">Storm Clouds</p>
+                    </a>
                     <a
-                      id="rotoshellThree"
-                      className="shellThree"
-                      title="Tuscan Sun"
-                      href="javascript:void(0)"
-                    />
-                    <p className="text-center">Tuscan Sun</p>
-                  </div>
-                  <div>
+                      data-sub-html={`<h3>Tuscan Sun</h3>`}
+                      href={`/img/getaway/colors/Tuscan.png`}
+                    >
+                      <img
+                        src={`/img/getaway/colors/Tuscan.png`}
+                        className="img-responsive"
+                      />
+
+                      <p className="text-center">Tuscan Sun</p>
+                    </a>
                     <a
-                      id="rotoshellFour"
-                      className="shellFour"
-                      title="Smoky Mountain"
-                      href="javascript:void(0)"
-                    />
-                    <p className="text-center">Smoky Mountain</p>
-                  </div>
+                      data-sub-html={`<h3>Smoky Mountain</h3>`}
+                      href={`/img/getaway/colors/Smoky.png`}
+                    >
+                      <img
+                        src={`/img/getaway/colors/Smoky.png`}
+                        className="img-responsive"
+                      />
+
+                      <p className="text-center">Smoky Mountain</p>
+                    </a>
+                  </LightGallery>
                 </div>
               </div>
               <div className="col-md-6">
@@ -498,54 +495,64 @@ const ProductPage = () => {
                   Skirt: <span>Color Options</span>
                 </p>
                 <div id="skirtSwatches">
-                  <div>
+                  <LightGallery speed={500} plugins={[lgThumbnail, lgZoom]}>
                     <a
-                      id="rotoskirtOne"
-                      className="skirtOne skirtSelected"
-                      title="DuraMaster Espresso"
-                      href="javascript:void(0)"
-                    />
-                    <p className="text-center">
-                      Gray <br />
-                      (STANDARD)
-                    </p>
-                  </div>
-                  <div>
+                      data-sub-html={`<h3>Gray</h3><p>STANDARD</p>`}
+                      href={`/img/getaway/colors/Gray.png`}
+                    >
+                      <img
+                        src={`/img/getaway/colors/Gray.png`}
+                        className="img-responsive skirtSelected"
+                      />
+
+                      <p className="text-center">
+                        Gray <br />
+                        (STANDARD)
+                      </p>
+                    </a>
                     <a
-                      id="rotoskirtTwo"
-                      className="skirtTwo"
-                      title="DuraMaster Graphite"
-                      href="javascript:void(0)"
-                    />
-                    <p className="text-center">
-                      Black <br />
-                      (STANDARD)
-                    </p>
-                  </div>
-                  <div>
+                      data-sub-html={`<h3>Black</h3><p>STANDARD</p>`}
+                      href={`/img/getaway/colors/Black.png`}
+                    >
+                      <img
+                        src={`/img/getaway/colors/Black.png`}
+                        className="img-responsive"
+                      />
+
+                      <p className="text-center">
+                        Gray <br />
+                        (STANDARD)
+                      </p>
+                    </a>
                     <a
-                      id="rotoskirtThree"
-                      className="skirtThree"
-                      title="Elite Coastal Gray"
-                      href="javascript:void(0)"
-                    />
-                    <p className="text-center">
-                      Elite Coastal Gray <br />
-                      (OPTIONAL)
-                    </p>
-                  </div>
-                  <div>
+                      data-sub-html={`<h3>Elite Coastal Gray</h3><p>OPTIONAL</p>`}
+                      href={`/img/getaway/colors/Elite-Coastal.png`}
+                    >
+                      <img
+                        src={`/img/getaway/colors/Elite-Coastal.png`}
+                        className="img-responsive"
+                      />
+
+                      <p className="text-center">
+                        Elite Coastal Gray <br />
+                        (OPTIONAL)
+                      </p>
+                    </a>
                     <a
-                      id="rotoskirtFour"
-                      className="skirtFour"
-                      title="Elite Ash"
-                      href="javascript:void(0)"
-                    />
-                    <p className="text-center">
-                      Elite Ash <br />
-                      (OPTIONAL)
-                    </p>
-                  </div>
+                      data-sub-html={`<h3>Elite Ash</h3><p>OPTIONAL</p>`}
+                      href={`/img/getaway/colors/Elit-Ash.png`}
+                    >
+                      <img
+                        src={`/img/getaway/colors/Elit-Ash.png`}
+                        className="img-responsive"
+                      />
+
+                      <p className="text-center">
+                        Elite Ash <br />
+                        (OPTIONAL)
+                      </p>
+                    </a>
+                  </LightGallery>
                 </div>
               </div>
             </div>
@@ -556,7 +563,7 @@ const ProductPage = () => {
             <div className="col-md-12">
               <div className="doublebuttons">
                 <div className="btn para outline blue">
-                  <a href="/subpages/coastal-gallery">Gallery</a>
+                  <Link to={`/gallery/${category?.slug}`}>Gallery</Link>
                 </div>
               </div>
             </div>

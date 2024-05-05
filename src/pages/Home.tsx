@@ -1,48 +1,9 @@
-import { CustomSliderArrowType } from "@/function";
 import MainLayout from "@/layouts/MainLayout";
 import { Link } from "react-router-dom";
-import { Settings } from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 
 const Home = () => {
-  const slider_settings: Settings = {
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 25000,
-    // autoplaySpeed: 500,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-
-  const CustomSliderArrow: React.FC<CustomSliderArrowType> = ({
-    type,
-    classes,
-    svgClassName = "w-5 h-5 text-gray-700",
-    onClick,
-    style,
-    ...rest
-  }) => {
-    return (
-      <Link
-        to="javascript:void"
-        {...rest}
-        onClick={onClick}
-        className={`carousel-control ${type == "prev" ? "left" : "right"}`}
-        style={{ zIndex: "9999" }}
-      >
-        <span
-          className={`glyphicon fa ${
-            type == "prev"
-              ? "glyphicon-chevron-left fa-chevron-left"
-              : "glyphicon-chevron-right fa-chevron-right"
-          }`}
-        ></span>
-        <span className="sr-only">{type == "prev" ? "Previous" : "Next"}</span>
-      </Link>
-    );
-  };
   return (
     <MainLayout
       title="Gulfsouth Spas"
@@ -66,7 +27,7 @@ const Home = () => {
                           Gulfsouth Spas
                         </h2>
                         <div id="videoCTA">
-                          <a href="/contact-us"> Contact Us </a>
+                          <Link to="/contact-us"> Contact Us </Link>
                         </div>
                       </div>
                     </div>
@@ -138,12 +99,12 @@ const Home = () => {
                 <div className="col-md-6">
                   <div className="hotTubLineWrapper legend">
                     <div className="threeQuarter">
-                      <a href="javascript:void">
+                      <Link to="/category/trident-series">
                         <img
-                          alt="Michael Phelps Legend Series Hot Tub"
+                          alt="Trident Series by Gulfsouth Spas"
                           src="/img/home-page/line-display/trident-tub.png"
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="hotTubLineDescription">
                       <h3>Trident Series</h3>
@@ -152,7 +113,7 @@ const Home = () => {
                         second best.
                       </p>
                       <div className="btn para">
-                        <a href="/trident-series">See More</a>
+                        <Link to="/category/trident-series">See More</Link>
                       </div>
                     </div>
                   </div>
@@ -160,12 +121,12 @@ const Home = () => {
                 <div className="col-md-6">
                   <div className="hotTubLineWrapper twilight">
                     <div className="threeQuarter">
-                      <a href="javascript:void">
+                      <Link to="/category/nautical-series">
                         <img
-                          alt="Nautical Series Hot Tub"
+                          alt="Nautical series by Gulfsouth Spas"
                           src="/img/home-page/line-display/nautical-tub.png"
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="hotTubLineDescription">
                       <h3>Nautical Series</h3>
@@ -173,7 +134,7 @@ const Home = () => {
                         Luxurious perfection designed for discriminating tastes.
                       </p>
                       <div className="btn para">
-                        <a href="/nautical-series">See More</a>
+                        <Link to="/category/nautical-series">See More</Link>
                       </div>
                     </div>
                   </div>
@@ -181,12 +142,12 @@ const Home = () => {
                 <div className="col-md-6">
                   <div className="hotTubLineWrapper clarity">
                     <div className="threeQuarter">
-                      <a href="javascript:void">
+                      <Link to="/category/coastal-series">
                         <img
-                          alt="Clarity Spas Hot Tub"
+                          alt="Coastal Series by Gulfsouth Spas"
                           src="/img/home-page/line-display/coastal-tub.png"
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="hotTubLineDescription">
                       <h3>Coastal Series</h3>
@@ -194,7 +155,7 @@ const Home = () => {
                         A stylish, modern approach to relaxation and wellness.
                       </p>
                       <div className="btn para">
-                        <a href="/coastal-series">See More</a>
+                        <Link to="/category/coastal-series">See More</Link>
                       </div>
                     </div>
                   </div>
@@ -211,18 +172,18 @@ const Home = () => {
                 <div className="col-md-6">
                   <div className="swimSpaLineWrapper mpss">
                     <div className="threeQuarter">
-                      <a href="/swim-spa-series">
+                      <Link to="/swim-spas">
                         <img
-                          alt="H2X Fitness Swim Spa"
+                          alt="Swim series by Gulfsouth Spas"
                           src="/img/home-page/line-display/swim-spa.png"
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="swimSpaLineDescription">
                       <h3>Swim Spas</h3>
                       <p>Jetted swim spa for training, fitness, and therapy.</p>
                       <div className="btn para">
-                        <a href="/swim-spa-series">See More</a>
+                        <Link to="/swim-spas">See More</Link>
                       </div>
                     </div>
                   </div>
@@ -252,7 +213,7 @@ const Home = () => {
                     <br />
                     <br />
                     <div className="btn para" style={{ width: 175 }}>
-                      <a href="/contact-us">Contact Us</a>
+                      <Link to="/contact-us">Contact Us</Link>
                     </div>
                   </div>
                 </div>
@@ -442,7 +403,7 @@ const Home = () => {
                           className="btn para"
                           style={{ width: "350px !important" }}
                         >
-                          <a href="/contact-us">Contact Us</a>
+                          <Link to="/contact-us">Contact Us</Link>
                         </div>
                       </div>
                     </div>

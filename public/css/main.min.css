@@ -644,7 +644,7 @@ nav {
   }
   #cdnVideoHero #playerTextWrap #playerText #playerTextSubset {
     height: auto;
-    bottom: 0px;
+    bottom: -13px;
     position: relative;
   }
 }
@@ -3712,25 +3712,23 @@ section#productionAccordion .container {
   align-items: center;
   justify-content: center;
 }
-#shellSwatches div,
+/* #shellSwatches div,
 #skirtSwatches div {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 #shellSwatches a,
 #skirtSwatches a {
   display: inline-block;
-  width: 90px;
-  height: 60px;
-  background-position: center;
+  margin-right: 15px;
 }
 #shellSwatches a.shellSelected,
 #skirtSwatches a.shellSelected {
   border: solid 3px #00aad4;
 }
-#shellSwatches a.skirtSelected,
-#skirtSwatches a.skirtSelected {
+#shellSwatches .skirtSelected,
+#skirtSwatches .skirtSelected {
   border: solid 3px #00aad4;
 }
 #shellSwatches div p,

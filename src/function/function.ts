@@ -14,8 +14,10 @@ export const getErrorMessageViaStatus = (error: RouteErrorInterface) => {
     default:
       return {
         ...error,
-        shortMessage: error.statusText,
-        longMessage: error.data,
+        shortMessage: error.statusText || "Error Encountered",
+        longMessage:
+          error.data ||
+          "There was a problem with this page. Try refreshing the page, if issue persists, contact administrator.",
       };
   }
 };

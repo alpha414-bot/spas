@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 interface NavBarInterface {
   type?: "announcement" | "navbar";
 }
@@ -26,72 +27,71 @@ const NavBar: React.FC<NavBarInterface> = ({}) => {
               <span className="icon-bar middle-bar" />
               <span className="icon-bar bottom-bar" />
             </a>
-            <a className="navbar-brand" href="/">
+            <Link className="navbar-brand" to="/">
               <picture>
                 <source srcSet="/img/gulfsouthspas.png" type="image/png" />
                 <img src="/img/gulfsouthspas.png" alt="Gulfsouth Spas Logo" />
               </picture>
-            </a>
+            </Link>
           </div>
           <div id="navbar" className="collapse navbar-collapse pull-right">
             <ul className="nav navbar-nav">
               <li className="dropdown dropdown-large">
-                <a href="/hot-tubs" style={{ color: "white !important" }}>
+                <Link to="/hot-tubs" style={{ color: "white !important" }}>
                   Hot Tubs <b className="caret" />
-                </a>
+                </Link>
                 <ul className="dropdown-menu dropdown-menu-large row">
                   <li className="col-sm-12">
                     <ul className="dropdown-brands">
                       <li>
-                        <a href="/category/trident-series">
+                        <Link to="/category/trident-series">
                           <span>Trident Series</span>
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="/category/nautical-series">
+                        <Link to="/category/nautical-series">
                           <span>Nautical Series</span>
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="/category/coastal-series">
+                        <Link to="/category/coastal-series">
                           <span>Coastal Series</span>
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li className="dropdown dropdown-large">
-                <a href="/swim-spas" style={{ color: "white !important" }}>
+                <Link to="/swim-spas" style={{ color: "white !important" }}>
                   Swim Spas <b className="caret" />
-                </a>
+                </Link>
                 <ul className="dropdown-menu dropdown-menu-large row">
                   <li className="col-sm-12">
                     <ul>
                       <li>
-                        <a href="/swim-spas">General Overview</a>
+                        <Link to="/swim-spas">General Overview</Link>
                       </li>
                       <li>
-                        <a href="/shop-swim-spas">Shop all swim spas</a>
+                        <Link to="/shop-swim-spas">Shop all swim spas</Link>
                       </li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li>
-                <a
-                  href="/customer-support"
+                <Link
+                  to="/customer-support"
                   style={{ color: "white !important" }}
                 >
                   Ideas &amp; Support
-                </a>
+                </Link>
               </li>
               <li>
                 <div
                   className="btn para"
                   style={{ backgroundColor: "transparent", width: 20 }}
                 >
-                  {/* {/*<a href="/find-a-dealer"></a>* /} */}
                 </div>
               </li>
             </ul>

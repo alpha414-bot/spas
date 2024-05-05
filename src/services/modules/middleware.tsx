@@ -47,7 +47,7 @@ export const ProtectedRoute = ({ children, middlewares }: ChildrenProps) => {
 
   if (!user) {
     // redirect to anywhere
-    // return <Redirect to="/login" />;
+    
   }
   // ret
   return children;

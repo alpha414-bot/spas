@@ -162,7 +162,7 @@ const SwimSpas = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-centered">
-              <h3 style={{ fontSize: 30 }} className="text-center">
+              <h3 style={{ fontSize: '' }} className="text-center">
                 Choose from our premium lines of swim spas by Gulfsouth Spas,
                 <br />
                 Relaxation Redefined
@@ -276,7 +276,7 @@ const SwimSpas = () => {
         <section className="homemore row">
           <div className="col-xs-12 col-md-4 ">
             <div>
-              <a href="/subpages/swimspas-gallery.html">
+              <Link to="/gallery/swim-series">
                 <span>
                   <p style={{ color: "#00aad4" }}>
                     Envision yourself in a Swim Series hot tub.
@@ -287,7 +287,7 @@ const SwimSpas = () => {
                   alt="Image gallery of Trident Series Hot Tubs"
                   title="Navigate to gallery of images of Trident Series Hot Tubs"
                 />
-              </a>
+              </Link>
               <div
                 className="btn para"
                 style={{
@@ -300,13 +300,13 @@ const SwimSpas = () => {
                   paddingBottom: 3,
                 }}
               >
-                <a href="/subpages/swimspas-gallery.html">Gallery</a>
+                <Link to="/gallery/swim-series">Gallery</Link>
               </div>
             </div>
           </div>
           <div className="col-xs-12 col-md-4 ">
             <div>
-              <a href="/subpages/swimspas-features.html">
+              <Link to="/features/swim-series">
                 <span>
                   <p>Explore all the magical features Swim series brings.</p>
                 </span>
@@ -315,7 +315,7 @@ const SwimSpas = () => {
                   alt="Trident Series Hot Tub features"
                   title="Navigate to Trident Series Hot Tub Features"
                 />
-              </a>
+              </Link>
               <div
                 className="btn para outline blue infillWhite"
                 style={{
@@ -328,13 +328,13 @@ const SwimSpas = () => {
                   paddingBottom: 3,
                 }}
               >
-                <a href="/subpages/swimspas-features.html">Features</a>
+                <Link to="/features/swim-series">Features</Link>
               </div>
             </div>
           </div>
           <div className="col-xs-12 col-md-4 ">
             <div>
-              <a href="/hot-tub-benefits.html">
+              <Link to="/hot-tub-benefits">
                 <span>
                   <p>Improve your well-being with hydrotherapy</p>
                 </span>
@@ -343,7 +343,7 @@ const SwimSpas = () => {
                   alt="Hot Tub Benefits"
                   title="Navigate to Hot Tub Benefits"
                 />
-              </a>
+              </Link>
               <div
                 className="btn para"
                 style={{
@@ -356,7 +356,7 @@ const SwimSpas = () => {
                   paddingBottom: 3,
                 }}
               >
-                <a href="/hot-tub-benefits.html">Hot Tub Benefits</a>
+                <Link to="/hot-tub-benefits">Hot Tub Benefits</Link>
               </div>
             </div>
           </div>

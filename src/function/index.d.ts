@@ -44,9 +44,7 @@ export interface ProductHotTubsInterface {
   eth_water_fall?: number;
   sth_water_fall?: number;
   fountains?: number;
-  exclusive_features?: ExclusiveFeaturesType[] | string;
-  premium_options?: string[] | string;
-  standard_features?: string[];
+  exclusive_features?: ExclusiveFeaturesType[];
   // for swim series
   therapy_fitness?: number;
   recreation_swim_fitness?: number;
@@ -56,14 +54,14 @@ export interface ProductHotTubsInterface {
 
 export interface HotTubsBrandInterface {
   slug: string;
-  title: "Trident Series" | "Nautical Series" | "Coastal Series";
+  title: TubBrandType;
   slogan: string;
   heroImage: string;
   heroMobileImage: string;
   brandLogo: string;
   brandDarkLogo: string;
   textDescription: string;
-  products: any;
+  products: ProductHotTubsInterface[];
 }
 
 export interface CustomSliderArrowType {

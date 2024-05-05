@@ -1,4 +1,5 @@
 import MainLayout from "@/layouts/MainLayout";
+import { Link } from "react-router-dom";
 
 const HotTubOwnersManuals = () => {
   return (
@@ -21,7 +22,7 @@ const HotTubOwnersManuals = () => {
                 reviewing the owner's manual, you have any questions regarding
                 the installation, use, or maintenance of your Gulfsouth Spas,
                 please contact your local dealer or the Gulfsouth Spas{" "}
-                <a href="/contact-us.html">Customer Care team</a>.
+                <Link to="/contact-us">Customer Care team</Link>.
                 <br />
                 <br />
                 Thank you for choosing Gulfsouth Spas.

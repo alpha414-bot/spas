@@ -543,6 +543,17 @@ const hotTubBrands = [
     textDescription:
       "Are you dreaming of buying an affordable spa? The Coastal Series therapeutic spas are a great choice. This series is perfect for families looking to buy their first spa at a good price. It also features a smaller spa for tighter spaces or urban setting.",
   },
+  {
+    slug: "swim-series",
+    title: "Swim Series",
+    slogan: "Swim. Exercise. Relax.",
+    heroImage: "/img/swimspapic.png",
+    heroMobileImage: "/img/swimspapic.png",
+    brandLogo: "",
+    brandDarkLogo: "",
+    textDescription:
+      "Swim, jog, walk, and exercise in water without the stress gravity has on your body. Relax with massaging spa jets in the perfect water temperature, year-round. This alternative to a pool has benefits for you and your entire family.",
+  },
 ] as HotTubsBrandInterface[];
 export async function CategoryLoader({ params }: { params?: any }) {
   const category_name = params?.category_name;
@@ -557,6 +568,12 @@ export async function CategoryLoader({ params }: { params?: any }) {
   if (category) {
     category.products = _.sortBy(products, (item) => item.name);
   }
+  if (!category || category.title === "Swim Series") {
+    throw new Response("", {
+      status: 404,
+      statusText: "Not Found",
+    });
+  }
   return { category };
 }
 
@@ -570,5 +587,11 @@ export async function ProductLoader({ params }: { params?: any }) {
     hotTubBrands,
     (item) => item.slug.toLowerCase() === params?.category_slug.toLowerCase()
   );
+  if (!product || !category) {
+    throw new Response("", {
+      status: 404,
+      statusText: "Not Found",
+    });
+  }
   return { product, category };
 }
