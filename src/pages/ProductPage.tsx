@@ -508,7 +508,7 @@ const ProductPage = () => {
                       />
 
                       <p className="text-center">
-                        Gray <br />
+                        Black <br />
                         (STANDARD)
                       </p>
                     </a>
