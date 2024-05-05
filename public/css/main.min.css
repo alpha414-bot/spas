@@ -575,7 +575,7 @@ nav {
   left: 0;
   right: 0;
   padding: 25px;
-  position: absolute;
+  /* position: absolute; */
   top: -10px;
   z-index: 3;
   color: #fff;
@@ -622,25 +622,29 @@ nav {
   #cdnVideoHero #playerTextWrap,
   #cdnVideoHero #playerTextWrap div {
     height: 100%;
+    position: relative;
   }
   #cdnVideoHero #playerTextWrap #playerText {
     position: relative;
   }
   #cdnVideoHero #playerTextWrap #playerText #playerTextSubset {
     height: auto;
-    position: absolute;
-    bottom: 50px;
   }
   #cdnVideoHero .cdnVideoDtop {
     display: none;
   }
   #cdnVideoHero .cdnVideoMobile {
     display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 }
 @media only screen and (min-width: 480px) {
   #cdnVideoHero {
-    max-height: 900px;
+    min-height: 400px;
   }
   #cdnVideoHero #playerTextWrap #playerText #playerTextSubset {
     height: auto;
@@ -665,6 +669,11 @@ nav {
 @media only screen and (min-width: 992px) {
   #cdnVideoHero .cdnVideoDtop {
     display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 }
 .gradientButtons {

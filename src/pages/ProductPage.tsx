@@ -96,6 +96,7 @@ const ProductPage = () => {
                   style={{
                     padding:
                       product?.brand === "Swim Series" ? "8em 0 0 0" : "",
+                    minHeight: product?.brand === "Swim Series" ? "25em" : "",
                   }}
                 >
                   <div

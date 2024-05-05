@@ -38,6 +38,7 @@ const Home = () => {
             <div className="cdnVideoDtop">
               <img
                 className="img-responsive"
+                style={{ width: "100%", height: "100%" }}
                 alt="Gulfsouth swim spas"
                 src="/img/swimspas/widescreen-fallback.jpg"
                 title=""
@@ -47,7 +48,7 @@ const Home = () => {
               <img
                 className="img-responsive"
                 alt="Gulfsouth swim spas"
-                style={{ width: "100%" }}
+                style={{ width: "100%", height: "100%" }}
                 src="/img/swimspas/widescreen-fallback.jpg"
                 title=""
               />
@@ -172,7 +173,7 @@ const Home = () => {
                 <div className="col-md-6">
                   <div className="swimSpaLineWrapper mpss">
                     <div className="threeQuarter">
-                      <Link to="/swim-spas">
+                      <Link to="/category/swim-series">
                         <img
                           alt="Swim series by Gulfsouth Spas"
                           src="/img/home-page/line-display/swim-spa.png"
@@ -183,7 +184,7 @@ const Home = () => {
                       <h3>Swim Spas</h3>
                       <p>Jetted swim spa for training, fitness, and therapy.</p>
                       <div className="btn para">
-                        <Link to="/swim-spas">See More</Link>
+                        <Link to="/category/swim-series">See More</Link>
                       </div>
                     </div>
                   </div>

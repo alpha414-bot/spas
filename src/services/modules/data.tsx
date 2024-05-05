@@ -549,8 +549,8 @@ const hotTubBrands = [
     slogan: "Swim. Exercise. Relax.",
     heroImage: "/img/swimspapic.png",
     heroMobileImage: "/img/swimspapic.png",
-    brandLogo: "",
-    brandDarkLogo: "",
+    brandLogo: "/img/gallery/swimspa-logo.png",
+    brandDarkLogo: "/img/gallery/swimspa-logo-dark.png",
     textDescription:
       "Swim, jog, walk, and exercise in water without the stress gravity has on your body. Relax with massaging spa jets in the perfect water temperature, year-round. This alternative to a pool has benefits for you and your entire family.",
   },
@@ -568,7 +568,7 @@ export async function CategoryLoader({ params }: { params?: any }) {
   if (category) {
     category.products = _.sortBy(products, (item) => item.name);
   }
-  if (!category || category.title === "Swim Series") {
+  if (!category) {
     throw new Response("", {
       status: 404,
       statusText: "Not Found",
