@@ -258,8 +258,8 @@ figure {
 .thumbnail a > img,
 .thumbnail > img {
 	display: block;
-	max-width: 100%;
-	height: auto;
+	max-width: 130px;
+	height: 100px;
 }
 hr {
 	margin-top: 20px;
