@@ -3728,6 +3728,11 @@ section#productionAccordion .container {
   display: inline-block;
   margin-right: 15px;
 }
+#shellSwatches img, #skirtSwatches img{
+  display: block;
+	max-width: 130px;
+	height: 100px;
+}
 #shellSwatches a.shellSelected,
 #skirtSwatches a.shellSelected {
   border: solid 3px #00aad4;

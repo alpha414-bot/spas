@@ -398,8 +398,8 @@ const ProductPage = () => {
               <div
                 className="col-md-12"
                 style={{
-                  padding: product?.brand === "Swim Series" ? "3em 0 0 0" : "",
-                  minHeight: product?.brand === "Swim Series" ? "30em" : "",
+                  padding: product?.brand === "Swim Series" ? "12em 0 0 0" : "",
+                  minHeight: product?.brand === "Swim Series" ? "36em" : "",
                 }}
               >
                 <div

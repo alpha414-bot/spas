@@ -244,9 +244,9 @@ const CategoryPage = () => {
                                 src={`/img/home-page/products/${slugged_name}.png`}
                                 alt={`${item.name} ${item.brand} Hot Tub on Gulfsouthspas `}
                               />
-                              <h4>
+                              <p>
                                 {item.brand} {item.type.toUpperCase()}
-                              </h4>
+                              </p>
                               <p>{item.measurements} </p>
                             </Link>
                           </div>
