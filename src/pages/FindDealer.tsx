@@ -38,11 +38,13 @@ const FindDealer = () => {
         .sendForm("service_0oj54fh", "template_4ekg6mf", formElement, {
           publicKey: "bm9UFtnw3fpNd0vc9",
         })
-        .then(() => {
+        .then((d: any) => {
+          console.log(d);
           alert("Mail sent successfully!");
           reset();
         })
-        .catch((error) => {
+        .catch((error: any) => {
+          console.log(error);
           alert(
             `There was an error when sending email: [ERROR:] ${JSON.stringify(
               error

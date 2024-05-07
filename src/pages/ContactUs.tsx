@@ -45,6 +45,7 @@ const ContactUs = () => {
           reset();
         })
         .catch((error: any) => {
+          console.log(error);
           alert(
             `There was an error when sending email: [ERROR:] ${JSON.stringify(
               error
