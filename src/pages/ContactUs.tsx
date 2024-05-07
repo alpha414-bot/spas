@@ -23,25 +23,28 @@ const ContactUs = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isLoading },
+    reset,
   } = useForm<Inputs>({
     mode: "all",
   });
   const numberPattern = /^[0-9]*$/;
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  const sendNow: SubmitHandler<Inputs> = (e) => {
+  const sendNow: SubmitHandler<Inputs> = () => {
     const formElement = form.current as HTMLFormElement;
+    console.log(formElement);
     if (formElement) {
       emailjs
         .sendForm("service_0oj54fh", "template_fdp7h2f", formElement, {
           publicKey: "bm9UFtnw3fpNd0vc9",
         })
-        .then(() => {
+        .then((d: any) => {
+          console.log(d);
           alert("Mail sent successfully!");
-          form.current?.reset();
+          reset();
         })
-        .catch((error) => {
+        .catch((error: any) => {
           alert(
             `There was an error when sending email: [ERROR:] ${JSON.stringify(
               error
@@ -53,8 +56,11 @@ const ContactUs = () => {
 
   return (
     <MainLayout
-      title="Owner Ideas & Support"
-      description="Hot tub owners can find answers to hot tub related questions, register your hot tub, find hot tub warranty information, watch video tutorials, learn how to maintain your hot tub, get installation ideas and more."
+      title="Contact Us | Gulfsouth Spas"
+      description="Whether you want to visit the showroom or explore your options
+      with a virtual tour or video consultation, our network of
+      dealers can help you find the best hot tub or swim spa for your
+      space and needs."
     >
       <div className="container maincontent">
         <div className="jumbotron overview owners dealer">
@@ -72,7 +78,11 @@ const ContactUs = () => {
             <div className="col-md-2" />
             <div className="col-md-12">
               <div id="locatorForm" className="bump-up">
-                <form id="contactForm" ref={form} onSubmit={handleSubmit(sendNow)}>
+                <form
+                  id="contactForm"
+                  ref={form}
+                  onSubmit={handleSubmit(sendNow)}
+                >
                   <div className="row">
                     <div className="form-group col-md-6">
                       <label className="sr-only" htmlFor="first_name">
@@ -671,7 +681,7 @@ const ContactUs = () => {
                           type="submit"
                           id="locatorSubmit"
                           name="locatorSubmit"
-                          defaultValue="Submit"
+                          value={isLoading ? "Submitting..." : "Submit"}
                         />
                       </label>
                       <div
