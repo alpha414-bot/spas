@@ -1,15 +1,40 @@
 import MainLayout from "@/layouts/MainLayout";
 import emailjs from "@emailjs/browser";
-import { FormEvent, useRef } from "react";
+import { useRef } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
+
+type Inputs = {
+  first_name: string;
+  last_name: string;
+  zip: string;
+  country: string;
+  phone: string;
+  email: string;
+  choosen_spa: string;
+  plan_on_buying: string;
+  prefer_contact_method: string;
+  comments: string;
+  join_newsletter: boolean;
+};
 
 const ContactUs = () => {
   const form = useRef<HTMLFormElement>(null);
 
-  const sendNow = (e: FormEvent) => {
-    e.preventDefault();
-    if (form.current) {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<Inputs>({
+    mode: "all",
+  });
+  const numberPattern = /^[0-9]*$/;
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const sendNow: SubmitHandler<Inputs> = (e) => {
+    const formElement = form.current as HTMLFormElement;
+    if (formElement) {
       emailjs
-        .sendForm("service_0oj54fh", "template_fdp7h2f", form.current, {
+        .sendForm("service_0oj54fh", "template_fdp7h2f", formElement, {
           publicKey: "bm9UFtnw3fpNd0vc9",
         })
         .then(() => {
@@ -47,7 +72,7 @@ const ContactUs = () => {
             <div className="col-md-2" />
             <div className="col-md-12">
               <div id="locatorForm" className="bump-up">
-                <form id="contactForm" ref={form} onSubmit={sendNow}>
+                <form id="contactForm" ref={form} onSubmit={handleSubmit(sendNow)}>
                   <div className="row">
                     <div className="form-group col-md-6">
                       <label className="sr-only" htmlFor="first_name">
@@ -55,17 +80,21 @@ const ContactUs = () => {
                       </label>
                       <input
                         className="form-control"
-                        name="first_name"
                         type="text"
+                        {...register("first_name", {
+                          required: "First name is required",
+                        })}
                         id="first_name"
                         placeholder="First name*"
                       />
-                      <span
-                        id="firstError"
-                        className="hidden alert-warning help-block animated fadeInDown"
-                      >
-                        Please enter your first name
-                      </span>
+                      {errors.first_name && (
+                        <span
+                          id="firstError"
+                          className="alert-warning help-block animated fadeInDown"
+                        >
+                          {errors.first_name.message}
+                        </span>
+                      )}
                     </div>
                     <div className="form-group col-md-6">
                       <label className="sr-only" htmlFor="last_name">
@@ -73,17 +102,21 @@ const ContactUs = () => {
                       </label>
                       <input
                         className="form-control"
-                        name="last_name"
                         type="text"
+                        {...register("last_name", {
+                          required: "Last name is required",
+                        })}
                         id="last_name"
                         placeholder="Last name*"
                       />
-                      <span
-                        id="lastError"
-                        className="hidden alert-warning help-block animated fadeInDown"
-                      >
-                        Please enter your last name
-                      </span>
+                      {errors.last_name && (
+                        <span
+                          id="firstError"
+                          className="alert-warning help-block animated fadeInDown"
+                        >
+                          {errors.last_name.message}
+                        </span>
+                      )}
                     </div>
                   </div>
                   <div className="row">
@@ -94,10 +127,20 @@ const ContactUs = () => {
                       <input
                         className="form-control"
                         id="zip"
+                        {...register("zip", {
+                          required: "Zip is required",
+                        })}
                         placeholder="Zip*"
                         type="text"
-                        name="zip"
                       />
+                      {errors.zip && (
+                        <span
+                          id="firstError"
+                          className="alert-warning help-block animated fadeInDown"
+                        >
+                          {errors.zip.message}
+                        </span>
+                      )}
                     </div>
                     <div className="form-group col-md-6">
                       <label className="sr-only" htmlFor="country">
@@ -106,13 +149,15 @@ const ContactUs = () => {
                       <select
                         className="form-control"
                         id="country"
-                        name="country"
+                        {...register("country")}
                       >
-                        <option value="">Country</option>
+                        <option value="">Select country</option>
                         <option value="United States">United States</option>
                         <option value="Canada">Canada</option>
                         <option value="United Kingdom">United Kingdom</option>
-                        <option value="--------------">--------------</option>
+                        <option value="--------------" disabled>
+                          --------------
+                        </option>
                         <option value="Afghanistan">Afghanistan</option>
                         <option value="Aland Islands">Aland Islands</option>
                         <option value="Albania">Albania</option>
@@ -469,17 +514,25 @@ const ContactUs = () => {
                       </label>
                       <input
                         className="form-control"
-                        name="phone"
                         type="text"
                         id="phone"
+                        {...register("phone", {
+                          required: "Phone is required",
+                          pattern: {
+                            value: numberPattern,
+                            message: "Phone number can't contain letters",
+                          },
+                        })}
                         placeholder="Phone*"
                       />
-                      <span
-                        id="phoneError"
-                        className="hidden alert-warning help-block animated fadeInDown"
-                      >
-                        Please enter your 10 digit phone number
-                      </span>
+                      {errors.phone && (
+                        <span
+                          id="firstError"
+                          className="alert-warning help-block animated fadeInDown"
+                        >
+                          {errors.phone.message}
+                        </span>
+                      )}
                     </div>
                     <div className="form-group col-md-6">
                       <label className="sr-only" htmlFor="email">
@@ -487,17 +540,25 @@ const ContactUs = () => {
                       </label>
                       <input
                         className="form-control"
-                        name="email"
                         type="text"
+                        {...register("email", {
+                          required: "Email is required",
+                          pattern: {
+                            value: emailPattern,
+                            message: "Ouch, that doesn't look like an email!",
+                          },
+                        })}
                         id="email"
                         placeholder="Email*"
                       />
-                      <span
-                        id="emailError"
-                        className="hidden alert-warning help-block animated fadeInDown"
-                      >
-                        Ouch, that doesn't look like an email!
-                      </span>
+                      {errors.email && (
+                        <span
+                          id="firstError"
+                          className="alert-warning help-block animated fadeInDown"
+                        >
+                          {errors.email.message}
+                        </span>
+                      )}
                     </div>
                   </div>
                   <div className="row">
@@ -574,8 +635,8 @@ const ContactUs = () => {
                         <input
                           id="join_newsletter"
                           type="checkbox"
-                          name="join_newsletter"
                           defaultValue="Y"
+                          {...register("join_newsletter")}
                         />
                         Yes, I want to join the Gulfsouth Spas mailing list so
                         I'll hear about awesome new products and special offers
@@ -602,30 +663,6 @@ const ContactUs = () => {
                   </div>
                   <div className="row">
                     <div className="TrOdd form-group col-md-12">
-                      <input
-                        id="lpcdirect"
-                        name="lpcdirect"
-                        defaultValue="e601d5eada31d568ef031dcdf07223bb"
-                        hidden
-                      />
-                      <input
-                        id="reference_from"
-                        name="reference_from"
-                        defaultValue="MSHome"
-                        hidden
-                      />
-                      <input
-                        id="product"
-                        name="product"
-                        defaultValue="hottubs"
-                        hidden
-                      />
-                      <input
-                        id="tag_id"
-                        name="tag_id"
-                        defaultValue={1299}
-                        hidden
-                      />
                       <label
                         className="para justify-content-center"
                         style={{ margin: "auto" }}
