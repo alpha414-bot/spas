@@ -555,8 +555,9 @@ const hotTubBrands = [
     brandLogo: "/img/gallery/swimspa-logo.png",
     brandDarkLogo: "/img/gallery/swimspa-logo-dark.png",
     textDescription:
-      "Swim, jog, walk, and exercise in water without the stress gravity has on your body. Relax with massaging spa jets in the perfect water temperature, year-round. This alternative to a pool has benefits for you and your entire family.",
-    colors: ["sterling"],
+    "Swim, jog, walk, and exercise in water without the stress gravity has on your body. Relax with massaging spa jets in the perfect water temperature, year-round. This alternative to a pool has benefits for you and your entire family.",
+    // colors: ["sterling"],
+    colors: ["sterling", "ash", "gray"],
   },
 ] as HotTubsBrandInterface[];
 export async function CategoryLoader({ params }: { params?: any }) {

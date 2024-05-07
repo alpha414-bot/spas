@@ -85,6 +85,22 @@ const CustomerSupport = () => {
                   </div>
                 </Link>
               </div>
+              <div className="col-sm-6 col-md-4">
+                <Link to="/find-a-dealer">
+                  <div className="support">
+                    <h4>Become a dealer</h4>
+                    <img
+                      src="/img/icons/icon-gear-wrench.png"
+                      alt="toolbox icon"
+                    />
+                    <p>
+                      Get in contact and join our list of qualified dealer for our best products.
+                      <br /> &nbsp;
+                    </p>
+                  </div>
+                </Link>
+              </div>
+
               <div className="col-sm-6 col-md-4" />
             </div>
           </div>

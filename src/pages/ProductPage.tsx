@@ -515,7 +515,7 @@ const ProductPage = () => {
                         >
                           <img
                             src={`/img/getaway/colors/Gray.png`}
-                            className="img-responsive skirtSelected"
+                            className="img-responsive"
                           />
 
                           <p className="text-center">

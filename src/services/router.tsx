@@ -4,6 +4,7 @@ import CategoryPage from "@/pages/CategoryPage";
 import ContactUs from "@/pages/ContactUs";
 import CustomerSupport from "@/pages/CustomerSupport";
 import ErrorPage from "@/pages/ErrorPage";
+import FindDealer from "@/pages/FindDealer";
 import Home from "@/pages/Home";
 import HotTubBenefits from "@/pages/HotTubBenefits";
 import ProductPage from "@/pages/ProductPage";
@@ -61,6 +62,15 @@ const routes = [
     element: (
       <ProtectedRoute>
         <ContactUs />
+      </ProtectedRoute>
+    ),
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/find-a-dealer",
+    element: (
+      <ProtectedRoute>
+        <FindDealer />
       </ProtectedRoute>
     ),
     errorElement: <ErrorPage />,

@@ -2,14 +2,14 @@ import MainLayout from "@/layouts/MainLayout";
 import emailjs from "@emailjs/browser";
 import { FormEvent, useRef } from "react";
 
-const ContactUs = () => {
+const FindDealer = () => {
   const form = useRef<HTMLFormElement>(null);
 
   const sendNow = (e: FormEvent) => {
     e.preventDefault();
     if (form.current) {
       emailjs
-        .sendForm("service_0oj54fh", "template_fdp7h2f", form.current, {
+        .sendForm("service_0oj54fh", "template_4ekg6mf", form.current, {
           publicKey: "bm9UFtnw3fpNd0vc9",
         })
         .then(() => {
@@ -28,12 +28,12 @@ const ContactUs = () => {
 
   return (
     <MainLayout
-      title="Owner Ideas & Support"
-      description="Hot tub owners can find answers to hot tub related questions, register your hot tub, find hot tub warranty information, watch video tutorials, learn how to maintain your hot tub, get installation ideas and more."
+      title="Become a dealer | Gulfsouth Spas"
+      description="Get in contact and join our list of qualified dealer for our best products."
     >
       <div className="container maincontent">
         <div className="jumbotron overview owners dealer">
-          <h1>Contact Us</h1>
+          <h1>Become a dealer</h1>
           <div className="row">
             <div className="col-md-2" />
             <div className="col-md-8 text-center">
@@ -677,4 +677,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default FindDealer;
