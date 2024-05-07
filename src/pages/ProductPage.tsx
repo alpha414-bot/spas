@@ -1,4 +1,5 @@
 import { HotTubsBrandInterface, ProductHotTubsInterface } from "@/function";
+import _ from "lodash";
 import MainLayout from "@/layouts/MainLayout";
 import LightGallery from "lightgallery/react";
 import { Link, useLoaderData } from "react-router-dom";
@@ -424,125 +425,157 @@ const ProductPage = () => {
                 <h3 className="bluetitle">Colors Available:</h3>
               </div>
             </div>
-            <div className="row">
-              <div className="col-md-6">
-                <p className="shellLabel bluetitle">
-                  Acrylic: <span>Color Options</span>
-                </p>
-                <div id="shellSwatches">
-                  <LightGallery speed={500} plugins={[lgThumbnail, lgZoom]}>
-                    <a
-                      data-sub-html={`<h3>Sterling Marble</h3>`}
-                      href={`/img/getaway/colors/Sterling.png`}
-                    >
-                      <img
-                        src={`/img/getaway/colors/Sterling.png`}
-                        className="img-responsive"
-                      />
+            <div
+              className="row"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              {_.filter(
+                category?.colors,
+                (item) => item === "sterling" || item === "storm"
+              ).length > 0 && (
+                <div className="col-md-6">
+                  <p className="shellLabel bluetitle">
+                    Acrylic: <span>Color Options</span>
+                  </p>
+                  <div id="shellSwatches">
+                    <LightGallery speed={500} plugins={[lgThumbnail, lgZoom]}>
+                      {category?.colors.includes("sterling") && (
+                        <a
+                          data-sub-html={`<h3>Sterling Marble</h3>`}
+                          href={`/img/getaway/colors/Sterling.png`}
+                        >
+                          <img
+                            src={`/img/getaway/colors/Sterling.png`}
+                            className="img-responsive"
+                          />
 
-                      <p className="text-center">Sterling Marble</p>
-                    </a>
-                    <a
-                      data-sub-html={`<h3>Sterling Marble</h3>`}
-                      href={`/img/getaway/colors/Storm.png`}
-                    >
-                      <img
-                        src={`/img/getaway/colors/Storm.png`}
-                        className="img-responsive"
-                      />
+                          <p className="text-center">Sterling Marble</p>
+                        </a>
+                      )}
+                      {category?.colors.includes("storm") && (
+                        <a
+                          data-sub-html={`<h3>Sterling Marble</h3>`}
+                          href={`/img/getaway/colors/Storm.png`}
+                        >
+                          <img
+                            src={`/img/getaway/colors/Storm.png`}
+                            className="img-responsive"
+                          />
+                          <p className="text-center">Storm Clouds</p>
+                        </a>
+                      )}
+                      {category?.colors.includes("tuscan") && (
+                        <a
+                          data-sub-html={`<h3>Tuscan Sun</h3>`}
+                          href={`/img/getaway/colors/Tuscan.png`}
+                        >
+                          <img
+                            src={`/img/getaway/colors/Tuscan.png`}
+                            className="img-responsive"
+                          />
 
-                      <p className="text-center">Storm Clouds</p>
-                    </a>
-                    <a
-                      data-sub-html={`<h3>Tuscan Sun</h3>`}
-                      href={`/img/getaway/colors/Tuscan.png`}
-                    >
-                      <img
-                        src={`/img/getaway/colors/Tuscan.png`}
-                        className="img-responsive"
-                      />
+                          <p className="text-center">Tuscan Sun</p>
+                        </a>
+                      )}
+                      {category?.colors.includes("smoky") && (
+                        <a
+                          data-sub-html={`<h3>Smoky Mountain</h3>`}
+                          href={`/img/getaway/colors/Smoky.png`}
+                        >
+                          <img
+                            src={`/img/getaway/colors/Smoky.png`}
+                            className="img-responsive"
+                          />
 
-                      <p className="text-center">Tuscan Sun</p>
-                    </a>
-                    <a
-                      data-sub-html={`<h3>Smoky Mountain</h3>`}
-                      href={`/img/getaway/colors/Smoky.png`}
-                    >
-                      <img
-                        src={`/img/getaway/colors/Smoky.png`}
-                        className="img-responsive"
-                      />
-
-                      <p className="text-center">Smoky Mountain</p>
-                    </a>
-                  </LightGallery>
+                          <p className="text-center">Smoky Mountain</p>
+                        </a>
+                      )}
+                    </LightGallery>
+                  </div>
                 </div>
-              </div>
-              <div className="col-md-6">
-                <p className="skirtLabel bluetitle">
-                  Skirt: <span>Color Options</span>
-                </p>
-                <div id="skirtSwatches">
-                  <LightGallery speed={500} plugins={[lgThumbnail, lgZoom]}>
-                    <a
-                      data-sub-html={`<h3>Gray</h3><p>STANDARD</p>`}
-                      href={`/img/getaway/colors/Gray.png`}
-                    >
-                      <img
-                        src={`/img/getaway/colors/Gray.png`}
-                        className="img-responsive skirtSelected"
-                      />
+              )}
+              {_.filter(
+                category?.colors,
+                (item) => item === "ash" || item === "black" || item === "gray"
+              ).length > 0 && (
+                <div className="col-md-6">
+                  <p className="skirtLabel bluetitle">
+                    Skirt: <span>Color Options</span>
+                  </p>
+                  <div id="skirtSwatches">
+                    <LightGallery speed={500} plugins={[lgThumbnail, lgZoom]}>
+                      {category?.colors.includes("gray") && (
+                        <a
+                          data-sub-html={`<h3>Gray</h3><p>STANDARD</p>`}
+                          href={`/img/getaway/colors/Gray.png`}
+                        >
+                          <img
+                            src={`/img/getaway/colors/Gray.png`}
+                            className="img-responsive skirtSelected"
+                          />
 
-                      <p className="text-center">
-                        Gray <br />
-                        (STANDARD)
-                      </p>
-                    </a>
-                    <a
-                      data-sub-html={`<h3>Black</h3><p>STANDARD</p>`}
-                      href={`/img/getaway/colors/Black.png`}
-                    >
-                      <img
-                        src={`/img/getaway/colors/Black.png`}
-                        className="img-responsive"
-                      />
+                          <p className="text-center">
+                            Gray <br />
+                            (STANDARD)
+                          </p>
+                        </a>
+                      )}
+                      {category?.colors.includes("black") && (
+                        <a
+                          data-sub-html={`<h3>Black</h3><p>STANDARD</p>`}
+                          href={`/img/getaway/colors/Black.png`}
+                        >
+                          <img
+                            src={`/img/getaway/colors/Black.png`}
+                            className="img-responsive"
+                          />
 
-                      <p className="text-center">
-                        Black <br />
-                        (STANDARD)
-                      </p>
-                    </a>
-                    <a
-                      data-sub-html={`<h3>Elite Coastal Gray</h3><p>OPTIONAL</p>`}
-                      href={`/img/getaway/colors/Elite-Coastal.png`}
-                    >
-                      <img
-                        src={`/img/getaway/colors/Elite-Coastal.png`}
-                        className="img-responsive"
-                      />
+                          <p className="text-center">
+                            Black <br />
+                            (STANDARD)
+                          </p>
+                        </a>
+                      )}
+                      {category?.colors.includes("coastal") && (
+                        <a
+                          data-sub-html={`<h3>Elite Coastal Gray</h3><p>OPTIONAL</p>`}
+                          href={`/img/getaway/colors/Elite-Coastal.png`}
+                        >
+                          <img
+                            src={`/img/getaway/colors/Elite-Coastal.png`}
+                            className="img-responsive"
+                          />
 
-                      <p className="text-center">
-                        Elite Coastal Gray <br />
-                        (OPTIONAL)
-                      </p>
-                    </a>
-                    <a
-                      data-sub-html={`<h3>Elite Ash</h3><p>OPTIONAL</p>`}
-                      href={`/img/getaway/colors/Elit-Ash.png`}
-                    >
-                      <img
-                        src={`/img/getaway/colors/Elit-Ash.png`}
-                        className="img-responsive"
-                      />
+                          <p className="text-center">
+                            Elite Coastal Gray <br />
+                            (OPTIONAL)
+                          </p>
+                        </a>
+                      )}
+                      {category?.colors.includes("ash") && (
+                        <a
+                          data-sub-html={`<h3>Elite Ash</h3><p>OPTIONAL</p>`}
+                          href={`/img/getaway/colors/Elit-Ash.png`}
+                        >
+                          <img
+                            src={`/img/getaway/colors/Elit-Ash.png`}
+                            className="img-responsive"
+                          />
 
-                      <p className="text-center">
-                        Elite Ash <br />
-                        (OPTIONAL)
-                      </p>
-                    </a>
-                  </LightGallery>
+                          <p className="text-center">
+                            Elite Ash <br />
+                            (OPTIONAL)
+                          </p>
+                        </a>
+                      )}
+                    </LightGallery>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </section>

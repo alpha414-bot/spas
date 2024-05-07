@@ -48,7 +48,7 @@ const Footer = () => {
                       <Link to="/category/trident-series">Trident Series</Link>
                     </li>
                     <li>
-                      <Link to="/category/nautical-serie">Nautical Series</Link>
+                      <Link to="/category/nautical-series">Nautical Series</Link>
                     </li>
                     <li>
                       <Link to="/category/coastal-series">Coastal Series</Link>

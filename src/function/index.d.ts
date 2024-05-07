@@ -25,6 +25,16 @@ type ExclusiveFeaturesType =
   | "In.Touch 2®"
   | "Digital Topside";
 
+type TubColors =
+  | "gray"
+  | "black"
+  | "ash"
+  | "coastal"
+  | "sterling"
+  | "storm"
+  | "tuscan"
+  | "smoky";
+
 export interface ProductHotTubsInterface {
   image: string;
   name: string;
@@ -62,6 +72,7 @@ export interface HotTubsBrandInterface {
   brandDarkLogo: string;
   textDescription: string;
   products: ProductHotTubsInterface[];
+  colors: TubColors[];
 }
 
 export interface CustomSliderArrowType {

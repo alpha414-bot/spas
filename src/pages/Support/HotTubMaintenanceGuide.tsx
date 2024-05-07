@@ -1,4 +1,5 @@
 import MainLayout from "@/layouts/MainLayout";
+import { Link } from "react-router-dom";
 
 const HotTubMaintenanceGuide = () => {
   return (
@@ -71,18 +72,18 @@ const HotTubMaintenanceGuide = () => {
                   defaultValue="1.67.0.64"
                 />
                 <div className="infusion-submit">
-                  <label
-                    className="para justify-content-center"
+                  <div
+                    className="btn para justify-content-center"
                     style={{ margin: "auto", width: 375 }}
                   >
-                    <input
-                      name="submit"
-                      type="submit"
-                      className="articleBody"
-                      id="submit"
-                      defaultValue="Download Your Hot Tub Maintenance Guide"
-                    />
-                  </label>
+                    <Link
+                      target="_blank"
+                      to="/documents/quick-start-guide.pdf"
+                      download="/documents/quick-start-guide.pdf"
+                    >
+                      Download
+                    </Link>
+                  </div>
                 </div>
               </form>
               {/*  */}

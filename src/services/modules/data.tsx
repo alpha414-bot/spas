@@ -520,6 +520,7 @@ const hotTubBrands = [
     brandDarkLogo: "/img/gallery/trident-logo-dark.png",
     textDescription:
       "Our Trident Series, has all the comfort and options you would like in your backyard, with all options to upgrade included to further complete your relaxation experience. Your GulfSouth Spa is built to suit your needs and desires for everything from entertaining friends and family to you.",
+    colors: ["gray", "black", "ash"],
   },
   {
     slug: "nautical-series",
@@ -531,6 +532,7 @@ const hotTubBrands = [
     brandDarkLogo: "/img/gallery/nautical-logo-dark.png",
     textDescription:
       "Our Nautical Series, Nautical Series is a even more soothing relaxation. Our Nautical Series is a deeper (39”) version for the most discerning spa owners crave. The Nautical Series will bring a sense of beauty to your backyard and senseof serenity to your life.",
+    colors: ["gray", "black", "ash"],
   },
   {
     slug: "coastal-series",
@@ -542,6 +544,7 @@ const hotTubBrands = [
     brandDarkLogo: "/img/gallery/coastal-logo-dark.png",
     textDescription:
       "Are you dreaming of buying an affordable spa? The Coastal Series therapeutic spas are a great choice. This series is perfect for families looking to buy their first spa at a good price. It also features a smaller spa for tighter spaces or urban setting.",
+    colors: ["gray", "black"],
   },
   {
     slug: "swim-series",
@@ -553,6 +556,7 @@ const hotTubBrands = [
     brandDarkLogo: "/img/gallery/swimspa-logo-dark.png",
     textDescription:
       "Swim, jog, walk, and exercise in water without the stress gravity has on your body. Relax with massaging spa jets in the perfect water temperature, year-round. This alternative to a pool has benefits for you and your entire family.",
+    colors: ["sterling"],
   },
 ] as HotTubsBrandInterface[];
 export async function CategoryLoader({ params }: { params?: any }) {
