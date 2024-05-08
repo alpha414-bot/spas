@@ -4,26 +4,28 @@ import { useRef } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 type Inputs = {
+  serial_number: string;
+  verify_serial_number: string;
   first_name: string;
   last_name: string;
-  zip: string;
+  street_address: string;
+  city: string;
   country: string;
+  state: string;
+  zip_code: string;
   phone: string;
   email: string;
-  choosen_spa: string;
-  plan_on_buying: string;
-  prefer_contact_method: string;
-  comments: string;
-  join_newsletter: boolean;
+  date_delivered: string;
+  agree_to_be_contacted: string;
 };
 
-const FindDealer = () => {
+const SpaRegistration = () => {
   const form = useRef<HTMLFormElement>(null);
 
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isLoading },
     reset,
   } = useForm<Inputs>({
     mode: "all",
@@ -33,10 +35,11 @@ const FindDealer = () => {
 
   const sendNow: SubmitHandler<Inputs> = () => {
     const formElement = form.current as HTMLFormElement;
+    console.log(formElement);
     if (formElement) {
       emailjs
-        .sendForm("service_0oj54fh", "template_4ekg6mf", formElement, {
-          publicKey: "bm9UFtnw3fpNd0vc9",
+        .sendForm("service_default", "template_spa", formElement, {
+          publicKey: "pIwotxEsvTYXtdHgP",
         })
         .then((d: any) => {
           console.log(d);
@@ -55,19 +58,18 @@ const FindDealer = () => {
   };
 
   return (
-    <MainLayout
-      title="Become a dealer | Gulfsouth Spas"
-      description="Get in contact and join our list of qualified dealer for our best products."
-    >
+    <MainLayout title="Spa Registration" description="">
       <div className="container maincontent">
         <div className="jumbotron overview owners dealer">
-          <h1>Become a dealer</h1>
+          <h1>Spa Registration</h1>
           <div className="row">
             <div className="col-md-2" />
             <div className="col-md-8 text-center">
               <p>
-                Get in contact and join our list of qualified dealer for our
-                best products.
+                Please Register your new spa with us to ensure prompt
+                professional service. (Verify ALL fields before submitting
+                form.) Your Serial Number is located on the U.L. Plate on the
+                access panel of your spa.
               </p>
             </div>
             <div className="col-md-2" />
@@ -78,6 +80,52 @@ const FindDealer = () => {
                   ref={form}
                   onSubmit={handleSubmit(sendNow)}
                 >
+                  <div className="row">
+                    <div className="form-group col-md-6">
+                      <label className="sr-only" htmlFor="serial_number">
+                        Serial number*
+                      </label>
+                      <input
+                        className="form-control"
+                        type="text"
+                        {...register("serial_number", {
+                          required: "Serial number is required",
+                        })}
+                        id="serial_number"
+                        placeholder="Serial number*"
+                      />
+                      {errors.serial_number && (
+                        <span
+                          id="firstError"
+                          className="alert-warning help-block animated fadeInDown"
+                        >
+                          {errors.serial_number.message}
+                        </span>
+                      )}
+                    </div>
+                    <div className="form-group col-md-6">
+                      <label className="sr-only" htmlFor="verify_serial_number">
+                        Verify serial number*
+                      </label>
+                      <input
+                        className="form-control"
+                        type="text"
+                        {...register("verify_serial_number", {
+                          required: "Verify serial number is required",
+                        })}
+                        id="verify_serial_number"
+                        placeholder="Verify serial number*"
+                      />
+                      {errors.verify_serial_number && (
+                        <span
+                          id="firstError"
+                          className="alert-warning help-block animated fadeInDown"
+                        >
+                          {errors.verify_serial_number.message}
+                        </span>
+                      )}
+                    </div>
+                  </div>
                   <div className="row">
                     <div className="form-group col-md-6">
                       <label className="sr-only" htmlFor="first_name">
@@ -126,27 +174,51 @@ const FindDealer = () => {
                   </div>
                   <div className="row">
                     <div className="form-group col-md-6">
-                      <label className="sr-only" htmlFor="zip">
-                        Zip*
+                      <label className="sr-only" htmlFor="street_address">
+                        Street address*
                       </label>
                       <input
                         className="form-control"
-                        id="zip"
-                        {...register("zip", {
-                          required: "Zip is required",
+                        id="street_address"
+                        {...register("street_address", {
+                          required: "Street address is required",
                         })}
-                        placeholder="Zip*"
+                        placeholder="Street address*"
                         type="text"
                       />
-                      {errors.zip && (
+                      {errors.street_address && (
                         <span
                           id="firstError"
                           className="alert-warning help-block animated fadeInDown"
                         >
-                          {errors.zip.message}
+                          {errors.street_address.message}
                         </span>
                       )}
                     </div>
+                    <div className="form-group col-md-6">
+                      <label className="sr-only" htmlFor="City">
+                        City*
+                      </label>
+                      <input
+                        className="form-control"
+                        id="city"
+                        {...register("city", {
+                          required: "City is required",
+                        })}
+                        placeholder="City*"
+                        type="text"
+                      />
+                      {errors.city && (
+                        <span
+                          id="firstError"
+                          className="alert-warning help-block animated fadeInDown"
+                        >
+                          {errors.city.message}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <div className="row">
                     <div className="form-group col-md-6">
                       <label className="sr-only" htmlFor="country">
                         Country
@@ -154,9 +226,11 @@ const FindDealer = () => {
                       <select
                         className="form-control"
                         id="country"
-                        {...register("country")}
+                        {...register("country", {
+                          required: "Country is required",
+                        })}
                       >
-                        <option value="">Select country</option>
+                        <option value="">Country*</option>
                         <option value="United States">United States</option>
                         <option value="Canada">Canada</option>
                         <option value="United Kingdom">United Kingdom</option>
@@ -510,25 +584,128 @@ const FindDealer = () => {
                         <option value="Zambia">Zambia</option>
                         <option value="Zimbabwe">Zimbabwe</option>
                       </select>
+                      {errors.country && (
+                        <span
+                          id="firstError"
+                          className="alert-warning help-block animated fadeInDown"
+                        >
+                          {errors.country.message}
+                        </span>
+                      )}
+                    </div>
+                    <div className="form-group col-md-6">
+                      <label className="sr-only" htmlFor="country">
+                        State*
+                      </label>
+                      <select
+                        className="form-control"
+                        id="state"
+                        {...register("state", {
+                          required: "State is required",
+                        })}
+                      >
+                        <option value="">State*</option>
+                        <option value="INTERNATIONAL">INTERNATIONAL</option>
+                        <option value="Alabama">Alabama</option>
+                        <option value="Alaska">Alaska</option>
+                        <option value="Arizona">Arizona</option>
+                        <option value="Arkansas">Arkansas</option>
+                        <option value="California">California</option>
+                        <option value="Colorado">Colorado</option>
+                        <option value="Connecticut">Connecticut</option>
+                        <option value="Delaware">Delaware</option>
+                        <option value="Florida">Florida</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Hawaii">Hawaii</option>
+                        <option value="Idaho">Idaho</option>
+                        <option value="Illinois">Illinois</option>
+                        <option value="Indiana">Indiana</option>
+                        <option value="Iowa">Iowa</option>
+                        <option value="Kansas">Kansas</option>
+                        <option value="Kentucky">Kentucky</option>
+                        <option value="Louisiana">Louisiana</option>
+                        <option value="Maine">Maine</option>
+                        <option value="Maryland">Maryland</option>
+                        <option value="Massachusetts">Massachusetts</option>
+                        <option value="Michigan">Michigan</option>
+                        <option value="Minnesota">Minnesota</option>
+                        <option value="Mississippi">Mississippi</option>
+                        <option value="Missouri">Missouri</option>
+                        <option value="Montana">Montana</option>
+                        <option value="Nebraska">Nebraska</option>
+                        <option value="Nevada">Nevada</option>
+                        <option value="New Hampshire">New Hampshire</option>
+                        <option value="New Jersey">New Jersey</option>
+                        <option value="New Mexico">New Mexico</option>
+                        <option value="New York">New York</option>
+                        <option value="North Carolina">North Carolina</option>
+                        <option value="North Dakota">North Dakota</option>
+                        <option value="Ohio">Ohio</option>
+                        <option value="Oklahoma">Oklahoma</option>
+                        <option value="Oregon">Oregon</option>
+                        <option value="Pennsylvania">Pennsylvania</option>
+                        <option value="Rhode Island">Rhode Island</option>
+                        <option value="South Carolina">South Carolina</option>
+                        <option value="South Dakota">South Dakota</option>
+                        <option value="Tennessee">Tennessee</option>
+                        <option value="Texas">Texas</option>
+                        <option value="Utah">Utah</option>
+                        <option value="Vermont">Vermont</option>
+                        <option value="Virginia">Virginia</option>
+                        <option value="Washington">Washington</option>
+                        <option value="West Virginia">West Virginia</option>
+                        <option value="Wisconsin">Wisconsin</option>
+                        <option value="Wyoming">Wyoming</option>
+                      </select>
+                      {errors.state && (
+                        <span
+                          id="firstError"
+                          className="alert-warning help-block animated fadeInDown"
+                        >
+                          {errors.state.message}
+                        </span>
+                      )}
                     </div>
                   </div>
                   <div className="row">
                     <div className="form-group col-md-6">
-                      <label className="sr-only" htmlFor="phone">
-                        Phone*
+                      <label className="sr-only" htmlFor="email">
+                        Zip code*
                       </label>
                       <input
                         className="form-control"
                         type="text"
-                        id="phone"
+                        {...register("zip_code", {
+                          required: "Zip code is required",
+                        })}
+                        id="zip_code"
+                        placeholder="Zip code*"
+                      />
+                      {errors.zip_code && (
+                        <span
+                          id="firstError"
+                          className="alert-warning help-block animated fadeInDown"
+                        >
+                          {errors.zip_code.message}
+                        </span>
+                      )}
+                    </div>
+                    <div className="form-group col-md-6">
+                      <label className="sr-only" htmlFor="email">
+                        Phone number*
+                      </label>
+                      <input
+                        className="form-control"
+                        type="text"
                         {...register("phone", {
-                          required: "Phone is required",
+                          required: "Phone number is required",
                           pattern: {
                             value: numberPattern,
-                            message: "Phone number can't contain letters",
+                            message: "Phone number can only contain numbers.",
                           },
                         })}
-                        placeholder="Phone*"
+                        id="phone"
+                        placeholder="Phone number*"
                       />
                       {errors.phone && (
                         <span
@@ -539,6 +716,8 @@ const FindDealer = () => {
                         </span>
                       )}
                     </div>
+                  </div>
+                  <div className="row">
                     <div className="form-group col-md-6">
                       <label className="sr-only" htmlFor="email">
                         Email*
@@ -565,72 +744,30 @@ const FindDealer = () => {
                         </span>
                       )}
                     </div>
-                  </div>
-                  <div className="row">
                     <div className="form-group col-md-6">
-                      <label className="sr-only" htmlFor="choosen_spa">
-                        Choose your spa
+                      <label className="sr-only" htmlFor="email">
+                        Date Delivered*
                       </label>
-                      <select
+                      <input
                         className="form-control"
-                        id="choosen_spa"
-                        name="choosen_spa"
-                      >
-                        <option value="hottub">Choose your spa...</option>
-                        <option value="Swim SPA Series">Swim SPA Series</option>
-                        <option value="Trident Series">Tident Series</option>
-                        <option value="Nautical Series">Nautical Series</option>
-                        <option value="Coastal Series">Coastal Series</option>
-                      </select>
-                    </div>
-                    <div className="form-group col-md-6">
-                      <label className="sr-only" htmlFor="plan_on_buying">
-                        Planning to buy in...
-                      </label>
-                      <select
-                        className="form-control"
-                        id="plan_on_buying"
-                        name="plan_on_buying"
-                      >
-                        <option value="">Planning to buy within...</option>
-                        <option value="A month">A month</option>
-                        <option value="2 to 3 months">2 to 3 months</option>
-                        <option value="4 to 6 months">4 to 6 months</option>
-                        <option value="7 to 12 months">7 to 12 months</option>
-                        <option value="More than 12 months">
-                          More than 12 months
-                        </option>
-                      </select>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="form-group col-sm-12">
-                      <label>Preferred Contact Method</label>
-                      <select
-                        name="prefer_contact_method"
-                        id="prefer_contact_method"
-                        className="form-control"
-                      >
-                        <option value="">No preference</option>
-                        <option value="Email">Email</option>
-                        <option value="Phone call">Phone call</option>
-                        <option value="Text message">Text message</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="form-group col-md-12">
-                      <label htmlFor="comments">
-                        Other comments or questions?
-                      </label>
-                      <textarea
-                        className="form-control"
-                        name="comments"
-                        id="comments"
-                        defaultValue={""}
+                        type="date"
+                        {...register("date_delivered", {
+                          required: "Date delivered is required",
+                        })}
+                        id="date_delivered"
+                        placeholder="Date delivered*"
                       />
+                      {errors.date_delivered && (
+                        <span
+                          id="firstError"
+                          className="alert-warning help-block animated fadeInDown"
+                        >
+                          {errors.date_delivered.message}
+                        </span>
+                      )}
                     </div>
                   </div>
+
                   <div className="row">
                     <div className="form-group col-md-12">
                       <label
@@ -640,15 +777,11 @@ const FindDealer = () => {
                         <input
                           id="join_newsletter"
                           type="checkbox"
-                          defaultValue="Y"
-                          {...register("join_newsletter")}
+                          defaultValue="Yes"
+                          {...register("agree_to_be_contacted")}
                         />
-                        Yes, I want to join the Gulfsouth Spas mailing list so
-                        I'll hear about awesome new products and special offers
-                        before anyone else! Gulfsouth Spas will contact you with
-                        information regarding dealer location, pricing and spa
-                        details. You may unsubscribe from these emails at any
-                        time.
+                        I agree to be contacted via email or text message to
+                        review my product.
                       </label>
                       <p>&nbsp;</p>
                       <span
@@ -676,7 +809,7 @@ const FindDealer = () => {
                           type="submit"
                           id="locatorSubmit"
                           name="locatorSubmit"
-                          defaultValue="Submit"
+                          value={isLoading ? "Submitting..." : "Submit"}
                         />
                       </label>
                       <div
@@ -698,17 +831,10 @@ const FindDealer = () => {
             <div className="col-md-12">
               <p>
                 <small>
-                  NOTICE: Gulfsouth Spas makes only those representations as
-                  provided in its written warranties. Any other representation,
-                  statement or contract made by a dealer to you regarding
-                  Gulfsouth Spas and any products manufacturerd by Gulfsouth
-                  Spas can be attributable only to such independent dealer. The
-                  dealer who sells Gulfsouth Spas products is an independent
-                  contractor and is not an agent, representative or employee of
-                  Gulfsouth Spas, and Gulfsouth Spas cannot and does not accept
-                  or assume any liability for any acts, representations or
-                  contracts of any dealer. All dealers of Gulfsouth Spas's
-                  products are independent businesses.
+                  NOTICE: In order to process warranty claims and
+                  service your unit, it may be necessary to provide your contact
+                  information to component manufacturers, service centers and
+                  dealers.
                 </small>
               </p>
             </div>
@@ -719,4 +845,4 @@ const FindDealer = () => {
   );
 };
 
-export default FindDealer;
+export default SpaRegistration;

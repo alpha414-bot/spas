@@ -1,10 +1,10 @@
+import BecomeDealer from "@/pages/BecomeDealer";
 import CategoryFeaturePage from "@/pages/CategoryFeaturePage";
 import CategoryGalleryPage from "@/pages/CategoryGalleryPage";
 import CategoryPage from "@/pages/CategoryPage";
 import ContactUs from "@/pages/ContactUs";
 import CustomerSupport from "@/pages/CustomerSupport";
 import ErrorPage from "@/pages/ErrorPage";
-import FindDealer from "@/pages/FindDealer";
 import Home from "@/pages/Home";
 import HotTubBenefits from "@/pages/HotTubBenefits";
 import ProductPage from "@/pages/ProductPage";
@@ -13,6 +13,7 @@ import ShopSwimSpas from "@/pages/ShopSwimSpas";
 import HotTubElectricalRequirement from "@/pages/Support/HotTubElectricalRequirement";
 import HotTubMaintenanceGuide from "@/pages/Support/HotTubMaintenanceGuide";
 import HotTubOwnersManuals from "@/pages/Support/HotTubOwnersManuals";
+import SpaRegistration from "@/pages/Support/SpaRegistration";
 import GeneralOverview from "@/pages/SwimSpas";
 import { useLayoutEffect } from "react";
 import { createBrowserRouter, useLocation } from "react-router-dom";
@@ -67,10 +68,10 @@ const routes = [
     errorElement: <ErrorPage />,
   },
   {
-    path: "/find-a-dealer",
+    path: "/become-a-dealer",
     element: (
       <ProtectedRoute>
-        <FindDealer />
+        <BecomeDealer />
       </ProtectedRoute>
     ),
     errorElement: <ErrorPage />,
@@ -145,6 +146,15 @@ const routes = [
     element: (
       <ProtectedRoute>
         <HotTubMaintenanceGuide />
+      </ProtectedRoute>
+    ),
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/spa-registration",
+    element: (
+      <ProtectedRoute>
+        <SpaRegistration />
       </ProtectedRoute>
     ),
     errorElement: <ErrorPage />,

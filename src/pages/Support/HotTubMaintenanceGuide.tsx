@@ -79,7 +79,7 @@ const HotTubMaintenanceGuide = () => {
                     <Link
                       target="_blank"
                       to="/documents/quick-start-guide.pdf"
-                      download="/documents/quick-start-guide.pdf"
+                      download="Hot tub maintenance guide"
                     >
                       Download
                     </Link>

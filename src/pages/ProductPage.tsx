@@ -429,13 +429,17 @@ const ProductPage = () => {
               className="row"
               style={{
                 display: "flex",
-                alignItems: "center",
+                alignItems: "start",
                 justifyContent: "center",
               }}
             >
               {_.filter(
                 category?.colors,
-                (item) => item === "sterling" || item === "storm"
+                (item) =>
+                  item === "sterling" ||
+                  item === "storm" ||
+                  item === "tuscan" ||
+                  item === "smoky"
               ).length > 0 && (
                 <div className="col-md-6">
                   <p className="shellLabel bluetitle">

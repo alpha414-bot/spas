@@ -57,7 +57,7 @@ const Footer = () => {
                   <ul>
                     <li className="listTitle">Ideas &amp; Support</li>
                     <li>
-                      <Link to="/contact-us">SPA Registration</Link>
+                      <Link to="/spa-registration">SPA Registration</Link>
                     </li>
                     <li>
                       <Link to="/hot-tub-maintenance-guide">

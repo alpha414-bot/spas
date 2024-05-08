@@ -36,7 +36,7 @@ const ContactUs = () => {
     console.log(formElement);
     if (formElement) {
       emailjs
-        .sendForm("service_0oj54fh", "template_fdp7h2f", formElement, {
+        .sendForm("service_default", "template_contact_us", formElement, {
           publicKey: "bm9UFtnw3fpNd0vc9",
         })
         .then((d: any) => {
@@ -160,7 +160,9 @@ const ContactUs = () => {
                       <select
                         className="form-control"
                         id="country"
-                        {...register("country")}
+                        {...register("country", {
+                          required: "Country is required",
+                        })}
                       >
                         <option value="">Select country</option>
                         <option value="United States">United States</option>
@@ -516,6 +518,14 @@ const ContactUs = () => {
                         <option value="Zambia">Zambia</option>
                         <option value="Zimbabwe">Zimbabwe</option>
                       </select>
+                      {errors.country && (
+                        <span
+                          id="firstError"
+                          className="alert-warning help-block animated fadeInDown"
+                        >
+                          {errors.country.message}
+                        </span>
+                      )}
                     </div>
                   </div>
                   <div className="row">
@@ -580,9 +590,11 @@ const ContactUs = () => {
                       <select
                         className="form-control"
                         id="choosen_spa"
-                        name="choosen_spa"
+                        {...register("choosen_spa")}
                       >
-                        <option value="hottub">Choose your spa...</option>
+                        <option value="" disabled>
+                          Choose your spa...
+                        </option>
                         <option value="Swim SPA Series">Swim SPA Series</option>
                         <option value="Trident Series">Tident Series</option>
                         <option value="Nautical Series">Nautical Series</option>
@@ -596,9 +608,11 @@ const ContactUs = () => {
                       <select
                         className="form-control"
                         id="plan_on_buying"
-                        name="plan_on_buying"
+                        {...register("plan_on_buying")}
                       >
-                        <option value="">Planning to buy within...</option>
+                        <option value="" disabled>
+                          Planning to buy within...
+                        </option>
                         <option value="A month">A month</option>
                         <option value="2 to 3 months">2 to 3 months</option>
                         <option value="4 to 6 months">4 to 6 months</option>
@@ -613,9 +627,9 @@ const ContactUs = () => {
                     <div className="form-group col-sm-12">
                       <label>Preferred Contact Method</label>
                       <select
-                        name="prefer_contact_method"
                         id="prefer_contact_method"
                         className="form-control"
+                        {...register("prefer_contact_method")}
                       >
                         <option value="">No preference</option>
                         <option value="Email">Email</option>
@@ -631,7 +645,7 @@ const ContactUs = () => {
                       </label>
                       <textarea
                         className="form-control"
-                        name="comments"
+                        {...register("comments")}
                         id="comments"
                         defaultValue={""}
                       />

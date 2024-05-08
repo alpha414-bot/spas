@@ -71,7 +71,7 @@ const CustomerSupport = () => {
                 </Link>
               </div>
               <div className="col-sm-6 col-md-4">
-                <Link to="/contact-us">
+                <Link to="/spa-registration">
                   <div className="support">
                     <h4>Spa Registration</h4>
                     <img
@@ -86,7 +86,7 @@ const CustomerSupport = () => {
                 </Link>
               </div>
               <div className="col-sm-6 col-md-4">
-                <Link to="/find-a-dealer">
+                <Link to="/become-a-dealer">
                   <div className="support">
                     <h4>Become a dealer</h4>
                     <img
