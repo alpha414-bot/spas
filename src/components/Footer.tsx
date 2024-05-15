@@ -67,6 +67,9 @@ const Footer = () => {
                     <li>
                       <Link to="/hot-tub-owners-manuals">Owner's Manuals</Link>
                     </li>
+                    <li>
+                      <Link to="/become-a-dealer">Become a dealer</Link>
+                    </li>
                   </ul>
                 </div>
               </div>

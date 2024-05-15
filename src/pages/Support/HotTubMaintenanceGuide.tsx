@@ -74,7 +74,7 @@ const HotTubMaintenanceGuide = () => {
                 <div className="infusion-submit">
                   <div
                     className="btn para justify-content-center"
-                    style={{ margin: "auto", width: 375 }}
+                    style={{ margin: "auto", width: "80%", display: "block" }}
                   >
                     <Link
                       target="_blank"
