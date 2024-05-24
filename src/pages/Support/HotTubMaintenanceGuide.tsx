@@ -78,7 +78,7 @@ const HotTubMaintenanceGuide = () => {
                   >
                     <Link
                       target="_blank"
-                      to="/documents/gulfsouthspas-maintenance-guide.pdf"
+                      to="/documents/quick-start-guide.pdf"
                       download="Gulfsouth Swim Spa Maintenance Guide"
                     >
                       Download

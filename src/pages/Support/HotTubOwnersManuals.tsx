@@ -30,16 +30,34 @@ const HotTubOwnersManuals = () => {
                     className="btn para justify-content-center"
                     style={{
                       margin: "0px 5px",
-                      width: "80%",
+                      width: "65%",
                       display: "block",
                     }}
                   >
                     <Link
                       target="_blank"
-                      to="/documents/gulfsouthspas-owners-manual.pdf"
-                      download="Gulfsouth Swim Spa Owner's Manuals"
+                      to="/documents/gulfsouthspas-swimspa-manual.pdf"
+                      download="Gulfsouth Swim SPA Manual"
                     >
-                      Download
+                      Swim SPA Manual
+                    </Link>
+                  </div>
+                </div>
+                <div className="infusion-submit">
+                  <div
+                    className="btn para justify-content-center"
+                    style={{
+                      margin: "8px 5px",
+                      width: "65%",
+                      display: "block",
+                    }}
+                  >
+                    <Link
+                      target="_blank"
+                      to="/documents/gulfsouthspas-hottube-guide.pdf"
+                      download="Gulfsouth Hot Tub Manual"
+                    >
+                      Hot Tub Manual
                     </Link>
                   </div>
                 </div>
