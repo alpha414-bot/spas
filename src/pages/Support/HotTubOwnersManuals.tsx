@@ -25,8 +25,26 @@ const HotTubOwnersManuals = () => {
                 <Link to="/contact-us">Customer Care team</Link>.
                 <br />
                 <br />
-                Thank you for choosing Gulfsouth Spas.
+                <div className="infusion-submit">
+                  <div
+                    className="btn para justify-content-center"
+                    style={{
+                      margin: "0px 5px",
+                      width: "80%",
+                      display: "block",
+                    }}
+                  >
+                    <Link
+                      target="_blank"
+                      to="/documents/gulfsouthspas-owners-manual.pdf"
+                      download="Gulfsouth Swim Spa Owner's Manuals"
+                    >
+                      Download
+                    </Link>
+                  </div>
+                </div>
                 <br />
+                Thank you for choosing Gulfsouth Spas.
               </p>
             </div>
             <div className="col-md-2" />
