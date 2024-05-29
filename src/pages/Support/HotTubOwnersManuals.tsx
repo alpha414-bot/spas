@@ -11,8 +11,7 @@ const HotTubOwnersManuals = () => {
         <div className="jumbotron">
           <h1>Hot Tub and Swim Spa Owner's Manuals </h1>
           <div className="row">
-            <div className="col-md-2" />
-            <div className="col-md-8">
+            <div className="col-md-12">
               <p>
                 With proper installation, use, and maintenance your hot tub or
                 swim spa will bring enjoyment for years to come. Please read the
@@ -62,10 +61,9 @@ const HotTubOwnersManuals = () => {
                   </div>
                 </div>
                 <br />
-                Thank you for choosing Gulfsouth Spas.
+                <strong>Thank you for choosing Gulfsouth Spas.</strong>
               </p>
             </div>
-            <div className="col-md-2" />
           </div>
         </div>
       </div>
