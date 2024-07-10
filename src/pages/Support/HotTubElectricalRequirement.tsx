@@ -49,16 +49,27 @@ const HotTubElectricalRequirement = () => {
               <div className="col-md-12 text-center">
                 <h2>Electrical Diagrams</h2>
               </div>
-              <div className="col-sm-6 col-md-4">
+              <Link
+                target="_blank"
+                to="/documents/2023-120v-electrical-requirements.pdf"
+                download="120V Electrical Requirements - GulfSouth Spas"
+                className=" col-sm-6 col-md-4"
+                style={{ marginRight: "2rem" }}
+              >
                 <span className="a">
                   <h2>120V Electrical Requirements</h2>
                 </span>
-              </div>
-              <div className="col-sm-6 col-md-4">
+              </Link>
+              <Link
+                target="_blank"
+                to="/documents/2023-240v-electrical-requirements.pdf"
+                download="240V Electrical Requirements - GulfSouth Spas"
+                className="col-sm-6 col-md-4"
+              >
                 <span className="a">
                   <h2>240V Electrical Requirements</h2>
                 </span>
-              </div>
+              </Link>
               {/*<div class="col-sm-6 col-md-4">*/}
               {/*    <span class="a">*/}
               {/*        <h2 style="margin-top:0px;">International Electrical Diagrams</h2>*/}

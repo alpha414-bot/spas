@@ -31,6 +31,44 @@ const CustomerSupport = () => {
                 </Link>
               </div>
               <div className="col-sm-6 col-md-4">
+                <Link
+                  target="_blank"
+                  to="/documents/Foundation Suggestions.pdf"
+                  // download="Foundation - GulfSouth Spas"
+                >
+                  <div className="support">
+                    <h4>Foundation</h4>
+                    <img
+                      src="/img/icons/icon-open-pdf.png"
+                      alt="toolbox icon"
+                    />
+                    <p>
+                      Foundation main PDF and documents. Download yours now!
+                      <br /> &nbsp;
+                    </p>
+                  </div>
+                </Link>
+              </div>
+              <div className="col-sm-6 col-md-4">
+                <Link
+                  target="_blank"
+                  to="/documents/Gulfsouth Spas Warranty.pdf"
+                  // download="Warranty - GulfSouth Spas"
+                >
+                  <div className="support">
+                    <h4>Warranty</h4>
+                    <img
+                      src="/img/icons/icon-open-pdf.png"
+                      alt="toolbox icon"
+                    />
+                    <p>
+                      Warranty main PDF and documents. Download yours now!
+                      <br /> &nbsp;
+                    </p>
+                  </div>
+                </Link>
+              </div>
+              <div className="col-sm-6 col-md-4">
                 <Link target="_blank" to="/documents/quick-start-guide.pdf">
                   <div className="support">
                     <h4>Quick Start Guide</h4>
@@ -71,7 +109,7 @@ const CustomerSupport = () => {
                 </Link>
               </div>
               <div className="col-sm-6 col-md-4">
-                <Link to="/spa-registration">
+                <Link to="https://registermyspa.com/" target="_blank">
                   <div className="support">
                     <h4>Spa Registration</h4>
                     <img
@@ -94,7 +132,8 @@ const CustomerSupport = () => {
                       alt="toolbox icon"
                     />
                     <p>
-                      Get in contact and join our list of qualified dealer for our best products.
+                      Get in contact and join our list of qualified dealer for
+                      our best products.
                       <br /> &nbsp;
                     </p>
                   </div>
