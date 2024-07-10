@@ -54,7 +54,6 @@ const HotTubElectricalRequirement = () => {
                 to="/documents/2023-120v-electrical-requirements.pdf"
                 download="120V Electrical Requirements - GulfSouth Spas"
                 className=" col-sm-6 col-md-4"
-                style={{ marginRight: "2rem" }}
               >
                 <span className="a">
                   <h2>120V Electrical Requirements</h2>
