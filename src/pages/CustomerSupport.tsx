@@ -34,7 +34,7 @@ const CustomerSupport = () => {
                 <Link
                   target="_blank"
                   to="/documents/Foundation Suggestions.pdf"
-                  // download="Foundation - GulfSouth Spas"
+                  download="Foundation - GulfSouth Spas"
                 >
                   <div className="support">
                     <h4>Foundation</h4>
@@ -53,7 +53,7 @@ const CustomerSupport = () => {
                 <Link
                   target="_blank"
                   to="/documents/Gulfsouth Spas Warranty.pdf"
-                  // download="Warranty - GulfSouth Spas"
+                  download="Warranty - GulfSouth Spas"
                 >
                   <div className="support">
                     <h4>Warranty</h4>
