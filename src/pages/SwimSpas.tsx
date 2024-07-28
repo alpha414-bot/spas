@@ -170,7 +170,7 @@ const SwimSpas = () => {
               <ul className="leadList">
                 <li>100% Made in America</li>
                 <li>Quality Construction</li>
-                <li>7 Models to Choose From</li>
+                <li>5 Models to Choose From</li>
               </ul>
             </div>
           </div>
