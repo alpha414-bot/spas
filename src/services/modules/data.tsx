@@ -360,7 +360,7 @@ export const _TubsData = [
   },
   {
     brand: "Swim Series",
-    type: "p13",
+    type: "13",
     name: "SS13",
     seats: 4,
     image: "ss13",
