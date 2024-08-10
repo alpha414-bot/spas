@@ -361,15 +361,15 @@ export const _TubsData = [
   {
     brand: "Swim Series",
     type: "p13",
-    name: "SSP13",
+    name: "SS13",
     seats: 4,
-    image: "ssp13",
+    image: "ss13",
     price: 0,
     gallons: 1400,
     jets: 29,
     swim_jets: 4,
     led_lighting: 12,
-    measurements: '92" x 144" x 55"',
+    measurements: '92" x 161" x 51"',
     power_requirement: "220 volt (2) x 5 BHP and (1) x 7 BHP",
     weight_dry: 2000,
     weight_filled: 13199,
@@ -429,7 +429,7 @@ export const _TubsData = [
     jets: 29,
     swim_jets: 3,
     led_lighting: 26,
-    measurements: '92" x 192" x 55"',
+    measurements: '92" x 192" x 60"',
     power_requirement: "220 volt (3) x 5 BHP and (1) x 7 BHP",
     weight_dry: 2500,
     weight_filled: 18500,
@@ -555,6 +555,7 @@ export async function CategoryLoader({ params }: { params?: any }) {
 
 export async function ProductLoader({ params }: { params?: any }) {
   // params: {category_slug, product_slug}
+  
   let product = _.find(
     _TubsData,
     (item) => item.image.toLowerCase() === params?.product_slug.toLowerCase()
