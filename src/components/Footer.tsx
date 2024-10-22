@@ -38,6 +38,9 @@ const Footer = () => {
                     <li>
                       <Link to="/contact-us">Contact Us</Link>
                     </li>
+                    <li>
+                      <Link to="tel:8882398658">Tol Free 888-239-8658</Link>
+                    </li>
                   </ul>
                   <ul>
                     <li className="listTitle">Hot Tubs / Swim SPA</li>
@@ -48,7 +51,9 @@ const Footer = () => {
                       <Link to="/category/trident-series">Trident Series</Link>
                     </li>
                     <li>
-                      <Link to="/category/nautical-series">Nautical Series</Link>
+                      <Link to="/category/nautical-series">
+                        Nautical Series
+                      </Link>
                     </li>
                     <li>
                       <Link to="/category/coastal-series">Coastal Series</Link>
@@ -84,6 +89,9 @@ const Footer = () => {
           </p>
           <p>
             <Link to="javascript:void">Privacy Statement</Link>
+          </p>
+          <p>
+            <Link to="tel:8882398658">Tol Free 888-239-8658</Link>
           </p>
           <br />
         </section>
