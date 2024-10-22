@@ -39,7 +39,10 @@ const Footer = () => {
                       <Link to="/contact-us">Contact Us</Link>
                     </li>
                     <li>
-                      <Link to="tel:8882398658">Tol Free 888-239-8658</Link>
+                      <Link to="tel:2056713100">Phone: 205-671-3100</Link>
+                    </li>
+                    <li>
+                      <Link to="tel:8882398658">Tol Free: 888-239-8658</Link>
                     </li>
                   </ul>
                   <ul>
@@ -91,7 +94,10 @@ const Footer = () => {
             <Link to="javascript:void">Privacy Statement</Link>
           </p>
           <p>
-            <Link to="tel:8882398658">Tol Free 888-239-8658</Link>
+            <Link to="tel:2056713100">Phone: 205-671-3100</Link>
+          </p>
+          <p>
+            <Link to="tel:8882398658">Tol Free: 888-239-8658</Link>
           </p>
           <br />
         </section>
