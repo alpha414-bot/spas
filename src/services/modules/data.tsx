@@ -38,7 +38,6 @@ export const _TubsData = [
       "K.1000 Digital Topside",
       "Comfortable Headrests",
       "Choice of Arcylic and Skirt Color",
-      "In.Touch 2®",
     ],
   },
   {
@@ -103,7 +102,6 @@ export const _TubsData = [
       "Choice of Arcylic and Skirt Color",
       "Comfortable Headrests",
       "K.1000 Digital Topside",
-      "In.Touch 2®",
     ],
   },
   {
@@ -203,7 +201,6 @@ export const _TubsData = [
       "Choice of Arcylic and Skirt Color",
       "Comfortable Headrests",
       "K.1000 Digital Topside",
-      "In.Touch 2®",
     ],
     fountains: 2,
   },
@@ -285,7 +282,7 @@ export const _TubsData = [
     sth_water_fall: 1,
     exclusive_features: [
       "K.1000 Digital Topside",
-      "In.Touch 2®",
+
       "Choice of Arcylic and Skirt Color",
       "Comfortable Headrests",
     ],
@@ -309,7 +306,7 @@ export const _TubsData = [
     exclusive_features: [
       "Choice of Arcylic and Skirt Color",
       "K.1000 Digital Topside",
-      "In.Touch 2®",
+
       "Comfortable Headrests",
     ],
   },
@@ -330,7 +327,7 @@ export const _TubsData = [
     water_fall: 3,
     exclusive_features: [
       "K.1000 Digital Topside",
-      "In.Touch 2®",
+
       "Comfortable Headrests",
       "Choice of Arcylic and Skirt Color",
     ],
@@ -352,7 +349,7 @@ export const _TubsData = [
     water_fall: 3,
     exclusive_features: [
       "K.1000 Digital Topside",
-      "In.Touch 2®",
+
       "Comfortable Headrests",
       "Choice of Arcylic and Skirt Color",
     ],
@@ -555,7 +552,7 @@ export async function CategoryLoader({ params }: { params?: any }) {
 
 export async function ProductLoader({ params }: { params?: any }) {
   // params: {category_slug, product_slug}
-  
+
   let product = _.find(
     _TubsData,
     (item) => item.image.toLowerCase() === params?.product_slug.toLowerCase()
