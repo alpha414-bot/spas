@@ -78,6 +78,12 @@ const Footer = () => {
                     <li>
                       <Link to="/become-a-dealer">Become a dealer</Link>
                     </li>
+                    <li>
+                      <Link to="/terms-conditions">Terms of Use</Link>
+                    </li>
+                    <li>
+                      <Link to="/privacy-policy">Privacy Policy</Link>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -87,11 +93,14 @@ const Footer = () => {
         <section className="text-center">
           <br />
           <p>
-            Copyright © 2024, Gulfsouth Spas |{" "}
-            <Link to="javascript:void">Legal</Link>
+            Copyright © {new Date().getFullYear()}, Gulfsouth Spas
+            {/* <Link to="javascript:void">Legal</Link> */}
           </p>
           <p>
-            <Link to="javascript:void">Privacy Statement</Link>
+            <Link to="/terms-conditions">Terms of Use</Link>
+          </p>
+          <p>
+            <Link to="/privacy-policy">Privacy Policy</Link>
           </p>
           <p>
             <Link to="tel:2056713100">Phone: 205-671-3100</Link>

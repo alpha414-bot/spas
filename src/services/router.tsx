@@ -13,7 +13,9 @@ import ShopSwimSpas from "@/pages/ShopSwimSpas";
 import HotTubElectricalRequirement from "@/pages/Support/HotTubElectricalRequirement";
 import HotTubMaintenanceGuide from "@/pages/Support/HotTubMaintenanceGuide";
 import HotTubOwnersManuals from "@/pages/Support/HotTubOwnersManuals";
+import PrivacyPolicy from "@/pages/Support/PrivacyPolicy";
 import SpaRegistration from "@/pages/Support/SpaRegistration";
+import TermsOfUse from "@/pages/Support/TermsofUse";
 import GeneralOverview from "@/pages/SwimSpas";
 import { useLayoutEffect } from "react";
 import { createBrowserRouter, useLocation } from "react-router-dom";
@@ -38,7 +40,7 @@ const withScrollToTop = (routerConfig?: any) => {
 };
 
 // Define ScrollToTop component
-const ScrollToTop = ({ children }: { children?: any }) => {
+export const ScrollToTop = ({ children }: { children?: any }) => {
   const location = useLocation();
   useLayoutEffect(() => {
     document.documentElement.scrollTo(0, 0);
@@ -155,6 +157,24 @@ const routes = [
     element: (
       <ProtectedRoute>
         <SpaRegistration />
+      </ProtectedRoute>
+    ),
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/terms-conditions",
+    element: (
+      <ProtectedRoute>
+        <TermsOfUse />
+      </ProtectedRoute>
+    ),
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/privacy-policy",
+    element: (
+      <ProtectedRoute>
+        <PrivacyPolicy />
       </ProtectedRoute>
     ),
     errorElement: <ErrorPage />,

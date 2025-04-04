@@ -126,7 +126,7 @@ const CategoryFeaturePage = () => {
                 <p>
                   {" "}
                   Made of recycled acrylic and resin. Isolates frame bottom from
-                  moisture. The structure’s flat base prevents the creation of
+                  moisture. The structure's flat base prevents the creation of
                   air pockets, thus ensuring increased stability and foot
                   support rigidity. The most durable and solid spas in the
                   industry.

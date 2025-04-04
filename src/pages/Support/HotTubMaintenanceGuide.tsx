@@ -16,7 +16,7 @@ const HotTubMaintenanceGuide = () => {
                 Properly balancing your spa water and conducting routine hot tub
                 maintenance is key to getting the maximum enjoyment from your
                 investment. To support our customers in achieving this goal,
-                we’ve created a Hot Tub Maintenance Guide that explains the
+                we've created a Hot Tub Maintenance Guide that explains the
                 components of water chemistry, offers routine hot tub
                 maintenance timetables and provides answers to these hot tub
                 maintenance questions—and many others:
