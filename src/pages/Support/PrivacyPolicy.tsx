@@ -55,13 +55,13 @@ const PrivacyPolicy = () => {
           <br />
           <p>
             Visit{" "}
-            <Link to={window.location.origin}>{window.location.origin}</Link>{" "}
+            <Link to={window.location.origin}>Gulfsouthspas</Link>{" "}
             for our Homepage.
           </p>
           <p>
             Visit{" "}
             <Link to={`${window.location.origin}/terms-conditions`}>
-              {window.location.origin}/terms-conditions
+              Gulfsouthspas
             </Link>{" "}
             for our Terms of Service.
           </p>

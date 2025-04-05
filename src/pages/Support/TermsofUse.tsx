@@ -229,14 +229,13 @@ const TermsofUse = () => {
           <br />
           <br />
           <p>
-            Visit{" "}
-            <Link to={window.location.origin}>{window.location.origin}</Link>{" "}
-            for our Homepage.
+            Visit <Link to={window.location.origin}>Gulfsouthspas</Link> for our
+            Homepage.
           </p>
           <p>
             Visit{" "}
             <Link to={`${window.location.origin}/privacy-policy`}>
-              {window.location.origin}/privacy-policy
+              Gulfsouthspas
             </Link>{" "}
             for our privacy policy.
           </p>
